@@ -1,4 +1,4 @@
-# Gesamtskript — Lineare Algebra II & Analysis II
+# Gesamtskript — Lineare Algebra II, Analysis II & Physik II
 
 ## Inhaltsverzeichnis
 
@@ -529,6 +529,266 @@
   - [Verbindungen](#verbindungen-20)
   - [Zusammenfassung Kapitel 12](#zusammenfassung-kapitel-12)
 - [Gesamtübersicht: Der rote Faden der Vorlesung](#gesamtübersicht-der-rote-faden-der-vorlesung)
+- [Physik II — Vollständiges Skript](#physik-ii-vollständiges-skript)
+  - [Teil I: Mechanik der Fluide und Wärmelehre](#teil-i-mechanik-der-fluide-und-wärmelehre)
+- [Inhaltsverzeichnis Teil I](#inhaltsverzeichnis-teil-i)
+- [Kapitel 1: Strömende Flüssigkeiten und Gase](#kapitel-1-strömende-flüssigkeiten-und-gase)
+  - [Motivation](#motivation-21)
+  - [Intuition](#intuition-21)
+  - [Formale Definitionen](#formale-definitionen-21)
+  - [Eigenschaften](#eigenschaften-17)
+  - [Sätze](#sätze-17)
+    - [Satz 1.1 (Kontinuitätsgleichung)](#satz-11-kontinuitätsgleichung)
+    - [Beweis von Satz 1.1](#beweis-von-satz-11)
+    - [Satz 1.2 (Bernoulli-Gleichung)](#satz-12-bernoulli-gleichung)
+    - [Beweis von Satz 1.2](#beweis-von-satz-12)
+    - [Satz 1.3 (Hagen-Poiseuille-Gesetz)](#satz-13-hagen-poiseuille-gesetz)
+    - [Beweis von Satz 1.3 (Beweisidee, da nicht vollständig aus den Grundgleichungen hergeleitet, sondern über Kräftebilanz)](#beweis-von-satz-13-beweisidee-da-nicht-vollständig-aus-den-grundgleichungen-hergeleitet-sondern-über-kräftebilanz)
+    - [Satz 1.4 (Stokes'sches Gesetz)](#satz-14-stokessches-gesetz)
+  - [Algorithmen](#algorithmen-9)
+  - [Beispiele](#beispiele-19)
+  - [Gegenbeispiele](#gegenbeispiele-19)
+  - [Typische Klausuraufgaben](#typische-klausuraufgaben-20)
+  - [Typische Fehler](#typische-fehler-20)
+  - [Verbindungen](#verbindungen-21)
+  - [Zusammenfassung](#zusammenfassung-9)
+- [Kapitel 2: Kinetische Gastheorie und Temperatur](#kapitel-2-kinetische-gastheorie-und-temperatur)
+  - [Motivation](#motivation-22)
+  - [Intuition](#intuition-22)
+  - [Formale Definitionen](#formale-definitionen-22)
+  - [Eigenschaften](#eigenschaften-18)
+  - [Sätze](#sätze-18)
+    - [Satz 2.1 (Kinetische Druckformel)](#satz-21-kinetische-druckformel)
+    - [Beweis von Satz 2.1](#beweis-von-satz-21)
+    - [Satz 2.2 (Gleichverteilungssatz / Äquipartitionstheorem)](#satz-22-gleichverteilungssatz-äquipartitionstheorem)
+    - [Satz 2.3 (Kombination von Gasgesetzen zur idealen Gasgleichung)](#satz-23-kombination-von-gasgesetzen-zur-idealen-gasgleichung)
+  - [Algorithmen](#algorithmen-10)
+  - [Beispiele](#beispiele-20)
+  - [Gegenbeispiele](#gegenbeispiele-20)
+  - [Typische Klausuraufgaben](#typische-klausuraufgaben-21)
+  - [Typische Fehler](#typische-fehler-21)
+  - [Verbindungen](#verbindungen-22)
+  - [Zusammenfassung](#zusammenfassung-10)
+- [Kapitel 3: Transportphänomene](#kapitel-3-transportphänomene)
+  - [Motivation](#motivation-23)
+  - [Intuition](#intuition-23)
+  - [Formale Definitionen](#formale-definitionen-23)
+  - [Eigenschaften](#eigenschaften-19)
+  - [Sätze](#sätze-19)
+    - [Satz 3.1 (2. Fick'sches Gesetz aus Kontinuität + 1. Fick'schem Gesetz)](#satz-31-2-ficksches-gesetz-aus-kontinuität-1-fickschem-gesetz)
+    - [Satz 3.2 (Analogie Diffusionsgleichung — Wärmeleitungsgleichung)](#satz-32-analogie-diffusionsgleichung-wärmeleitungsgleichung)
+  - [Algorithmen](#algorithmen-11)
+  - [Beispiele](#beispiele-21)
+  - [Gegenbeispiele](#gegenbeispiele-21)
+  - [Typische Klausuraufgaben](#typische-klausuraufgaben-22)
+  - [Typische Fehler](#typische-fehler-22)
+  - [Verbindungen](#verbindungen-23)
+  - [Zusammenfassung](#zusammenfassung-11)
+- [Kapitel 4: Wärme, Arbeit und der 1. Hauptsatz der Thermodynamik](#kapitel-4-wärme-arbeit-und-der-1-hauptsatz-der-thermodynamik)
+  - [Motivation](#motivation-24)
+  - [Intuition](#intuition-24)
+  - [Formale Definitionen](#formale-definitionen-24)
+  - [Eigenschaften](#eigenschaften-20)
+  - [Sätze](#sätze-20)
+    - [Satz 4.1 (1. Hauptsatz der Thermodynamik)](#satz-41-1-hauptsatz-der-thermodynamik)
+    - [Satz 4.2 ($C_p - C_V = R$, "Robert-Mayer-Beziehung")](#satz-42-c_p-c_v-r-robert-mayer-beziehung)
+    - [Beweis von Satz 4.2](#beweis-von-satz-42)
+    - [Satz 4.3 (Adiabatengleichungen)](#satz-43-adiabatengleichungen)
+    - [Beweis von Satz 4.3](#beweis-von-satz-43)
+  - [Algorithmen](#algorithmen-12)
+  - [Beispiele](#beispiele-22)
+  - [Gegenbeispiele](#gegenbeispiele-22)
+  - [Typische Klausuraufgaben](#typische-klausuraufgaben-23)
+  - [Typische Fehler](#typische-fehler-23)
+  - [Verbindungen](#verbindungen-24)
+  - [Zusammenfassung](#zusammenfassung-12)
+- [Kapitel 5: Kreisprozesse und der 2. Hauptsatz der Thermodynamik](#kapitel-5-kreisprozesse-und-der-2-hauptsatz-der-thermodynamik)
+  - [Motivation](#motivation-25)
+  - [Intuition](#intuition-25)
+  - [Formale Definitionen](#formale-definitionen-25)
+  - [Eigenschaften](#eigenschaften-21)
+  - [Sätze](#sätze-21)
+    - [Satz 5.1 (Carnot-Wirkungsgrad)](#satz-51-carnot-wirkungsgrad)
+    - [Beweis von Satz 5.1](#beweis-von-satz-51)
+    - [Satz 5.2 (Carnot'scher Satz — Optimalität)](#satz-52-carnotscher-satz-optimalität)
+    - [Satz 5.3 (Entropieänderung bei Zustandsänderungen idealer Gase)](#satz-53-entropieänderung-bei-zustandsänderungen-idealer-gase)
+    - [Satz 5.4 (2. Hauptsatz — Entropiezunahme in abgeschlossenen Systemen)](#satz-54-2-hauptsatz-entropiezunahme-in-abgeschlossenen-systemen)
+    - [Satz 5.5 (Boltzmann-Entropie und statistische Interpretation)](#satz-55-boltzmann-entropie-und-statistische-interpretation)
+  - [Algorithmen](#algorithmen-13)
+  - [Beispiele](#beispiele-23)
+  - [Gegenbeispiele](#gegenbeispiele-23)
+  - [Typische Klausuraufgaben](#typische-klausuraufgaben-24)
+  - [Typische Fehler](#typische-fehler-24)
+  - [Verbindungen](#verbindungen-25)
+  - [Zusammenfassung](#zusammenfassung-13)
+- [Physik II — Vollständiges Skript](#physik-ii-vollständiges-skript-1)
+  - [Teil II: Elektromagnetismus](#teil-ii-elektromagnetismus)
+- [Inhaltsverzeichnis Teil II](#inhaltsverzeichnis-teil-ii)
+- [Kapitel 6: Elektrostatik I — Ladung, Coulombgesetz, elektrisches Feld, Potential](#kapitel-6-elektrostatik-i-ladung-coulombgesetz-elektrisches-feld-potential)
+  - [Motivation](#motivation-26)
+  - [Intuition](#intuition-26)
+  - [Formale Definitionen](#formale-definitionen-26)
+  - [Eigenschaften](#eigenschaften-22)
+  - [Sätze](#sätze-22)
+    - [Satz 6.1 (Wegunabhängigkeit der Arbeit im elektrostatischen Feld)](#satz-61-wegunabhängigkeit-der-arbeit-im-elektrostatischen-feld)
+    - [Satz 6.2 (Feld einer unendlich ausgedehnten geladenen Platte)](#satz-62-feld-einer-unendlich-ausgedehnten-geladenen-platte)
+  - [Algorithmen](#algorithmen-14)
+  - [Beispiele](#beispiele-24)
+  - [Gegenbeispiele](#gegenbeispiele-24)
+  - [Typische Klausuraufgaben](#typische-klausuraufgaben-25)
+  - [Typische Fehler](#typische-fehler-25)
+  - [Verbindungen](#verbindungen-26)
+  - [Zusammenfassung](#zusammenfassung-14)
+- [Kapitel 7: Elektrostatik II — Gauß'sches Gesetz, Leiter, Kondensatoren](#kapitel-7-elektrostatik-ii-gaußsches-gesetz-leiter-kondensatoren)
+  - [Motivation](#motivation-27)
+  - [Intuition](#intuition-27)
+  - [Formale Definitionen](#formale-definitionen-27)
+  - [Eigenschaften](#eigenschaften-23)
+  - [Sätze](#sätze-23)
+    - [Satz 7.1 (Gauß'sches Gesetz, integral)](#satz-71-gaußsches-gesetz-integral)
+    - [Satz 7.2 (Gauß'sches Gesetz, differentiell — 1. Maxwell-Gleichung)](#satz-72-gaußsches-gesetz-differentiell-1-maxwell-gleichung)
+    - [Satz 7.3 (Feld einer geladenen Kugel — innen und außen)](#satz-73-feld-einer-geladenen-kugel-innen-und-außen)
+    - [Satz 7.4 (Kondensatorformeln)](#satz-74-kondensatorformeln)
+    - [Satz 7.5 (Energie des elektrischen Feldes im Kondensator)](#satz-75-energie-des-elektrischen-feldes-im-kondensator)
+  - [Algorithmen](#algorithmen-15)
+  - [Beispiele](#beispiele-25)
+  - [Gegenbeispiele](#gegenbeispiele-25)
+  - [Typische Klausuraufgaben](#typische-klausuraufgaben-26)
+  - [Typische Fehler](#typische-fehler-26)
+  - [Verbindungen](#verbindungen-27)
+  - [Zusammenfassung](#zusammenfassung-15)
+- [Kapitel 8: Elektrostatik III — Dielektrika, Materie im elektrischen Feld](#kapitel-8-elektrostatik-iii-dielektrika-materie-im-elektrischen-feld)
+  - [Motivation](#motivation-28)
+  - [Intuition](#intuition-28)
+  - [Formale Definitionen](#formale-definitionen-28)
+  - [Eigenschaften](#eigenschaften-24)
+  - [Sätze](#sätze-24)
+    - [Satz 8.1 (Div $\vec D$ = freie Ladungsdichte — Maxwell-Gleichung in Materie)](#satz-81-div-vec-d-freie-ladungsdichte-maxwell-gleichung-in-materie)
+    - [Satz 8.2 (Brechungsgesetz für das E-Feld an einer dielektrischen Grenzfläche)](#satz-82-brechungsgesetz-für-das-e-feld-an-einer-dielektrischen-grenzfläche)
+    - [Satz 8.3 (Kapazität und Feldenergie mit Dielektrikum)](#satz-83-kapazität-und-feldenergie-mit-dielektrikum)
+  - [Algorithmen](#algorithmen-16)
+  - [Beispiele](#beispiele-26)
+  - [Gegenbeispiele](#gegenbeispiele-26)
+  - [Typische Klausuraufgaben](#typische-klausuraufgaben-27)
+  - [Typische Fehler](#typische-fehler-27)
+  - [Verbindungen](#verbindungen-28)
+  - [Zusammenfassung](#zusammenfassung-16)
+- [Kapitel 9: Elektrischer Strom und Gleichstromkreise](#kapitel-9-elektrischer-strom-und-gleichstromkreise)
+  - [Motivation](#motivation-29)
+  - [Intuition](#intuition-29)
+  - [Formale Definitionen](#formale-definitionen-29)
+  - [Eigenschaften](#eigenschaften-25)
+  - [Sätze](#sätze-25)
+    - [Satz 9.1 (Kontinuitätsgleichung für elektrische Ladung)](#satz-91-kontinuitätsgleichung-für-elektrische-ladung)
+    - [Satz 9.2 (Mikroskopische Herleitung des Ohm'schen Gesetzes)](#satz-92-mikroskopische-herleitung-des-ohmschen-gesetzes)
+    - [Satz 9.3 (Kirchhoff'sche Regeln)](#satz-93-kirchhoffsche-regeln)
+    - [Satz 9.4 (Ersatzwiderstände: Reihen- und Parallelschaltung)](#satz-94-ersatzwiderstände-reihen-und-parallelschaltung)
+  - [Algorithmen](#algorithmen-17)
+  - [Beispiele](#beispiele-27)
+  - [Gegenbeispiele](#gegenbeispiele-27)
+  - [Typische Klausuraufgaben](#typische-klausuraufgaben-28)
+  - [Typische Fehler](#typische-fehler-28)
+  - [Verbindungen](#verbindungen-29)
+  - [Zusammenfassung](#zusammenfassung-17)
+- [Kapitel 10: Ladungstransport in Materialien](#kapitel-10-ladungstransport-in-materialien)
+  - [Motivation](#motivation-30)
+  - [Intuition](#intuition-30)
+  - [Formale Definitionen](#formale-definitionen-30)
+  - [Eigenschaften](#eigenschaften-26)
+  - [Sätze](#sätze-26)
+    - ["Satz" 10.1 (Wiedemann-Franz-Gesetz, Wiederholung/Vertiefung aus Kapitel 3)](#satz-101-wiedemann-franz-gesetz-wiederholungvertiefung-aus-kapitel-3)
+  - [Algorithmen](#algorithmen-18)
+  - [Beispiele](#beispiele-28)
+  - [Gegenbeispiele](#gegenbeispiele-28)
+  - [Typische Klausuraufgaben](#typische-klausuraufgaben-29)
+  - [Typische Fehler](#typische-fehler-29)
+  - [Verbindungen](#verbindungen-30)
+  - [Zusammenfassung](#zusammenfassung-18)
+- [Kapitel 11: Magnetismus I — Kraftwirkungen (Lorentzkraft)](#kapitel-11-magnetismus-i-kraftwirkungen-lorentzkraft)
+  - [Motivation](#motivation-31)
+  - [Intuition](#intuition-31)
+  - [Formale Definitionen](#formale-definitionen-31)
+  - [Eigenschaften](#eigenschaften-27)
+  - [Sätze](#sätze-27)
+    - [Satz 11.1 (Kreisbahn im homogenen Magnetfeld)](#satz-111-kreisbahn-im-homogenen-magnetfeld)
+    - [Satz 11.2 (Hall-Effekt)](#satz-112-hall-effekt)
+  - [Algorithmen](#algorithmen-19)
+  - [Beispiele](#beispiele-29)
+  - [Gegenbeispiele](#gegenbeispiele-29)
+  - [Typische Klausuraufgaben](#typische-klausuraufgaben-30)
+  - [Typische Fehler](#typische-fehler-30)
+  - [Verbindungen](#verbindungen-31)
+  - [Zusammenfassung](#zusammenfassung-19)
+- [Kapitel 12: Magnetismus II — Feldquellen und magnetische Materialien](#kapitel-12-magnetismus-ii-feldquellen-und-magnetische-materialien)
+  - [Motivation](#motivation-32)
+  - [Intuition](#intuition-32)
+  - [Formale Definitionen](#formale-definitionen-32)
+  - [Eigenschaften](#eigenschaften-28)
+  - [Sätze](#sätze-28)
+    - [Satz 12.1 (Div B = 0 — 2. Maxwell-Gleichung)](#satz-121-div-b-0-2-maxwell-gleichung)
+    - [Satz 12.2 (Magnetfeld eines geraden, unendlich langen Leiters)](#satz-122-magnetfeld-eines-geraden-unendlich-langen-leiters)
+    - [Satz 12.3 (Ampère'sches Gesetz)](#satz-123-ampèresches-gesetz)
+    - [Satz 12.4 (Magnetfeld einer langen Spule)](#satz-124-magnetfeld-einer-langen-spule)
+  - [Algorithmen](#algorithmen-20)
+  - [Beispiele](#beispiele-30)
+  - [Gegenbeispiele](#gegenbeispiele-30)
+  - [Typische Klausuraufgaben](#typische-klausuraufgaben-31)
+  - [Typische Fehler](#typische-fehler-31)
+  - [Verbindungen](#verbindungen-32)
+  - [Zusammenfassung](#zusammenfassung-20)
+- [Kapitel 13: Elektrodynamik — Induktion](#kapitel-13-elektrodynamik-induktion)
+  - [Motivation](#motivation-33)
+  - [Intuition](#intuition-33)
+  - [Formale Definitionen](#formale-definitionen-33)
+  - [Eigenschaften](#eigenschaften-29)
+  - [Sätze](#sätze-29)
+    - [Satz 13.1 (Faraday'sches Induktionsgesetz — 3. Maxwell-Gleichung)](#satz-131-faradaysches-induktionsgesetz-3-maxwell-gleichung)
+    - [Satz 13.2 (Selbstinduktion und Aufbauverhalten in einer RL-Schaltung)](#satz-132-selbstinduktion-und-aufbauverhalten-in-einer-rl-schaltung)
+  - [Algorithmen](#algorithmen-21)
+  - [Beispiele](#beispiele-31)
+  - [Gegenbeispiele](#gegenbeispiele-31)
+  - [Typische Klausuraufgaben](#typische-klausuraufgaben-32)
+  - [Typische Fehler](#typische-fehler-32)
+  - [Verbindungen](#verbindungen-33)
+  - [Zusammenfassung](#zusammenfassung-21)
+- [Kapitel 14: Wechselstromkreise](#kapitel-14-wechselstromkreise)
+  - [Motivation](#motivation-34)
+  - [Intuition](#intuition-34)
+  - [Formale Definitionen](#formale-definitionen-34)
+  - [Eigenschaften](#eigenschaften-30)
+  - [Sätze](#sätze-30)
+    - [Satz 14.1 (Impedanz des Kondensators)](#satz-141-impedanz-des-kondensators)
+    - [Satz 14.2 (Impedanz der Spule)](#satz-142-impedanz-der-spule)
+    - [Satz 14.3 (Kirchhoff'sche Regeln gelten unverändert für komplexe Größen)](#satz-143-kirchhoffsche-regeln-gelten-unverändert-für-komplexe-größen)
+  - [Algorithmen](#algorithmen-22)
+  - [Beispiele](#beispiele-32)
+  - [Gegenbeispiele](#gegenbeispiele-32)
+  - [Typische Klausuraufgaben](#typische-klausuraufgaben-33)
+  - [Typische Fehler](#typische-fehler-33)
+  - [Verbindungen](#verbindungen-34)
+  - [Zusammenfassung](#zusammenfassung-22)
+- [Kapitel 15: Elektromagnetische Wellen](#kapitel-15-elektromagnetische-wellen)
+  - [Motivation](#motivation-35)
+  - [Intuition](#intuition-35)
+  - [Formale Definitionen](#formale-definitionen-35)
+  - [Eigenschaften](#eigenschaften-31)
+  - [Sätze](#sätze-31)
+    - [Satz 15.1 (Wellengleichung aus den Maxwell-Gleichungen)](#satz-151-wellengleichung-aus-den-maxwell-gleichungen)
+    - [Satz 15.2 (Ebene, harmonische Welle — Struktureigenschaften)](#satz-152-ebene-harmonische-welle-struktureigenschaften)
+  - [Algorithmen](#algorithmen-23)
+  - [Beispiele](#beispiele-33)
+  - [Gegenbeispiele](#gegenbeispiele-33)
+  - [Typische Klausuraufgaben](#typische-klausuraufgaben-34)
+  - [Typische Fehler](#typische-fehler-34)
+  - [Verbindungen](#verbindungen-35)
+  - [Zusammenfassung](#zusammenfassung-23)
+- [Kapitel 16: Exkurs — Lorentz-Transformation und Spezielle Relativitätstheorie](#kapitel-16-exkurs-lorentz-transformation-und-spezielle-relativitätstheorie)
+  - [Motivation](#motivation-36)
+  - [Grundidee](#grundidee)
+  - [Formeln](#formeln)
+  - [Beispiel 1: Zwillingsparadoxon (qualitativ)](#beispiel-1-zwillingsparadoxon-qualitativ)
+  - [Beispiel 2: Myonenparadoxon (quantitativ)](#beispiel-2-myonenparadoxon-quantitativ)
+  - [Zusammenfassung](#zusammenfassung-24)
 
 ---
 
@@ -7187,6 +7447,2711 @@ Für die Klausurvorbereitung empfiehlt sich, diese drei Verbindungslinien besond
 ---
 
 *Ende des Skripts. Alle sechs Teile (Kapitel 1–12) bilden zusammen die vollständige, bereinigte und ergänzte Rekonstruktion der Vorlesung.*
+
+
+
+---
+
+<a id="physik-ii-vollständiges-skript"></a>
+# Physik II — Vollständiges Skript
+<a id="teil-i-mechanik-der-fluide-und-wärmelehre"></a>
+## Teil I: Mechanik der Fluide und Wärmelehre
+
+> Dieses Skript ist die vollständige, fehlerbereinigte und lehrbuchartig ausgearbeitete Rekonstruktion der Vorlesung. Es ersetzt die Mitschrift und ist so geschrieben, dass kein zusätzliches Lehrbuch nötig sein sollte.
+
+---
+
+<a id="inhaltsverzeichnis-teil-i"></a>
+# Inhaltsverzeichnis Teil I
+
+1. Strömende Flüssigkeiten und Gase
+2. Kinetische Gastheorie und Temperatur
+3. Transportphänomene
+4. Wärme, Arbeit und der 1. Hauptsatz der Thermodynamik
+5. Kreisprozesse und der 2. Hauptsatz der Thermodynamik
+
+---
+
+<a id="kapitel-1-strömende-flüssigkeiten-und-gase"></a>
+# Kapitel 1: Strömende Flüssigkeiten und Gase
+
+<a id="motivation-21"></a>
+## Motivation
+
+In der Mechanik des Massenpunkts und starrer Körper beschreiben wir Bewegung durch die Trajektorie einzelner Objekte. Bei einer Flüssigkeit oder einem Gas ist das unmöglich — ein Liter Wasser enthält etwa $3,3\cdot 10^{25}$ Moleküle. Wir brauchen daher eine **Feldbeschreibung**: Statt "wo ist Teilchen $i$ zur Zeit $t$?" fragen wir "wie groß ist Geschwindigkeit, Druck und Dichte an jedem Ort $\vec r$ zur Zeit $t$?".
+
+Historisch entstand diese Denkweise aus sehr praktischen Problemen: Wie schnell fließt Wasser aus einem Loch im Fass (Torricelli, 17. Jh.)? Wie trägt eine Tragfläche (Bernoulli, 18. Jh.)? Wie groß ist der Druckverlust in einer Rohrleitung (Hagen, Poiseuille, 19. Jh.)? Die in diesem Kapitel entwickelten Gesetze sind Spezialfälle der viel allgemeineren Navier-Stokes-Gleichungen, die wir hier bewusst nicht vollständig herleiten — sie sind Gegenstand eigener Vorlesungen (Strömungsmechanik). Wir beschränken uns auf die Fälle, die mit Erhaltungssätzen (Masse, Energie) und einfachen empirischen Ansätzen (Newtonsche Reibung) lösbar sind.
+
+<a id="intuition-21"></a>
+## Intuition
+
+Stell dir Wasser als ein Bündel dünner "Stromfäden" vor, die nie beginnen oder enden (außer an Quellen/Senken) und sich nie kreuzen (bei stationärer Strömung). Wo die Fäden eng zusammenrücken (enges Rohr), muss das Wasser schneller fließen — genau wie eine Menschenmenge, die sich durch eine Engstelle drängt, dort automatisch schneller läuft, wenn niemand verloren gehen darf.
+
+Die Bernoulli-Gleichung ist im Kern eine **Energiebilanz entlang eines Stromfadens**: Geschwindigkeit "kostet" Druck. Wenn eine Flüssigkeit beschleunigt wird (weil das Rohr enger wird), muss diese kinetische Energie irgendwoher kommen — sie wird aus dem statischen Druck "bezahlt". Das ist derselbe Mechanismus, der ein Blatt Papier nach oben zieht, wenn man von oben darüber bläst: schnellere Luft = geringerer Druck.
+
+Reale Flüssigkeiten haben zusätzlich **innere Reibung** (Viskosität): benachbarte Flüssigkeitsschichten, die sich unterschiedlich schnell bewegen, üben Scherkräfte aufeinander aus — man kann sich das wie viele dünne Kartenstapel vorstellen, die übereinander verschoben werden und sich dabei gegenseitig bremsen.
+
+<a id="formale-definitionen-21"></a>
+## Formale Definitionen
+
+**Definition 1.1 (Stromdichte, Geschwindigkeitsfeld).**
+Ein Fluid wird durch ein Geschwindigkeitsfeld $\vec v(\vec r, t)$ und ein Dichtefeld $\rho(\vec r,t)$ beschrieben. Die **Stromdichte** ist
+$$\vec j(\vec r,t) := \rho(\vec r,t)\,\vec v(\vec r,t), \qquad [\vec j] = \frac{\text{kg}}{\text{m}^2\,\text{s}}.$$
+
+**Definition 1.2 (Stationäre Strömung).**
+Eine Strömung heißt *stationär*, wenn $\partial \vec v/\partial t = 0$ und $\partial \rho/\partial t = 0$ überall gilt — das Geschwindigkeitsfeld ändert sich nicht mit der Zeit (wohl aber i. A. mit dem Ort).
+
+**Definition 1.3 (Volumen- bzw. Massendurchfluss).**
+Für eine Querschnittsfläche $A$ senkrecht zur Strömung:
+$$\dot V := \frac{dV}{dt} = A\cdot v, \qquad \dot m := \frac{dm}{dt} = \rho A v.$$
+
+**Definition 1.4 (Divergenz eines Vektorfeldes).**
+$$\operatorname{div}\vec j := \nabla\cdot\vec j = \frac{\partial j_x}{\partial x}+\frac{\partial j_y}{\partial y}+\frac{\partial j_z}{\partial z}.$$
+Die Divergenz misst die "Quellstärke" eines Feldes an einem Punkt: Wie viel mehr fließt lokal heraus als hinein?
+
+**Definition 1.5 (Viskosität).**
+Für eine Scherströmung mit Geschwindigkeitsgefälle $dv/dz$ senkrecht zur Strömungsrichtung ist die Scherkraft pro Fläche (Schubspannung) proportional zum Gradienten:
+$$\frac{F}{A} = \eta\,\frac{dv}{dz} \qquad \text{(Newtonsches Reibungsgesetz)},$$
+mit der **dynamischen Viskosität** $\eta$, $[\eta] = \text{Pa}\cdot\text{s} = 10\ \text{Poise}$.
+
+**Definition 1.6 (Reynoldszahl).**
+$$\mathrm{Re} := \frac{\rho\, v\, \Delta z}{\eta},$$
+eine dimensionslose Kennzahl, die das Verhältnis von Trägheitskräften zu Reibungskräften angibt ($\Delta z$: charakteristische Länge des Systems, z. B. Rohrdurchmesser).
+
+<a id="eigenschaften-17"></a>
+## Eigenschaften
+
+| Eigenschaft | Aussage | Kurzbegründung |
+|---|---|---|
+| Masseerhaltung | $\operatorname{div}\vec j = -\dot\rho$ | Folgt aus Gauß'schem Satz + Massebilanz über beliebiges Volumen |
+| Inkompressibilität | $\operatorname{div}\vec v = 0$ | Für Flüssigkeiten ($\rho=\text{const}$) folgt dies direkt aus obiger Gleichung |
+| Bernoulli gilt nur | entlang eines Stromfadens, reibungsfrei, stationär, inkompressibel | Energieerhaltung wird nur *entlang* eines Fadens formuliert, nicht global |
+| Laminar vs. turbulent | $\mathrm{Re} < \mathrm{Re}_{krit}$: laminar; sonst turbulent | Empirisches Kriterium, $\mathrm{Re}_{krit}\approx 2300$ im Rohr, $\approx 100$ um ein Hindernis |
+| Viskosität temperaturabhängig | $\eta$ sinkt bei Flüssigkeiten mit $T$, steigt bei Gasen mit $T$ | Flüssigkeiten: thermische Bewegung schwächt Bindungen; Gase: mehr Impulsaustausch bei höherer Molekülgeschwindigkeit |
+
+<a id="sätze-17"></a>
+## Sätze
+
+<a id="satz-11-kontinuitätsgleichung"></a>
+### Satz 1.1 (Kontinuitätsgleichung)
+
+**Aussage:**
+$$\operatorname{div}\vec j(\vec r,t) = -\frac{\partial \rho}{\partial t}(\vec r,t).$$
+Für inkompressible, stationäre Strömung folgt speziell $A\cdot v = \text{const}$ entlang eines Stromröhrchens.
+
+**Voraussetzungen:** Keine — die Kontinuitätsgleichung ist eine reine Konsequenz der Massenerhaltung, gilt also immer (für Massenstromdichte; analoge Formen gelten für jede Erhaltungsgröße).
+
+**Bedeutung:** Sie ist das fluidmechanische Analogon zur Ladungserhaltung in der Elektrodynamik (vgl. Kapitel 9) — "was nicht erzeugt oder vernichtet wird, kann nur durch die Oberfläche eines Volumens ab- oder zufließen."
+
+**Intuition:** Stell dir ein beliebiges, festes Kontrollvolumen $V$ vor. Die Masse darin kann sich nur ändern, wenn Masse durch die Oberfläche $S$ hinein- oder herausströmt. Es gibt keine "Zauberei" in der Mitte, die Masse erschafft.
+
+**Konsequenzen:** Für eine inkompressible Strömung im Rohr mit veränderlichem Querschnitt: $A_1 v_1 = A_2 v_2$ — verengt sich das Rohr, muss die Geschwindigkeit steigen.
+
+<a id="beweis-von-satz-11"></a>
+### Beweis von Satz 1.1
+
+**Beweisstil:** Direkter Beweis über ein Kontrollvolumen (Bilanzargument) + Satz von Gauß.
+
+Sei $V$ ein beliebiges, zeitlich festes Volumen mit Rand $S = \partial V$. Die Masse in $V$ ist $m(t) = \int_V \rho\, dV$. Die zeitliche Änderung ist
+$$\frac{dm}{dt} = \int_V \frac{\partial \rho}{\partial t}\, dV.$$
+Andererseits kann sich die Masse nur durch den Fluss über den Rand ändern. Der Massenstrom, der pro Zeit durch ein Flächenelement $d\vec A$ (nach außen orientiert) austritt, ist $\vec j\cdot d\vec A$. Also
+$$\frac{dm}{dt} = -\oint_S \vec j\cdot d\vec A$$
+(Minuszeichen, weil Ausströmen die Masse in $V$ *verringert*). Mit dem Satz von Gauß,
+$$\oint_S \vec j\cdot d\vec A = \int_V \operatorname{div}\vec j\, dV,$$
+folgt
+$$\int_V \frac{\partial\rho}{\partial t}\, dV = -\int_V \operatorname{div}\vec j\, dV.$$
+Da $V$ *beliebig* gewählt war, müssen die Integranden punktweise übereinstimmen:
+$$\operatorname{div}\vec j = -\frac{\partial\rho}{\partial t}. \qquad \blacksquare$$
+
+<a id="satz-12-bernoulli-gleichung"></a>
+### Satz 1.2 (Bernoulli-Gleichung)
+
+**Aussage:** Für eine stationäre, reibungsfreie, inkompressible Strömung entlang eines Stromfadens gilt
+$$p + \rho g h + \tfrac{1}{2}\rho v^2 = \text{const}.$$
+
+**Voraussetzungen:** stationär, reibungsfrei (keine Viskosität), inkompressibel ($\rho = \text{const}$), entlang *eines* Stromfadens.
+
+**Bedeutung:** Energieerhaltung für Fluide: statischer Druck + hydrostatischer Druck + dynamischer Druck ist entlang eines Stromfadens konstant.
+
+**Intuition:** Multipliziert man mit einem Volumenelement $dV$, so wird jeder Term zu einer Energie: $p\,dV$ ist die Verschiebearbeit (Druckkraft mal Weg), $\rho g h\, dV$ die potentielle Energie, $\tfrac12 \rho v^2\, dV$ die kinetische Energie. Die Gleichung ist also nichts anderes als der Energieerhaltungssatz der Mechanik, angewendet auf ein mitbewegtes Fluidelement.
+
+**Konsequenzen:** An einer Engstelle ($v$ groß) ist $p$ klein — das erklärt Auftrieb an Tragflächen (näherungsweise, s. u.) und den Venturi-Effekt.
+
+<a id="beweis-von-satz-12"></a>
+### Beweis von Satz 1.2
+
+**Beweisstil:** Energiebilanz (Arbeit-Energie-Satz), direkter Beweis.
+
+Betrachte ein Fluidelement, das sich entlang eines Stromfadens von Punkt 1 (Querschnitt $A_1$, Geschwindigkeit $v_1$, Druck $p_1$) zu Punkt 2 bewegt. In der Zeit $dt$ tritt bei 1 ein Volumen $dV = A_1 v_1\, dt$ ein und bei 2 (wegen Kontinuität) dasselbe Volumen $dV$ aus.
+
+Die am Fluid *verrichtete* Arbeit durch die Druckkraft bei 1 ist
+$$dW_1 = F_1\, dx_1 = p_1 A_1 \cdot v_1\, dt = p_1\, dV,$$
+und die *vom* Fluid gegen den Druck bei 2 verrichtete Arbeit ist $dW_2 = p_2\, dV$. Die Nettoarbeit am System ist also $dW_1 - dW_2 = (p_1-p_2)\,dV$.
+
+Nach dem Arbeit-Energie-Satz muss diese Nettoarbeit gleich der Änderung der kinetischen (und ggf. potentiellen) Energie des herausgeschobenen Volumenelements sein:
+$$(p_1-p_2)\,dV = dE_{kin,2}-dE_{kin,1} = \tfrac12 \rho\, dV\,(v_2^2-v_1^2)$$
+(für horizontale Strömung; bei Höhenunterschied kommt zusätzlich $\rho g\,dV\,(h_2-h_1)$ hinzu). Division durch $dV$ und Umsortieren:
+$$p_1 + \tfrac12\rho v_1^2 = p_2 + \tfrac12 \rho v_2^2 \quad(+\rho g h_1 = \dots + \rho g h_2).$$
+Da 1 und 2 beliebige Punkte auf dem Stromfaden waren, ist $p+\rho gh + \tfrac12\rho v^2$ entlang des gesamten Fadens konstant. $\blacksquare$
+
+<a id="satz-13-hagen-poiseuille-gesetz"></a>
+### Satz 1.3 (Hagen-Poiseuille-Gesetz)
+
+**Aussage:** Für eine laminare, stationäre Strömung einer viskosen Flüssigkeit durch ein zylindrisches Rohr der Länge $\ell$, Radius $R$, bei Druckdifferenz $\Delta p$, ist das Geschwindigkeitsprofil parabelförmig,
+$$v(r) = \frac{\Delta p}{4\eta \ell}\left(R^2 - r^2\right),$$
+und der Volumendurchsatz
+$$\frac{\dot V}{\phantom{}} = \frac{\pi \Delta p}{8\eta \ell} R^4.$$
+
+**Voraussetzungen:** laminare Strömung ($\mathrm{Re}<\mathrm{Re}_{krit}$), Newtonsches Fluid, Haftbedingung an der Rohrwand ($v(R)=0$), stationär.
+
+**Bedeutung:** Der Durchsatz skaliert mit $R^4$ — verdoppelt man den Rohrdurchmesser, versechzehnfacht sich (bei gleichem $\Delta p$) der Durchsatz. Das ist medizinisch/technisch enorm wichtig (z. B. Gefäßverengung).
+
+**Intuition:** Die treibende Druckkraft auf einen Fluidzylinder vom Radius $r$ wird durch die Reibungskraft an dessen Mantelfläche balanciert — je weiter außen, desto größer die Mantelfläche und desto stärker die Bremsung, daher das parabolische Profil mit Maximum in der Rohrmitte.
+
+<a id="beweis-von-satz-13-beweisidee-da-nicht-vollständig-aus-den-grundgleichungen-hergeleitet-sondern-über-kräftebilanz"></a>
+### Beweis von Satz 1.3 (Beweisidee, da nicht vollständig aus den Grundgleichungen hergeleitet, sondern über Kräftebilanz)
+
+**Beweisstil:** Kräftebilanz an einem Fluidzylinder (Gleichgewichtsbetrachtung).
+
+Betrachte einen koaxialen Fluidzylinder vom Radius $r$ und Länge $dz$. Die Druckkraft treibt ihn an: $F_{Druck} = \Delta p\cdot \pi r^2$. Die Reibungskraft an seiner Mantelfläche $2\pi r\, dz$ bremst ihn gemäß Newtonschem Reibungsgesetz: $F_{Reib} = -\eta\, \dfrac{dv}{dr}\cdot 2\pi r\, dz$. Im stationären Zustand ist die Summe der Kräfte null:
+$$\Delta p\, \pi r^2 = -\eta\,2\pi r\,dz\,\frac{dv}{dr} \;\Longrightarrow\; \frac{dv}{dr} = -\frac{\Delta p}{2\eta\, dz}\, r.$$
+Integration mit Randbedingung $v(R)=0$ liefert
+$$v(r) = \frac{\Delta p}{4\eta \ell}(R^2-r^2).$$
+Den Gesamtdurchsatz erhält man durch Integration über alle konzentrischen Ringe:
+$$\dot V = \int_0^R v(r)\cdot 2\pi r\, dr = \frac{\pi\Delta p}{8\eta\ell}R^4$$
+(Rechendetail: Substitution und Standardintegral $\int_0^R (R^2-r^2)r\,dr = R^4/4$). $\blacksquare$
+
+<a id="satz-14-stokessches-gesetz"></a>
+### Satz 1.4 (Stokes'sches Gesetz)
+
+**Aussage:** Die Widerstandskraft auf eine Kugel vom Radius $r$, die sich mit konstanter Geschwindigkeit $\bar v$ durch eine viskose Flüssigkeit bewegt (bei kleiner Reynoldszahl), ist
+$$F_W = 6\pi \eta r \bar v.$$
+
+**Voraussetzungen:** kleine Reynoldszahl (schleichende Strömung, keine Turbulenz), kugelförmiger Körper, Newtonsches Fluid.
+
+**Bedeutung:** Grundlage des Kugelfallviskosimeters zur Messung von $\eta$.
+
+**Beweisstil:** Dieses Gesetz erfordert die vollständige Lösung der Navier-Stokes-Gleichungen für schleichende Strömung um eine Kugel (Stokes 1851) — **kein** elementarer Beweis mit den Mitteln dieser Vorlesung möglich. Wir übernehmen das Ergebnis als gegeben (so auch in der Originalvorlesung explizit vermerkt).
+
+**Konsequenz — Sedimentationsgeschwindigkeit:** Im Kräftegleichgewicht (Gewichtskraft − Auftrieb = Widerstand) für eine Kugel der Dichte $\rho_K$ in einer Flüssigkeit der Dichte $\rho_{Fl}$:
+$$(\rho_K-\rho_{Fl})\,\tfrac43\pi r^3\, g = 6\pi\eta r\bar v \;\Longrightarrow\; \bar v = \frac{2}{9}\frac{(\rho_K-\rho_{Fl})\,g}{\eta}\, r^2.$$
+Da $\bar v \propto r^2$, fällt eine größere Kugel überproportional schneller — daher eignen sich zwei verschieden große Kugeln zur Viskositätsbestimmung.
+
+<a id="algorithmen-9"></a>
+## Algorithmen
+
+Kapitel 1 enthält keine klassischen Algorithmen im informatischen Sinn, aber eine **standardisierte Lösungsstrategie** für Strömungsaufgaben, die wie ein Algorithmus behandelt werden sollte:
+
+**"Rezept" zur Lösung von Strömungsaufgaben**
+
+- **Motivation:** Strömungsaufgaben in Klausuren folgen fast immer demselben Muster; ein festes Vorgehen verhindert, die falsche Gleichung (Bernoulli vs. Hagen-Poiseuille) anzuwenden.
+- **Idee:** Zuerst klären, ob Reibung relevant ist (→ Hagen-Poiseuille/Stokes) oder vernachlässigbar (→ Bernoulli/Kontinuität).
+- **Voraussetzungen:** Geometrie und gegebene Größen (Querschnitte, Drücke, Geschwindigkeiten) müssen identifizierbar sein.
+- **Pseudocode:**
+```
+EINGABE: Strömungsproblem
+1. Bestimme Reynoldszahl (falls η gegeben) oder prüfe Aufgabentext auf
+   "reibungsfrei" / "ideal" vs. "viskos" / "zäh"
+2. WENN reibungsfrei:
+   a. Wende Kontinuitätsgleichung an: A1 v1 = A2 v2
+   b. Wende Bernoulli-Gleichung zwischen zwei Punkten an
+   c. Löse das (i. A. lineare) Gleichungssystem nach der gesuchten Größe
+3. WENN viskos UND Rohrströmung:
+   a. Prüfe laminar (Re < Re_krit)
+   b. Wende Hagen-Poiseuille-Gesetz an
+4. WENN viskos UND Kugel in Flüssigkeit:
+   a. Wende Stokes'sches Gesetz + Kräftegleichgewicht an
+AUSGABE: gesuchte Größe (v, p, Q, η, ...)
+```
+- **Mathematische Beschreibung:** Fallunterscheidung nach dominierendem physikalischem Mechanismus (Trägheit vs. Reibung), quantifiziert durch $\mathrm{Re}$.
+- **Laufzeit / Speicherbedarf:** nicht anwendbar (kein numerischer Algorithmus).
+- **Korrektheitsidee:** Jeder Fall entspricht einer separat bewiesenen Erhaltungsgleichung (Sätze 1.1–1.4); die Fallunterscheidung stellt sicher, dass die Voraussetzungen des jeweils verwendeten Satzes erfüllt sind.
+- **Typische Anwendungen:** Ausflussgeschwindigkeit aus Behältern, Venturi-Rohr, Blutfluss in Gefäßen, Tragflächenauftrieb (näherungsweise).
+- **Typische Fehler:** Bernoulli wird auf viskose Strömungen angewendet (verboten!), oder Hagen-Poiseuille wird für turbulente Strömungen benutzt (nur für laminar gültig).
+
+<a id="beispiele-19"></a>
+## Beispiele
+
+**Beispiel 1 (leicht):** Wasser fließt durch ein Rohr, das sich von $A_1 = 4\,\text{cm}^2$ auf $A_2 = 1\,\text{cm}^2$ verjüngt. Bei $v_1 = 2\,\text{m/s}$: Wie groß ist $v_2$?
+*Lösung:* $A_1 v_1 = A_2 v_2 \Rightarrow v_2 = v_1 A_1/A_2 = 2\cdot 4 = 8\,\text{m/s}$.
+
+**Beispiel 2 (mittel):** Aus einem großen, offenen Behälter mit Wasserstand $h$ über einem kleinen Loch fließt Wasser aus. Wie groß ist die Ausflussgeschwindigkeit (Torricelli)?
+*Lösung:* Bernoulli zwischen Wasseroberfläche (Index 1, $v_1\approx 0$, $p_1 = p_{atm}$, Höhe $h$) und Loch (Index 2, Höhe 0, $p_2 = p_{atm}$):
+$$p_{atm} + \rho g h = p_{atm} + \tfrac12 \rho v_2^2 \;\Rightarrow\; v_2 = \sqrt{2gh}.$$
+
+**Beispiel 3 (mittel):** Blut ($\eta \approx 3\cdot 10^{-3}\,\text{Pa s}$) fließt durch ein Blutgefäß der Länge $\ell = 5\,\text{cm}$, Radius $R = 1\,\text{mm}$, bei Druckdifferenz $\Delta p = 500\,\text{Pa}$. Berechne den Volumendurchsatz.
+*Lösung:* Hagen-Poiseuille: $\dot V = \dfrac{\pi \Delta p R^4}{8\eta\ell} = \dfrac{\pi\cdot 500\cdot (10^{-3})^4}{8\cdot 3\cdot10^{-3}\cdot 0{,}05} \approx 1{,}3\cdot 10^{-6}\,\text{m}^3/\text{s}$.
+
+**Beispiel 4 (schwer):** Zwei Kugeln (Radius $1\,\text{mm}$ und $2\,\text{mm}$, gleiches Material) fallen in Öl. Um welchen Faktor ist die größere schneller?
+*Lösung:* $\bar v \propto r^2 \Rightarrow$ Faktor $= (2/1)^2 = 4$.
+
+**Beispiel 5 (schwer, kombiniert):** Ein Venturi-Rohr wird zur Durchflussmessung genutzt. Am weiten Teil ($A_1=10\,\text{cm}^2$) misst man $p_1 = 200\,\text{kPa}$, am engen Teil ($A_2=2\,\text{cm}^2$) $p_2=150\,\text{kPa}$. Dichte $\rho=1000\,\text{kg/m}^3$. Bestimme $\dot V$.
+*Lösung:* Aus Kontinuität $v_1 = (A_2/A_1)v_2$. Bernoulli: $p_1+\tfrac12\rho v_1^2 = p_2 + \tfrac12\rho v_2^2$. Einsetzen und nach $v_2$ auflösen:
+$$v_2 = \sqrt{\frac{2(p_1-p_2)}{\rho\,[1-(A_2/A_1)^2]}} = \sqrt{\frac{2\cdot 50000}{1000\cdot(1-0{,}04)}} \approx 10{,}2\,\text{m/s},$$
+$$\dot V = A_2 v_2 = 2\cdot10^{-4}\cdot10{,}2 \approx 2{,}0\cdot10^{-3}\,\text{m}^3/\text{s}.$$
+
+<a id="gegenbeispiele-19"></a>
+## Gegenbeispiele
+
+- **Bernoulli funktioniert NICHT** bei turbulenter Strömung (Energie wird dissipativ in Wärme/Wirbel umgewandelt, ist also entlang des "Stromfadens" nicht mehr erhalten) und **nicht** bei kompressiblen Gasen mit großen Geschwindigkeitsänderungen (dann muss $\rho(p)$ berücksichtigt werden — Gasdynamik).
+- **Hagen-Poiseuille funktioniert NICHT** für turbulente Strömung ($\mathrm{Re}>\mathrm{Re}_{krit}\approx 2300$) — der Durchsatz wächst dann nicht mehr linear mit $\Delta p$, sondern langsamer (ca. $\sqrt{\Delta p}$), da Turbulenz zusätzlichen Widerstand erzeugt.
+- **Stokes'sches Gesetz funktioniert NICHT** für große, schnell fallende Körper (großes $\mathrm{Re}$) — dort dominiert der Trägheitswiderstand ($F\propto v^2$, Newton-Widerstand) statt des viskosen Widerstands ($F\propto v$).
+
+<a id="typische-klausuraufgaben-20"></a>
+## Typische Klausuraufgaben
+
+- **Erkennungsmerkmal "reibungsfrei/ideal":** → Bernoulli + Kontinuität kombinieren. Strategie: immer zwei Punkte auf demselben Stromfaden identifizieren, Bernoulli dort ansetzen.
+- **Erkennungsmerkmal "durch ein Rohr/eine Kapillare", Viskosität gegeben:** → Hagen-Poiseuille. Achtung auf $R^4$-Abhängigkeit bei Vergleichsaufgaben.
+- **Erkennungsmerkmal "Kugel fällt/steigt in Flüssigkeit", "Viskosimeter":** → Stokes + Kräftegleichgewicht (Gewicht = Auftrieb + Reibung).
+- **Kombinationsaufgaben:** Ausflussgeschwindigkeit + Reichweite eines Strahls (Bernoulli liefert $v$, dann Wurfparabel aus Mechanik I).
+
+<a id="typische-fehler-20"></a>
+## Typische Fehler
+
+1. Bernoulli wird verwendet, obwohl Reibung explizit erwähnt ist (Fehler: Voraussetzung ignoriert).
+2. Verwechslung von $A_1v_1=A_2v_2$ (Kontinuität, gilt für inkompressibel) mit einer Impuls- oder Energiegleichung.
+3. Vorzeichenfehler bei der Höhenkorrektur in Bernoulli (welcher Punkt liegt höher?).
+4. Vergessen, dass Hagen-Poiseuille nur für **laminare** Strömung gilt — Reynoldszahl nicht geprüft.
+5. Stokes'sches Gesetz mit dem *Radius* statt dem *Durchmesser* verwechseln (Faktor 2 bzw. 4 Fehler in Endergebnis).
+
+<a id="verbindungen-21"></a>
+## Verbindungen
+
+- Die **Kontinuitätsgleichung** (Satz 1.1) ist strukturell identisch mit der **Ladungserhaltung** in der Elektrodynamik (Kapitel 9, $\operatorname{div}\vec j = -\dot\rho$) — dasselbe mathematische Muster (lokale Erhaltungsgröße + Fluss) taucht dort wieder auf.
+- Der **Satz von Gauß**, hier zum ersten Mal verwendet, ist zentrales Werkzeug in der **Elektrostatik** (Gauß'sches Gesetz, Kapitel 6).
+- Die **Reynoldszahl** und das Konzept "empirischer dimensionsloser Kennzahlen" begegnet uns in ähnlicher Form nicht wieder in diesem Kurs, ist aber grundlegend für weiterführende Strömungslehre-Vorlesungen.
+- Die **Viskosität** als Transportphänomen (Impulstransport) wird in Kapitel 3 systematisch neben Wärmeleitung und Diffusion eingeordnet.
+
+<a id="zusammenfassung-9"></a>
+## Zusammenfassung
+
+- Fluide werden durch Felder $\vec v(\vec r,t)$, $\rho(\vec r,t)$, $p(\vec r,t)$ beschrieben.
+- **Kontinuitätsgleichung** $\operatorname{div}\vec j = -\dot\rho$: Massenerhaltung, für inkompressible Strömung $Av=\text{const}$.
+- **Bernoulli-Gleichung** $p+\rho gh+\tfrac12\rho v^2=\text{const}$: Energieerhaltung entlang eines Stromfadens, nur für reibungsfreie, stationäre, inkompressible Strömung.
+- **Hagen-Poiseuille**: $\dot V = \dfrac{\pi\Delta p R^4}{8\eta\ell}$ für laminare Rohrströmung.
+- **Stokes'sches Gesetz**: $F_W=6\pi\eta r\bar v$ für schleichende Umströmung einer Kugel.
+- **Reynoldszahl** $\mathrm{Re}$ entscheidet laminar vs. turbulent.
+
+---
+
+<a id="kapitel-2-kinetische-gastheorie-und-temperatur"></a>
+# Kapitel 2: Kinetische Gastheorie und Temperatur
+
+<a id="motivation-22"></a>
+## Motivation
+
+Was *ist* Temperatur eigentlich? Im Alltag ist sie eine Zahl auf einem Thermometer. Die kinetische Gastheorie (Bernoulli, Clausius, Maxwell, Boltzmann, 18.–19. Jh.) beantwortet die Frage fundamental: Temperatur ist ein **Maß für die mittlere kinetische Energie** der ungeordneten Teilchenbewegung. Diese Erkenntnis ist einer der großen Triumphe der Physik des 19. Jahrhunderts, weil sie eine makroskopische Größe (Temperatur, messbar mit einem Thermometer) auf mikroskopische Mechanik (Newtonsche Stöße von Molekülen) zurückführt — und damit den Übergang von der klassischen Mechanik zur statistischen Physik einleitet.
+
+Das Problem, das gelöst werden musste: Ein Mol Gas enthält $N_A\approx 6{,}022\cdot 10^{23}$ Teilchen. Man kann unmöglich $10^{23}$ Bewegungsgleichungen lösen. Die Lösung ist, nur *statistische Mittelwerte* zu betrachten (Druck, Temperatur) statt individueller Trajektorien.
+
+<a id="intuition-22"></a>
+## Intuition
+
+Stell dir ein Gas als extrem viele, sehr kleine, elastisch stoßende Kugeln vor, die chaotisch durch einen Behälter fliegen. Der **Druck** entsteht dadurch, dass diese Kugeln ständig gegen die Wand prallen und dabei Impuls übertragen — wie ein Sandstrahl, der gegen eine Fläche trifft, erzeugt viele kleine, schnelle Stöße makroskopisch eine kontinuierlich wirkende Kraft.
+
+Die **Temperatur** ist ein Maß dafür, *wie heftig* diese Teilchen im Mittel herumfliegen. Doppelte Temperatur (in Kelvin) bedeutet doppelte mittlere kinetische Energie pro Freiheitsgrad — nicht doppelte Geschwindigkeit (die wächst nur mit $\sqrt{T}$, weil Energie quadratisch in $v$ eingeht).
+
+Die **Freiheitsgrade** zählen, auf wie viele unabhängige Arten ein Molekül Energie "speichern" kann: ein einzelnes Atom kann sich nur in $x,y,z$ bewegen (3 FG), ein zweiatomiges Molekül kann zusätzlich um zwei Achsen rotieren (2 weitere FG) — man kann sich das wie Schubladen vorstellen, in die thermische Energie "einsortiert" wird, und jede offene Schublade bekommt im Mittel den gleichen Anteil ($\tfrac12 kT$) — das ist der **Gleichverteilungssatz (Äquipartitionstheorem)**.
+
+<a id="formale-definitionen-22"></a>
+## Formale Definitionen
+
+**Definition 2.1 (Ideales Gas — Modellannahmen).**
+Ein ideales Gas besteht aus $N$ identischen Teilchen mit folgenden Eigenschaften:
+1. Punktförmig (Eigenvolumen vernachlässigbar gegenüber dem Behältervolumen).
+2. Keine Wechselwirkung außer bei elastischen Stößen (Wand und untereinander).
+3. Bewegung folgt der klassischen Mechanik.
+
+**Definition 2.2 (Druck, mikroskopisch).**
+Der Druck ist die mittlere Kraft pro Fläche, die durch Teilchenstöße auf eine Wand ausgeübt wird:
+$$p := \frac{\langle F\rangle}{A}.$$
+
+**Definition 2.3 (Freiheitsgrad, FG).**
+Ein Freiheitsgrad ist eine unabhängige Koordinate, in der ein Molekül kinetische (oder potentielle) Energie speichern kann. Für ein punktförmiges Teilchen: 3 Translations-FG. Für ein zweiatomiges Molekül zusätzlich: 2 Rotations-FG (um die zwei Achsen senkrecht zur Verbindungsachse; Rotation um die Verbindungsachse selbst trägt praktisch kein Trägheitsmoment und zählt nicht).
+
+**Definition 2.4 (Absolute Temperatur, kinetisch).**
+Über den Gleichverteilungssatz definiert:
+$$\left\langle \varepsilon_{kin}\right\rangle = \frac{3}{2}k_BT \quad\text{(pro Teilchen, nur Translation)},$$
+mit der **Boltzmann-Konstante** $k_B = 1{,}38\cdot10^{-23}\,\text{J/K}$.
+
+**Definition 2.5 (Ideale Gasgleichung).**
+$$pV = Nk_BT = nRT,$$
+mit Stoffmenge $n$ (in mol; **hier bewusst $n$ statt $\nu$ oder $v$ verwendet, um Verwechslung mit der Geschwindigkeit zu vermeiden — siehe Fehlerkorrektur aus der Mitschrift**), universeller Gaskonstante $R = 8{,}31\,\text{J}/(\text{mol}\,\text{K})$, und $R = N_A k_B$.
+
+**Definition 2.6 (Innere Energie eines idealen Gases).**
+$$U := \sum_{i=1}^N \varepsilon_{kin,i} + \sum \varepsilon_{pot,i} = N\cdot f\cdot\tfrac12 k_BT = n\cdot f\cdot\tfrac12 RT,$$
+wobei $f$ die Anzahl der Freiheitsgrade pro Molekül ist (für ideale Gase ist $\varepsilon_{pot}=0$, da keine Wechselwirkung).
+
+**Definition 2.7 (Maxwell-Boltzmann-Geschwindigkeitsverteilung).**
+Die Wahrscheinlichkeitsdichte, ein Teilchen mit Geschwindigkeitsbetrag $v=|\vec v|$ zu finden:
+$$h(v)\, dv = 4\pi\left(\frac{m}{2\pi k_BT}\right)^{3/2} v^2\, e^{-\frac{mv^2}{2k_BT}}\, dv.$$
+
+<a id="eigenschaften-18"></a>
+## Eigenschaften
+
+| Größe | Formel | Bedeutung |
+|---|---|---|
+| Wahrscheinlichste Geschwindigkeit | $v_w = \sqrt{2k_BT/m}$ | Maximum von $h(v)$ |
+| Mittlere Geschwindigkeit | $\langle v\rangle = \sqrt{8k_BT/(\pi m)}$ | Mittelwert über $h(v)$ |
+| Quadratisch gemittelte Geschwindigkeit | $\sqrt{\langle v^2\rangle} = \sqrt{3k_BT/m}$ | Geht direkt in $\langle\varepsilon_{kin}\rangle$ ein |
+| $\langle v^2\rangle > \langle v\rangle^2$ | stets | Cauchy-Schwarz / Varianz $\geq 0$ |
+| $f=3$ | einatomiges Gas (Edelgase) | nur Translation |
+| $f=5$ | zweiatomiges Gas bei mittleren $T$ | 3 Translation + 2 Rotation |
+| $f=6$ (oder mehr) | zweiatomiges Gas bei hohem $T$ | zusätzlich Vibrations-FG (2, da kinetisch+potentiell) |
+
+<a id="sätze-18"></a>
+## Sätze
+
+<a id="satz-21-kinetische-druckformel"></a>
+### Satz 2.1 (Kinetische Druckformel)
+
+**Aussage:** $$pV = \frac{2}{3}N\langle\varepsilon_{kin}\rangle = \frac13 Nm\langle v^2\rangle.$$
+
+**Voraussetzungen:** ideales Gas (Modellannahmen 1–3), isotrope Geschwindigkeitsverteilung (kein bevorzugter Richtung).
+
+**Bedeutung:** Diese Formel *ist* die Brücke zwischen Mechanik (einzelne Stöße) und Thermodynamik (makroskopischer Druck).
+
+**Intuition:** Druck ist "gemittelter Impulsübertrag pro Zeit und Fläche" — die Formel zählt systematisch, wie viele Teilchen pro Zeit auf ein Wandstück treffen und wie viel Impuls sie jeweils übertragen.
+
+<a id="beweis-von-satz-21"></a>
+### Beweis von Satz 2.1
+
+**Beweisstil:** Konstruktiver Beweis durch explizite Stoßbilanz (Standardherleitung der kinetischen Gastheorie).
+
+Betrachte ein Teilchen der Masse $m$ mit Geschwindigkeitskomponente $v_x$, das elastisch von einer Wand (senkrecht zur $x$-Achse) reflektiert wird. Der Impulsübertrag pro Stoß ist $\Delta p_x = 2mv_x$ (Impuls kehrt sich um).
+
+Die Zeit zwischen zwei Stößen desselben Teilchens gegen dieselbe Wand (Behälterlänge $L$ in $x$-Richtung) ist $\Delta t = 2L/v_x$ (Hin- und Rückweg). Die mittlere Kraft *eines* Teilchens auf die Wand ist
+$$F_1 = \frac{\Delta p_x}{\Delta t} = \frac{2mv_x}{2L/v_x} = \frac{mv_x^2}{L}.$$
+Für $N$ Teilchen mit im Mittel gleichem $\langle v_x^2\rangle$:
+$$F = N\frac{m\langle v_x^2\rangle}{L}.$$
+Wegen Isotropie ist $\langle v_x^2\rangle = \langle v_y^2\rangle = \langle v_z^2\rangle = \tfrac13\langle v^2\rangle$ (da $v^2=v_x^2+v_y^2+v_z^2$ und alle drei Richtungen gleichwertig sind). Mit der Wandfläche $A$ und Volumen $V=LA$:
+$$p = \frac{F}{A} = \frac{Nm\langle v_x^2\rangle}{LA} = \frac{Nm\langle v^2\rangle}{3V} \;\Longrightarrow\; pV = \frac13 Nm\langle v^2\rangle = \frac23 N\left(\tfrac12 m\langle v^2\rangle\right) = \frac23 N\langle\varepsilon_{kin}\rangle.\ \blacksquare$$
+
+<a id="satz-22-gleichverteilungssatz-äquipartitionstheorem"></a>
+### Satz 2.2 (Gleichverteilungssatz / Äquipartitionstheorem)
+
+**Aussage:** Im thermischen Gleichgewicht entfällt auf jeden quadratischen Freiheitsgrad im Mittel die Energie $\tfrac12 k_BT$:
+$$U = N\cdot f\cdot\tfrac12 k_BT.$$
+
+**Voraussetzungen:** thermisches Gleichgewicht, klassische (nicht-quantisierte) Betrachtung der Freiheitsgrade.
+
+**Bedeutung:** Verallgemeinert Satz 2.1 (der nur Translation, $f=3$, behandelt) auf beliebige Moleküle mit Rotation und Vibration.
+
+**Beweisstil:** Wird in dieser Vorlesung *nicht* streng bewiesen (der vollständige Beweis benötigt die Boltzmann-Statistik / kanonisches Ensemble aus der statistischen Physik). Wir übernehmen ihn als empirisch/statistisch begründetes Postulat — dies ist explizit zu kennzeichnen, da ein Klausurbeweis hierzu nicht erwartet werden sollte.
+
+**Konsequenz:** Aus $U=nf\tfrac12 RT$ und $U=nC_VT$ (Def. Kapitel 4) folgt sofort $C_V = \tfrac f2 R$ — eine der wichtigsten Formeln für die Wärmelehre-Kapitel.
+
+<a id="satz-23-kombination-von-gasgesetzen-zur-idealen-gasgleichung"></a>
+### Satz 2.3 (Kombination von Gasgesetzen zur idealen Gasgleichung)
+
+**Aussage:** $pV=nRT$ vereinigt drei historisch getrennt entdeckte Gesetze: Boyle-Mariotte ($pV=\text{const}$ bei $T=\text{const}$), Gay-Lussac ($p\propto T$ bei $V=\text{const}$), Charles ($V\propto T$ bei $p=\text{const}$).
+
+**Beweisidee:** Aus Satz 2.1 und Definition 2.4 folgt direkt $pV = \tfrac23 N\cdot\tfrac32 k_BT = Nk_BT$, was bei fixiertem $N$ genau die drei Spezialfälle reproduziert, je nachdem welche Größe konstant gehalten wird.
+
+<a id="algorithmen-10"></a>
+## Algorithmen
+
+**"Rezept" zur Lösung von Gastheorie-Aufgaben**
+
+- **Motivation:** Viele Aufgaben verlangen den Wechsel zwischen mikroskopischer Beschreibung ($v$, $\varepsilon_{kin}$ einzelner Teilchen) und makroskopischer ($p$, $V$, $T$, $U$) — ein systematisches Vorgehen verhindert Verwechslungen.
+- **Pseudocode:**
+```
+EINGABE: gegebene Größen (z. B. T, p, V, m, N, f)
+1. WENN T gesucht UND (v oder ε_kin gegeben):
+     nutze ⟨ε_kin⟩ = (3/2) k_B T  (nur Translation!)
+2. WENN p, V, n, T verknüpft werden sollen:
+     nutze pV = nRT
+3. WENN U gesucht:
+     bestimme zuerst f (aus Molekülstruktur/Temperaturbereich),
+     dann U = n f (1/2) R T
+4. WENN Geschwindigkeitsverteilung gefragt:
+     unterscheide v_w, ⟨v⟩, sqrt(⟨v²⟩) — NICHT verwechseln!
+AUSGABE: gesuchte Größe
+```
+- **Korrektheitsidee:** Jeder Schritt basiert auf einer separat bewiesenen/begründeten Beziehung (Sätze 2.1–2.3).
+- **Typische Fehler:** $f$ falsch bestimmt (z. B. bei zweiatomigen Gasen bei sehr tiefer Temperatur werden Rotationsfreiheitsgrade "eingefroren" — quantenmechanischer Effekt, den das klassische Modell nicht erfasst); Verwechslung der drei charakteristischen Geschwindigkeiten.
+
+<a id="beispiele-20"></a>
+## Beispiele
+
+**Beispiel 1 (leicht):** Wie groß ist $\langle\varepsilon_{kin}\rangle$ eines Gasteilchens bei $T=300\,\text{K}$?
+*Lösung:* $\langle\varepsilon_{kin}\rangle = \tfrac32 k_BT = 1{,}5\cdot1{,}38\cdot10^{-23}\cdot300 \approx 6{,}2\cdot10^{-21}\,\text{J} \approx 0{,}039\,\text{eV}$.
+
+**Beispiel 2 (leicht):** Berechne $\sqrt{\langle v^2\rangle}$ für Stickstoff ($N_2$, $m=4{,}65\cdot10^{-26}\,\text{kg}$) bei $300\,\text{K}$.
+*Lösung:* $\sqrt{\langle v^2\rangle}=\sqrt{3k_BT/m} = \sqrt{3\cdot1{,}38\cdot10^{-23}\cdot300/4{,}65\cdot10^{-26}} \approx 517\,\text{m/s} \approx 1850\,\text{km/h}$.
+
+**Beispiel 3 (mittel):** Ein ideales einatomiges Gas ($f=3$) mit $n=2\,\text{mol}$ wird von $300\,\text{K}$ auf $400\,\text{K}$ erwärmt. Wie groß ist $\Delta U$?
+*Lösung:* $\Delta U = nf\tfrac12 R\Delta T = 2\cdot3\cdot0{,}5\cdot8{,}31\cdot100 \approx 2493\,\text{J}$.
+
+**Beispiel 4 (mittel):** Zwei Gase im thermischen Gleichgewicht ($T_A=T_B$) — Gas A besteht aus schweren, Gas B aus leichten Teilchen. Welches hat die höhere mittlere Geschwindigkeit?
+*Lösung:* Aus $\tfrac12 m_A\langle v_A^2\rangle = \tfrac12 m_B\langle v_B^2\rangle = \tfrac32 k_BT$ folgt $\langle v^2\rangle \propto 1/m$ — die leichteren Teilchen (B) sind im Mittel schneller, obwohl beide Gase dieselbe mittlere *Energie* haben.
+
+**Beispiel 5 (schwer):** Bestimme das Verhältnis $\langle v\rangle/v_w$ aus der Maxwell-Boltzmann-Verteilung und interpretiere es.
+*Lösung:* $\dfrac{\langle v\rangle}{v_w} = \dfrac{\sqrt{8k_BT/(\pi m)}}{\sqrt{2k_BT/m}} = \sqrt{\dfrac{4}{\pi}} \approx 1{,}128$ — die mittlere Geschwindigkeit liegt (wegen der asymmetrischen, rechtsschiefen Verteilung) etwas über der wahrscheinlichsten.
+
+<a id="gegenbeispiele-20"></a>
+## Gegenbeispiele
+
+- Bei **sehr tiefen Temperaturen** versagt die klassische Gleichverteilung für Rotations-/Vibrationsfreiheitsgrade — diese werden quantenmechanisch "eingefroren" (die thermische Energie $k_BT$ reicht nicht aus, um den ersten angeregten Rotations-/Vibrationszustand zu erreichen). $f$ ist dann effektiv kleiner als der klassische Wert.
+- Bei **sehr hohen Dichten oder tiefen Temperaturen nahe der Verflüssigung** versagt das ideale Gasmodell komplett (Eigenvolumen und Wechselwirkungen werden relevant — reales Gas, z. B. van-der-Waals-Gleichung, hier nicht behandelt).
+- Für **relativistische Geschwindigkeiten** (extrem hohe $T$) ist $\varepsilon_{kin}=\tfrac12 mv^2$ nicht mehr korrekt.
+
+<a id="typische-klausuraufgaben-21"></a>
+## Typische Klausuraufgaben
+
+- Umrechnung zwischen $T$, $\langle\varepsilon_{kin}\rangle$, $\langle v^2\rangle$ — Erkennungsmerkmal: Angabe einer Temperatur und Frage nach einer Geschwindigkeit (oder umgekehrt).
+- Bestimmung von $f$ aus der Molekülstruktur und anschließende Berechnung von $U$ oder $C_V$ — wird oft als Vorbereitung für Kapitel 4/5-Aufgaben gestellt.
+- Vergleichsaufgaben zwischen zwei Gasen unterschiedlicher Masse bei gleicher Temperatur (Strategie: immer über $\langle\varepsilon_{kin}\rangle$ gehen, nie direkt Geschwindigkeiten vergleichen).
+
+<a id="typische-fehler-21"></a>
+## Typische Fehler
+
+1. $\langle\varepsilon_{kin}\rangle = \tfrac32 k_BT$ wird mit der *gesamten* inneren Energie pro Teilchen verwechselt (das gilt nur für $f=3$, einatomige Gase!).
+2. $n$ (Stoffmenge) und $v$/$\nu$ (Geschwindigkeit) werden notationsbedingt verwechselt — in diesem Skript daher konsequent $n$ für Stoffmenge reserviert.
+3. Bei zweiatomigen Gasen wird die Rotation um die Molekülachse selbst mitgezählt (falsch — deren Trägheitsmoment ist vernachlässigbar).
+4. $v_w$, $\langle v\rangle$, $\sqrt{\langle v^2\rangle}$ werden durcheinandergebracht (sie unterscheiden sich um Faktoren nahe 1, aber nicht exakt 1!).
+
+<a id="verbindungen-22"></a>
+## Verbindungen
+
+- $pV=nRT$ ist die Grundgleichung für **alle** Zustandsänderungen in Kapitel 4 (isochor, isobar, isotherm, adiabatisch).
+- $C_V = \tfrac f2 R$ (aus Satz 2.2) wird in Kapitel 4 zur zentralen Größe für Enthalpie, Adiabatenexponent $\kappa=C_p/C_V$.
+- Die **freie Bewegung der Gasteilchen** ist die mikroskopische Grundlage der **Diffusion** (Kapitel 3) und der **elektrischen Leitfähigkeit in Gasen** (Ladungsträgerbewegung, später in Kapitel 8).
+- Das Konzept "makroskopische Größe = statistischer Mittelwert vieler mikroskopischer Freiheitsgrade" kehrt bei der **Entropie** (Kapitel 5, Boltzmann-Formel $S=k_B\ln W$) in verallgemeinerter Form wieder.
+
+<a id="zusammenfassung-10"></a>
+## Zusammenfassung
+
+- Ideales Gas: punktförmige, nicht wechselwirkende Teilchen.
+- $pV = \tfrac23 N\langle\varepsilon_{kin}\rangle = Nk_BT = nRT$.
+- $\langle\varepsilon_{kin}\rangle = \tfrac32 k_BT$ (nur Translation); allgemein $U = n f \tfrac12 RT$ (Gleichverteilungssatz).
+- Freiheitsgrade $f$: 3 (einatomig), 5 (zweiatomig, Translation+Rotation), mehr bei hoher $T$ (Vibration).
+- Maxwell-Boltzmann-Verteilung beschreibt die statistische Verteilung der Geschwindigkeiten; $v_w<\langle v\rangle<\sqrt{\langle v^2\rangle}$.
+
+---
+
+<a id="kapitel-3-transportphänomene"></a>
+# Kapitel 3: Transportphänomene
+
+<a id="motivation-23"></a>
+## Motivation
+
+Bisher haben wir Gase/Flüssigkeiten im *Gleichgewicht* betrachtet. Was passiert aber, wenn das System *nicht* im Gleichgewicht ist — z. B. wenn irgendwo eine höhere Konzentration, Temperatur oder Geschwindigkeit herrscht als anderswo? Die Natur "will" Gleichgewicht herstellen, und der Weg dahin führt über **Transportprozesse**: Diffusion (Stofftransport), Wärmeleitung (Energietransport), Konvektion (Massentransport durch Auftrieb) und, wie in Kapitel 1 gesehen, Viskosität (Impulstransport). Diese Prozesse folgen alle demselben mathematischen Muster: **Fluss proportional zu einem Gradienten** — ein zentrales, wiederkehrendes Prinzip der Physik.
+
+<a id="intuition-23"></a>
+## Intuition
+
+Stell dir eine Tinte vor, die in ein Glas Wasser tropft. Ohne Rühren breitet sie sich trotzdem langsam aus — das ist Diffusion. Der Grund ist rein statistisch: Dort, wo viel Tinte ist, gibt es (durch die zufällige thermische Bewegung der Moleküle) mehr Moleküle, die *zufällig* nach außen wandern, als von außen *zufällig* hineinwandern. Es braucht keine "Kraft", die die Tinte auseinandertreibt — nur die schlichte Tatsache, dass mehr Teilchen dort sind, wo mehr Teilchen sind, und die Zufallsbewegung diesen Unterschied im Mittel ausgleicht.
+
+Wärmeleitung ist im Wesentlichen dasselbe Prinzip, nur dass statt Teilchenzahl die *kinetische Energie* transportiert wird: schnelle (heiße) Moleküle stoßen mit langsamen (kalten) zusammen und geben dabei im Mittel Energie ab.
+
+<a id="formale-definitionen-23"></a>
+## Formale Definitionen
+
+**Definition 3.1 (Teilchenstromdichte, Fick'sches Gesetz — 1. Fick'sches Gesetz).**
+$$\vec j = -D\,\nabla n(\vec r), \qquad [D] = \frac{\text{m}^2}{\text{s}},$$
+mit Konzentration (Teilchendichte) $n(\vec r)$ und Diffusionskoeffizient $D$.
+
+**Definition 3.2 (2. Fick'sches Gesetz).**
+Kombiniert man Definition 3.1 mit der Kontinuitätsgleichung (Kapitel 1, Satz 1.1, angewendet auf Teilchenzahl statt Masse):
+$$\frac{\partial n}{\partial t} = D\,\Delta n, \qquad \Delta = \nabla^2 \ \text{(Laplace-Operator)}.$$
+
+**Definition 3.3 (Wärmestromdichte, Fourier'sches Gesetz).**
+$$\vec j_E = -\lambda\, \nabla T, \qquad [\lambda] = \frac{\text{W}}{\text{m}\,\text{K}},$$
+mit Wärmeleitfähigkeit $\lambda$.
+
+**Definition 3.4 (Wiedemann-Franz-Gesetz).**
+Für Metalle (Ladungstransport und Wärmetransport durch dieselben freien Elektronen):
+$$\frac{\lambda}{\sigma} = a\,T, \qquad a = \frac{\pi^2}{3}\left(\frac{k_B}{e}\right)^2 \approx 2{,}45\cdot 10^{-8}\ \frac{\text{W}\Omega}{\text{K}^2}$$
+(Lorenz-Zahl; $\sigma$ elektrische Leitfähigkeit, vgl. Kapitel 8).
+
+<a id="eigenschaften-19"></a>
+## Eigenschaften
+
+| Prozess | Transportierte Größe | Gesetz | Triebkraft |
+|---|---|---|---|
+| Diffusion | Teilchenzahl/Masse | 1./2. Fick'sches Gesetz | Konzentrationsgradient $\nabla n$ |
+| Wärmeleitung | Energie | Fourier'sches Gesetz | Temperaturgradient $\nabla T$ |
+| Viskosität (Kap. 1) | Impuls | Newtonsches Reibungsgesetz | Geschwindigkeitsgradient $\nabla v$ |
+| Konvektion | Masse (makroskopisch) | kein einfaches lineares Gesetz | Dichteunterschied + Gravitation |
+
+Alle drei linearen Transportgesetze (Diffusion, Wärmeleitung, Viskosität) haben dieselbe Struktur: **Fluss = −(Transportkoeffizient) × Gradient(intensive Größe)**. Dieses Muster wird uns in Kapitel 8 (Ohm'sches Gesetz, $\vec j = \sigma\vec E$, hier ist $\vec E = -\nabla\phi$!) exakt wiederbegegnen.
+
+<a id="sätze-19"></a>
+## Sätze
+
+<a id="satz-31-2-ficksches-gesetz-aus-kontinuität-1-fickschem-gesetz"></a>
+### Satz 3.1 (2. Fick'sches Gesetz aus Kontinuität + 1. Fick'schem Gesetz)
+
+**Aussage:** $\dfrac{\partial n}{\partial t} = D\Delta n$.
+
+**Voraussetzungen:** $D$ räumlich konstant, keine Quellen/Senken von Teilchen (keine chemische Reaktion).
+
+**Beweis (Beweisstil: direkte Substitution).**
+Die Kontinuitätsgleichung für die Teilchendichte lautet analog zu Satz 1.1:
+$$\operatorname{div}\vec j = -\frac{\partial n}{\partial t}.$$
+Einsetzen von $\vec j = -D\nabla n$ (Definition 3.1):
+$$\operatorname{div}(-D\nabla n) = -\frac{\partial n}{\partial t} \;\Longrightarrow\; -D\,\operatorname{div}(\nabla n) = -\frac{\partial n}{\partial t} \;\Longrightarrow\; \frac{\partial n}{\partial t} = D\,\Delta n. \qquad\blacksquare$$
+
+**Bedeutung:** Dies ist eine partielle Differentialgleichung (Diffusionsgleichung, mathematisch identisch mit der Wärmeleitungsgleichung — s. u.), deren Lösungen die zeitliche Ausbreitung eines Konzentrationsprofils beschreiben.
+
+<a id="satz-32-analogie-diffusionsgleichung-wärmeleitungsgleichung"></a>
+### Satz 3.2 (Analogie Diffusionsgleichung — Wärmeleitungsgleichung)
+
+**Aussage:** Setzt man in der Herleitung von Satz 3.1 statt $n$ die Größe "Energiedichte" bzw. (bei konstanter spezifischer Wärme $c$ und Dichte $\rho$) die Temperatur $T$ ein, erhält man die formal identische Gleichung
+$$\frac{\partial T}{\partial t} = \frac{\lambda}{\rho c}\,\Delta T =: \kappa_{th}\,\Delta T$$
+mit der Temperaturleitfähigkeit $\kappa_{th}$.
+
+**Bedeutung:** Diffusion und Wärmeleitung sind mathematisch **dieselbe** Gleichung mit unterschiedlicher physikalischer Interpretation — ein Paradebeispiel dafür, wie Physik durch abstrakte, wiederverwendbare mathematische Strukturen enorm an Eleganz gewinnt.
+
+<a id="algorithmen-11"></a>
+## Algorithmen
+
+**Lösungsstrategie für Transportaufgaben**
+- **Motivation:** Diffusions-, Wärmeleitungs- und Viskositätsaufgaben werden oft verwechselt, weil sie strukturell gleich aussehen.
+- **Pseudocode:**
+```
+EINGABE: Transportproblem (Was wird transportiert? Wodurch?)
+1. Identifiziere die transportierte Größe:
+   Teilchen/Masse → Diffusion (Fick)
+   Wärme/Energie  → Wärmeleitung (Fourier)
+   Impuls         → Viskosität (Newton, Kapitel 1)
+2. Identifiziere den Gradienten (Konzentration, Temperatur, Geschwindigkeit)
+3. Wende j = -K * grad(Größe) an (K = D, λ bzw. η)
+4. WENN stationär (∂/∂t = 0): j = const, oft linear approximierbar
+   (j ≈ K * ΔGröße / Δx für ebene Geometrie)
+5. WENN zeitabhängig: 2. Fick'sches Gesetz / Wärmeleitungsgleichung lösen
+AUSGABE: Stromdichte, Konzentrations-/Temperaturprofil
+```
+- **Typische Fehler:** Vorzeichen vergessen (Fluss ist *entgegen* dem Gradienten gerichtet — von hoch nach tief); Verwechslung von $D$, $\lambda$, $\eta$ (unterschiedliche Einheiten!).
+
+<a id="beispiele-21"></a>
+## Beispiele
+
+**Beispiel 1 (leicht):** Eine Membran trennt zwei Bereiche mit $n_1=10^{20}\,\text{m}^{-3}$ und $n_2=10^{19}\,\text{m}^{-3}$, Abstand $\Delta x = 1\,\text{mm}$, $D=10^{-9}\,\text{m}^2/\text{s}$. Bestimme $j$.
+*Lösung:* $j \approx D\dfrac{n_1-n_2}{\Delta x} = 10^{-9}\cdot\dfrac{9\cdot10^{19}}{10^{-3}} = 9\cdot10^{7}\,\text{m}^{-2}\text{s}^{-1}$.
+
+**Beispiel 2 (mittel):** Eine Wand ($\lambda = 0{,}8\,\text{W/(mK)}$, Dicke $d=20\,\text{cm}$) trennt Innen ($20\,°\text{C}$) von Außen ($0\,°\text{C}$). Bestimme den Wärmestrom pro $\text{m}^2$.
+*Lösung:* $j_E = \lambda\dfrac{\Delta T}{d} = 0{,}8\cdot\dfrac{20}{0{,}2} = 80\,\text{W/m}^2$.
+
+**Beispiel 3 (schwer):** Zeige, dass eine Gauß-Verteilung $n(x,t)=\frac{N_0}{\sqrt{4\pi Dt}}e^{-x^2/(4Dt)}$ die Diffusionsgleichung (1D: $\partial_tn=D\partial_x^2n$) löst.
+*Lösung:* Direktes Differenzieren (Rechenaufgabe) — Ableitung nach $t$ und zweite Ableitung nach $x$ einsetzen, beide Seiten stimmen überein. (Wird hier als Übung empfohlen, nicht vollständig vorgerechnet, da reine Rechentechnik ohne neue Konzepte.)
+
+<a id="gegenbeispiele-21"></a>
+## Gegenbeispiele
+
+- Bei **hoher Konzentration/starken Gradienten** kann $D$ selbst konzentrationsabhängig werden (nichtlineare Diffusion) — Fick's Gesetz ist dann nur noch näherungsweise gültig.
+- **Konvektion** lässt sich NICHT durch ein einfaches lineares Fluss-Gradient-Gesetz beschreiben, da sie makroskopischen Massentransport durch Auftrieb involviert (keine einfache Proportionalität zu einem Gradienten wie bei den anderen drei Prozessen).
+
+<a id="typische-klausuraufgaben-22"></a>
+## Typische Klausuraufgaben
+
+- Stationäre Wärmeleitung durch mehrschichtige Wände (Reihenschaltung von "thermischen Widerständen" $d/\lambda$ — direkte Analogie zu elektrischen Widerständen, Kapitel 8!).
+- Abschätzung von Diffusionszeiten über $\Delta x \sim \sqrt{Dt}$ (aus der Struktur der Diffusionsgleichung).
+- Osmotischer Druck ($\pi_{osm} = \frac{n}{V}RT$, van't-Hoff'sches Gesetz) bei halbdurchlässigen Membranen.
+
+<a id="typische-fehler-22"></a>
+## Typische Fehler
+
+1. Fourier'sches und Fick'sches Gesetz werden inhaltlich verwechselt (unterschiedliche transportierte Größe).
+2. Vorzeichen des Gradienten falsch gesetzt (Fluss fließt von hoher zu niedriger Konzentration/Temperatur, das Minuszeichen ist essenziell).
+3. Stationärer Fall (linear approximiert) wird auf zeitabhängige Probleme angewendet, wo eigentlich die volle Diffusionsgleichung nötig wäre.
+
+<a id="verbindungen-23"></a>
+## Verbindungen
+
+- Direkte mathematische Analogie zu **Viskosität** (Kap. 1) und **Ohm'schem Gesetz** (Kap. 8, $\vec j=\sigma\vec E=-\sigma\nabla\phi$) — alle drei sind Spezialfälle des Musters "Fluss $\propto$ Gradient einer intensiven Größe".
+- Die thermischen Widerstände $d/\lambda$ bei Reihenschaltung von Wänden sind strukturell identisch zu elektrischen Reihenwiderständen (Kirchhoff'sche Regeln, Kap. 8).
+- Grundlage für ein tieferes Verständnis, warum **Wärmeleitung** in Kapitel 4/5 als eigener Mechanismus des Energieaustauschs (neben Arbeit) eine Rolle spielt.
+
+<a id="zusammenfassung-11"></a>
+## Zusammenfassung
+
+- Transportprozesse folgen dem Muster Fluss $=-K\cdot\nabla(\text{Größe})$.
+- Diffusion: $\vec j=-D\nabla n$, 2. Fick'sches Gesetz $\partial_tn=D\Delta n$.
+- Wärmeleitung: $\vec j_E=-\lambda\nabla T$, mathematisch identische Differentialgleichung wie Diffusion.
+- Wiedemann-Franz-Gesetz verknüpft Wärme- und elektrische Leitfähigkeit in Metallen.
+- Konvektion ist kein lineares Gradientengesetz, sondern makroskopischer Auftriebstransport.
+
+---
+
+<a id="kapitel-4-wärme-arbeit-und-der-1-hauptsatz-der-thermodynamik"></a>
+# Kapitel 4: Wärme, Arbeit und der 1. Hauptsatz der Thermodynamik
+
+<a id="motivation-24"></a>
+## Motivation
+
+Im 19. Jahrhundert war eine der zentralen offenen Fragen: Ist Wärme eine eigenständige "Substanz" (Caloricum-Theorie) oder eine Form von Energie? Joule zeigte experimentell (Rührwerk-Experiment), dass mechanische Arbeit vollständig in Wärme umgewandelt werden kann, mit einem festen Umrechnungsfaktor. Das führte zur Erkenntnis: **Wärme ist eine Form von Energieübertragung**, keine Substanz. Der 1. Hauptsatz ist nichts anderes als der Energieerhaltungssatz, erweitert um Wärme als zusätzliche "Buchungsposition".
+
+<a id="intuition-24"></a>
+## Intuition
+
+Stell dir die innere Energie $U$ eines Gases als ein Bankkonto vor. Es gibt zwei Wege, das Konto zu verändern: **Einzahlungen/Abhebungen durch Wärme** ($Q$, wie eine Überweisung von außen) und **Einzahlungen/Abhebungen durch Arbeit** ($W$, wie physische Bargeldübergabe). Der Kontostand selbst ($U$) kennt nicht, auf welchem Weg das Geld hereinkam — nur die Summe zählt. Das ist der Kern des 1. Hauptsatzes: $U$ ist eine **Zustandsgröße** (hängt nur vom aktuellen Zustand ab), während $Q$ und $W$ **Prozessgrößen** sind (hängen vom Weg ab, wie man dorthin kam).
+
+<a id="formale-definitionen-24"></a>
+## Formale Definitionen
+
+**Definition 4.1 (Volumenarbeit).**
+Bei quasistatischer Volumenänderung $dV$ gegen den Außendruck $p$ verrichtet das Gas die Arbeit
+$$\delta W_{vom\ Gas} = p\, dV.$$
+Die *am* Gas verrichtete Arbeit ist entsprechend $\delta W = -p\,dV$.
+
+**Definition 4.2 (Vorzeichenkonvention — hier vereinheitlicht).**
+$$dU = \delta Q - p\, dV,$$
+mit $\delta Q>0$: dem Gas wird Wärme zugeführt; $p\,dV>0$: das Gas leistet Arbeit (dehnt sich aus) und $U$ sinkt entsprechend. **(Diese Konvention wird im gesamten Skript konsistent verwendet — im Gegensatz zur uneinheitlichen Schreibweise der Mitschrift.)**
+
+**Definition 4.3 (Wärmekapazität).**
+$$C := \frac{1}{n}\frac{\delta Q}{dT}, \qquad [C] = \frac{\text{J}}{\text{mol}\,\text{K}}.$$
+Wichtig: $C$ ist **prozessabhängig** — man unterscheidet $C_V$ (bei konstantem Volumen) und $C_p$ (bei konstantem Druck).
+
+**Definition 4.4 (Enthalpie).**
+$$H := U + pV.$$
+
+**Definition 4.5 (Adiabatenexponent).**
+$$\kappa := \frac{C_p}{C_V}.$$
+
+<a id="eigenschaften-20"></a>
+## Eigenschaften
+
+| Größe | Zustandsgröße? | Bedeutung |
+|---|---|---|
+| $U$ | ja | hängt nur vom momentanen Zustand $(p,V,T)$ ab |
+| $H$ | ja | wie $U$, aber praktisch für isobare Prozesse |
+| $Q$ | **nein** | hängt vom Weg/Prozess ab |
+| $W$ | **nein** | hängt vom Weg/Prozess ab |
+| $C_V,\ C_p$ | (Materialgröße) | $C_p > C_V$ stets (siehe Satz 4.2) |
+
+<a id="sätze-20"></a>
+## Sätze
+
+<a id="satz-41-1-hauptsatz-der-thermodynamik"></a>
+### Satz 4.1 (1. Hauptsatz der Thermodynamik)
+
+**Aussage:** $dU = \delta Q - p\,dV$. Für ein ideales Gas gilt zusätzlich $U=U(T)$ *nur* (unabhängig von $V$!), also $dU = nC_V\,dT$ für jeden Prozess.
+
+**Voraussetzungen:** geschlossenes System (kein Stoffaustausch), quasistatischer Prozess (Definition der Volumenarbeit setzt Gleichgewichtsdruck voraus).
+
+**Bedeutung:** Energieerhaltungssatz, erweitert um Wärme. Fundamentalste Gleichung der gesamten Thermodynamik.
+
+**Intuition:** Es gibt keine "Energiequelle aus dem Nichts" — jede Änderung der inneren Energie muss durch Wärmeaustausch mit der Umgebung oder durch am/vom System verrichtete Arbeit erklärt werden.
+
+**Konsequenz — Perpetuum mobile 1. Art:** Maschinen, die dauerhaft mehr Arbeit leisten als $dU-dQ$ zulässt (also Energie "erschaffen"), sind unmöglich.
+
+<a id="satz-42-c_p-c_v-r-robert-mayer-beziehung"></a>
+### Satz 4.2 ($C_p - C_V = R$, "Robert-Mayer-Beziehung")
+
+**Aussage:** Für ein ideales Gas gilt $C_p - C_V = R$, also stets $C_p>C_V$.
+
+**Voraussetzungen:** ideales Gas ($pV=nRT$, $U=U(T)$ allein).
+
+**Bedeutung:** Bei konstantem Druck muss zusätzlich zur Temperaturerhöhung auch noch Ausdehnungsarbeit gegen den Außendruck verrichtet werden — das kostet zusätzliche Wärme im Vergleich zum isochoren Prozess.
+
+<a id="beweis-von-satz-42"></a>
+### Beweis von Satz 4.2
+
+**Beweisstil:** Direkter Beweis über die Definitionen von $C_V$, $C_p$ und den 1. Hauptsatz.
+
+Bei konstantem Volumen ist $dV=0$, also nach Def. 4.2: $dU = \delta Q \Rightarrow C_V = \dfrac1n\dfrac{dU}{dT}\Big|_{V} = \dfrac1n\dfrac{dU}{dT}$ (da für ideales Gas $U=U(T)$ ohnehin nur von $T$ abhängt, ist die Bedingung "bei konstantem $V$" hier automatisch erfüllt für die Ableitung).
+
+Bei konstantem Druck ist nach Def. 4.4 $dH = dU + p\,dV + V\,dp = dU+p\,dV$ (da $dp=0$). Mit dem 1. Hauptsatz $dU=\delta Q-p\,dV$ folgt $dH = \delta Q$, also
+$$C_p = \frac1n\frac{dH}{dT}\bigg|_p.$$
+Aus $H=U+pV=U+nRT$ (ideales Gas) folgt $dH = dU + nR\,dT$, also
+$$nC_p\,dT = nC_V\,dT + nR\,dT \;\Longrightarrow\; C_p = C_V+R. \qquad\blacksquare$$
+
+<a id="satz-43-adiabatengleichungen"></a>
+### Satz 4.3 (Adiabatengleichungen)
+
+**Aussage:** Für eine adiabatische ($\delta Q=0$), quasistatische Zustandsänderung eines idealen Gases gilt
+$$T\,V^{\kappa-1} = \text{const}, \qquad p\,V^{\kappa} = \text{const}, \qquad \frac{T^{\kappa}}{p^{\kappa-1}} = \text{const}.$$
+
+**Voraussetzungen:** ideales Gas, $\delta Q=0$, quasistatisch, $C_V$ temperaturunabhängig im betrachteten Bereich.
+
+**Bedeutung:** Beschreibt schnelle Kompressionen/Expansionen (z. B. im Verbrennungsmotor), bei denen keine Zeit für Wärmeaustausch mit der Umgebung bleibt.
+
+<a id="beweis-von-satz-43"></a>
+### Beweis von Satz 4.3
+
+**Beweisstil:** Direkte Integration einer separierbaren Differentialgleichung.
+
+Aus dem 1. Hauptsatz mit $\delta Q=0$: $\;nC_V\,dT = -p\,dV$. Mit $p=nRT/V$ (ideale Gasgleichung):
+$$nC_V\,dT = -\frac{nRT}{V}\,dV \;\Longrightarrow\; C_V\frac{dT}{T} = -R\frac{dV}{V}.$$
+Beide Seiten integrieren:
+$$C_V\ln T = -R\ln V + \text{const} \;\Longrightarrow\; \ln T = -\frac{R}{C_V}\ln V+\text{const}.$$
+Mit $R=C_p-C_V$ (Satz 4.2) ist $\dfrac{R}{C_V} = \dfrac{C_p-C_V}{C_V} = \kappa - 1$. Also
+$$\ln T = -(\kappa-1)\ln V + \text{const} \;\Longrightarrow\; T = \text{const}\cdot V^{-(\kappa-1)} \;\Longrightarrow\; T\,V^{\kappa-1}=\text{const}.$$
+Mit $T=pV/(nR)$ eingesetzt folgt direkt $p\,V^\kappa=\text{const}$, und Elimination von $V$ zwischen beiden Formen liefert $T^\kappa/p^{\kappa-1}=\text{const}$. $\blacksquare$
+
+<a id="algorithmen-12"></a>
+## Algorithmen
+
+**Lösungsstrategie für Zustandsänderungen**
+- **Motivation:** Die vier Standardprozesse (isochor, isobar, isotherm, adiabatisch) tauchen in fast jeder Klausur auf und verlangen jeweils andere Formeln für $Q$, $W$, $\Delta U$.
+- **Pseudocode:**
+```
+EINGABE: Prozesstyp, Anfangs-/Endzustand
+1. Identifiziere Prozesstyp anhand der konstant gehaltenen Größe:
+   V = const → isochor
+   p = const → isobar
+   T = const → isotherm
+   Q = 0     → adiabatisch
+2. Berechne ΔU = n C_V ΔT  (gilt IMMER für ideales Gas, unabhängig vom Prozess!)
+3. FALLS isochor:      W = 0,             Q = ΔU
+   FALLS isobar:       W = p ΔV = nR ΔT,  Q = n C_p ΔT
+   FALLS isotherm:     ΔU = 0,            W = Q = nRT ln(V2/V1)
+   FALLS adiabatisch:  Q = 0,             W = -ΔU = -n C_V ΔT
+4. Nutze ggf. Adiabatengleichung (Satz 4.3), um fehlende Zustandsgröße
+   (p, V oder T am Endpunkt) zu bestimmen
+AUSGABE: Q, W, ΔU für den Prozess
+```
+- **Korrektheitsidee:** Schritt 2 gilt immer wegen $U=U(T)$ für ideale Gase (unabhängig vom Weg — Zustandsgröße!); die Fallunterscheidung in Schritt 3 folgt direkt aus den Definitionen und Satz 4.1.
+- **Typische Fehler:** $\Delta U=nC_V\Delta T$ wird fälschlich nur für isochore Prozesse angewendet — es gilt aber für **jeden** Prozess eines idealen Gases, weil $U$ eine reine Funktion von $T$ ist!
+
+<a id="beispiele-22"></a>
+## Beispiele
+
+**Beispiel 1 (leicht):** $2\,\text{mol}$ eines einatomigen idealen Gases werden bei konstantem Volumen von $300\,\text{K}$ auf $400\,\text{K}$ erwärmt ($C_V=\tfrac32R$). Berechne $Q$, $W$, $\Delta U$.
+*Lösung:* $W=0$ (isochor). $\Delta U = nC_V\Delta T = 2\cdot1{,}5\cdot8{,}31\cdot100 = 2493\,\text{J} = Q$.
+
+**Beispiel 2 (mittel):** Dasselbe Gas wird stattdessen isotherm bei $300\,\text{K}$ von $V_1=10\,\text{L}$ auf $V_2=20\,\text{L}$ expandiert. Berechne $W$.
+*Lösung:* $\Delta U=0$ (isotherm, ideales Gas). $W=Q=nRT\ln(V_2/V_1)=2\cdot8{,}31\cdot300\cdot\ln 2 \approx 3456\,\text{J}$.
+
+**Beispiel 3 (mittel):** Luft ($\kappa=1{,}4$) wird adiabatisch von $V_1=1\,\text{L}$, $p_1=1\,\text{bar}$ auf $V_2=0{,}5\,\text{L}$ komprimiert. Bestimme $p_2$.
+*Lösung:* $p_1V_1^\kappa=p_2V_2^\kappa \Rightarrow p_2=p_1(V_1/V_2)^\kappa = 1\cdot 2^{1,4}\approx 2{,}64\,\text{bar}$.
+
+**Beispiel 4 (schwer):** Berechne $C_p$ für ein zweiatomiges Gas ($f=5$) und vergleiche mit einatomigem Gas.
+*Lösung:* $C_V=\tfrac52R$, also $C_p=C_V+R=\tfrac72R\approx 29{,}1\,\text{J/(mol K)}$, gegenüber $C_p=\tfrac52R\approx 20{,}8\,\text{J/(mol K)}$ für einatomige Gase. $\kappa_{zweiatomig}=7/5=1{,}4$ statt $\kappa_{einatomig}=5/3\approx1{,}67$.
+
+**Beispiel 5 (schwer, kombiniert):** Ein Gas durchläuft nacheinander: (1) isochore Erwärmung, (2) isotherme Expansion. Skizziere den Prozess im $p$-$V$-Diagramm und berechne die Gesamtarbeit.
+*Lösung:* Strategie: Arbeit ist additiv über Teilprozesse; $W_{ges}=W_1+W_2 = 0 + nRT_2\ln(V_3/V_2)$ (mit $T_2$ = Temperatur nach Schritt 1). Details hängen von den konkreten Zahlenwerten ab — wichtig ist die Erkenntnis, dass sich mehrstufige Prozesse durch Aneinanderreihung der Einzelformeln lösen lassen.
+
+<a id="gegenbeispiele-22"></a>
+## Gegenbeispiele
+
+- $\Delta U = nC_V\Delta T$ gilt **NICHT** für reale Gase (dort hängt $U$ zusätzlich von $V$ ab, wegen zwischenmolekularer Wechselwirkung — van-der-Waals-Korrektur nötig).
+- Die Adiabatengleichungen (Satz 4.3) gelten **NICHT**, wenn der Prozess nicht quasistatisch ist (z. B. eine plötzliche, sehr schnelle Expansion ins Vakuum — dort wird zwar auch $Q=0$, aber auch $W=0$, da kein Gegendruck existiert, und $T$ bleibt beim idealen Gas konstant, was der Adiabatengleichung scheinbar widerspricht, weil diese quasistatisches Gleichgewicht voraussetzt).
+
+<a id="typische-klausuraufgaben-23"></a>
+## Typische Klausuraufgaben
+
+- "Berechnen Sie $Q$, $W$, $\Delta U$ für einen [isochoren/isobaren/isothermen/adiabatischen] Prozess" — Strategie: siehe Algorithmus oben, IMMER zuerst $\Delta U=nC_V\Delta T$ berechnen.
+- $p$-$V$-Diagramme zeichnen und Fläche unter der Kurve als Arbeit interpretieren.
+- Mehrstufige Prozesse (Kombination mehrerer Zustandsänderungen) — Vorbereitung auf Kreisprozesse in Kapitel 5.
+- Bestimmung von $\kappa$ oder $f$ aus gegebenen $C_p$, $C_V$ oder umgekehrt.
+
+<a id="typische-fehler-23"></a>
+## Typische Fehler
+
+1. $\Delta U=nC_V\Delta T$ wird nur für isochore Prozesse "erlaubt" gehalten — falsch, gilt für alle Prozesse idealer Gase.
+2. Vorzeichenfehler: Arbeit *am* Gas vs. *vom* Gas verwechselt.
+3. $C_p$ und $C_V$ vertauscht (v. a. bei isobaren Aufgaben).
+4. Adiabatengleichung mit falschem Exponenten ($\kappa$ statt $\kappa-1$ oder umgekehrt) angewendet.
+
+<a id="verbindungen-24"></a>
+## Verbindungen
+
+- Baut direkt auf Kapitel 2 auf ($U=nf\tfrac12RT \Rightarrow C_V=\tfrac f2R$).
+- Ist die Grundlage für **Kreisprozesse** (Kapitel 5) — jeder Kreisprozess besteht aus einer Abfolge der hier eingeführten vier Standardprozesse.
+- Die Enthalpie $H$ wird in der Chemie/Verfahrenstechnik systematisch weiterverwendet (hier nur eingeführt, nicht vertieft).
+
+<a id="zusammenfassung-12"></a>
+## Zusammenfassung
+
+- 1. Hauptsatz: $dU=\delta Q-p\,dV$; $U$ Zustandsgröße, $Q,W$ Prozessgrößen.
+- Für ideales Gas: $\Delta U=nC_V\Delta T$ gilt **immer**, unabhängig vom Prozess.
+- $C_p-C_V=R$ (Robert-Mayer), $\kappa=C_p/C_V>1$.
+- Vier Standardprozesse mit charakteristischen $Q$-$W$-$\Delta U$-Formeln (siehe Algorithmus).
+- Adiabatengleichungen: $TV^{\kappa-1}=\text{const}$, $pV^\kappa=\text{const}$.
+
+---
+
+<a id="kapitel-5-kreisprozesse-und-der-2-hauptsatz-der-thermodynamik"></a>
+# Kapitel 5: Kreisprozesse und der 2. Hauptsatz der Thermodynamik
+
+<a id="motivation-25"></a>
+## Motivation
+
+Der 1. Hauptsatz sagt: Energie kann nicht erzeugt oder vernichtet werden. Er verbietet aber **nicht** offensichtlich unsinnige Prozesse — z. B. dass Wärme spontan von einem kalten zu einem heißen Körper fließt (das würde $U$ nirgends verletzen!) oder dass eine Maschine Wärme *vollständig* in Arbeit umwandelt, ohne Abwärme abzugeben. Beides beobachten wir nie in der Natur. Der 2. Hauptsatz ergänzt daher den 1. Hauptsatz um eine **Richtungsaussage**: Manche energetisch erlaubten Prozesse laufen trotzdem nie (oder nur in eine Richtung) ab. Historisch entstand dies aus dem sehr praktischen Problem, den Wirkungsgrad von Dampfmaschinen zu maximieren (Carnot, 1824) — lange bevor man wusste, warum es eine fundamentale Grenze gibt.
+
+<a id="intuition-25"></a>
+## Intuition
+
+Denk an einen Stapel Bücher, der umfällt: Die Bücher verteilen sich chaotisch auf dem Boden. Der Prozess "Bücher fallen und verteilen sich" passiert spontan; der umgekehrte Prozess ("Bücher springen von selbst zurück in einen ordentlichen Stapel") widerspricht nicht der Energieerhaltung, passiert aber praktisch nie. Der Grund: Es gibt extrem viele "unordentliche" Anordnungen, aber nur sehr wenige "ordentliche". Das System bewegt sich statistisch fast immer in Richtung *mehr* Möglichkeiten — das ist der Kern der **Entropie**: ein Maß für die Anzahl der mikroskopischen Möglichkeiten, die zu einem gegebenen makroskopischen Zustand passen.
+
+Bei einer Wärmekraftmaschine ist die tiefere Ursache dieselbe: Um Wärme vollständig in Arbeit (eine hochgeordnete Form von Energie, alle Moleküle bewegen sich "im gleichen Takt") umzuwandeln, müsste man die ungeordnete thermische Bewegung komplett "ordnen" — das ist statistisch extrem unwahrscheinlich, wenn nicht gleichzeitig woanders Unordnung zunimmt (Abwärme an ein kälteres Reservoir).
+
+<a id="formale-definitionen-25"></a>
+## Formale Definitionen
+
+**Definition 5.1 (Kreisprozess).**
+Ein Kreisprozess ist eine Folge von Zustandsänderungen, die das System zum Ausgangszustand zurückführt: $\oint dU = 0$ (da $U$ Zustandsgröße ist).
+
+**Definition 5.2 (Wirkungsgrad einer Wärmekraftmaschine).**
+$$\eta := \frac{|W|}{Q_{zu}},$$
+das Verhältnis von gewonnener Arbeit zu zugeführter Wärme (vom heißen Reservoir).
+
+**Definition 5.3 (Entropie, thermodynamisch).**
+$$dS := \frac{\delta Q_{rev}}{T}$$
+für einen *reversiblen* Prozess (Index "rev" zur Betonung — für irreversible Prozesse gilt nur $dS \geq \delta Q/T$, s. Satz 5.4).
+
+**Definition 5.4 (Entropie, statistisch — Boltzmann).**
+$$S := k_B\ln W,$$
+mit $W$ = Anzahl der mikroskopischen Realisierungsmöglichkeiten (Mikrozustände), die zum gegebenen Makrozustand führen.
+
+<a id="eigenschaften-21"></a>
+## Eigenschaften
+
+| Kreisprozess | Teilschritte | Typische Anwendung |
+|---|---|---|
+| Carnot | isotherm–adiabatisch–isotherm–adiabatisch | theoretischer Referenzprozess, maximaler Wirkungsgrad |
+| Stirling | isotherm–isochor–isotherm–isochor | Stirlingmotor |
+| Otto | adiabatisch–isochor–adiabatisch–isochor | Benzinmotor |
+| Diesel | adiabatisch–isobar–adiabatisch–isochor | Dieselmotor |
+
+| Vergleich | Wärmekraftmaschine | Kältemaschine/Wärmepumpe |
+|---|---|---|
+| Zweck | mechanische Arbeit gewinnen | Wärme von kalt nach warm transportieren |
+| Energiefluss | $Q_1$ (warm, rein) → $W$ (raus) + $Q_2$ (kalt, raus) | $W$ (rein) + $Q_2$ (kalt, rein) → $Q_1$ (warm, raus) |
+| Kennzahl | Wirkungsgrad $\eta=|W|/Q_1$ | Leistungszahl $\varepsilon = Q_1/W$ bzw. $Q_2/W$ |
+
+<a id="sätze-21"></a>
+## Sätze
+
+<a id="satz-51-carnot-wirkungsgrad"></a>
+### Satz 5.1 (Carnot-Wirkungsgrad)
+
+**Aussage:** Für den Carnot-Prozess zwischen den Temperaturen $T_1$ (heiß) und $T_2$ (kalt) gilt
+$$\eta_{Carnot} = 1 - \frac{T_2}{T_1} = \frac{T_1-T_2}{T_1}.$$
+
+**Voraussetzungen:** reversibler Kreisprozess, ideales Gas als Arbeitsmedium, zwei Wärmereservoire konstanter Temperatur.
+
+**Bedeutung:** Dies ist der **maximal mögliche** Wirkungsgrad jeder Wärmekraftmaschine, die zwischen zwei festen Temperaturen arbeitet — unabhängig vom Funktionsprinzip (2. Hauptsatz, Carnot'scher Satz).
+
+**Intuition:** Je größer der Temperaturunterschied, desto mehr "Ordnung" (niedrige Entropie bei $T_2$) steht zur Verfügung, um in Arbeit umgewandelt zu werden.
+
+<a id="beweis-von-satz-51"></a>
+### Beweis von Satz 5.1
+
+**Beweisstil:** Direkte Berechnung der vier Teilprozesse (konstruktiver Beweis).
+
+Der Carnot-Zyklus besteht aus vier Schritten (Zustände 1→2→3→4→1):
+
+1. **Isotherme Expansion** bei $T_1$ ($V_1\to V_2$): $\Delta U=0$, also $Q_{12}=W_{12}=nRT_1\ln(V_2/V_1)$.
+2. **Adiabatische Expansion** ($T_1\to T_2$, $V_2\to V_3$): $Q_{23}=0$, $W_{23}=-nC_V(T_2-T_1)$.
+3. **Isotherme Kompression** bei $T_2$ ($V_3\to V_4$): $Q_{34}=nRT_2\ln(V_4/V_3) < 0$ (da $V_4<V_3$).
+4. **Adiabatische Kompression** ($T_2\to T_1$, $V_4\to V_1$): $Q_{41}=0$.
+
+Aus den Adiabatengleichungen (Satz 4.3) für die Schritte 2 und 4:
+$$T_1V_2^{\kappa-1} = T_2V_3^{\kappa-1}, \qquad T_1V_1^{\kappa-1}=T_2V_4^{\kappa-1}.$$
+Division dieser beiden Gleichungen liefert $\dfrac{V_2}{V_1}=\dfrac{V_3}{V_4}$.
+
+Die insgesamt aufgenommene Wärme ist $Q_1:=Q_{12}=nRT_1\ln(V_2/V_1)$, die abgegebene $|Q_2|:=-Q_{34}=nRT_2\ln(V_3/V_4)=nRT_2\ln(V_2/V_1)$ (wegen $V_3/V_4=V_2/V_1$).
+
+Die insgesamt verrichtete Arbeit ist (da $\oint dU=0$): $|W| = Q_1 - |Q_2| = nR(T_1-T_2)\ln(V_2/V_1)$.
+
+Damit:
+$$\eta = \frac{|W|}{Q_1} = \frac{nR(T_1-T_2)\ln(V_2/V_1)}{nRT_1\ln(V_2/V_1)} = \frac{T_1-T_2}{T_1} = 1-\frac{T_2}{T_1}. \qquad\blacksquare$$
+
+<a id="satz-52-carnotscher-satz-optimalität"></a>
+### Satz 5.2 (Carnot'scher Satz — Optimalität)
+
+**Aussage:** Keine Wärmekraftmaschine, die zwischen den Temperaturen $T_1$ und $T_2$ arbeitet, kann einen höheren Wirkungsgrad als $\eta_{Carnot}$ erreichen.
+
+**Beweisidee (Widerspruchsbeweis):** Angenommen, es gäbe eine "Super-Carnot"-Maschine mit $\eta' > \eta_{Carnot}$. Man könnte sie mit einer rückwärts laufenden (als Kältemaschine betriebenen) Carnot-Maschine koppeln, sodass die Super-Maschine die Carnot-Maschine antreibt. Netto würde dann Wärme *ohne* äußere Arbeitszufuhr vom kalten zum heißen Reservoir fließen — ein Widerspruch zum 2. Hauptsatz (Formulierung nach Clausius: "Es gibt keinen Prozess, dessen einziges Ergebnis der Wärmeübergang von einem kälteren zu einem wärmeren Körper ist"). Also kann $\eta'>\eta_{Carnot}$ nicht existieren. **Markierung:** Dies ist ein reiner Existenz-/Widerspruchsbeweis, kein Rechenbeweis — für die Klausur genügt in der Regel die Beweisidee.
+
+<a id="satz-53-entropieänderung-bei-zustandsänderungen-idealer-gase"></a>
+### Satz 5.3 (Entropieänderung bei Zustandsänderungen idealer Gase)
+
+**Aussage:**
+$$\Delta S(T,V) = nC_V\ln\frac{T_2}{T_1} + nR\ln\frac{V_2}{V_1}, \qquad \Delta S(p,T) = nC_p\ln\frac{T_2}{T_1} - nR\ln\frac{p_2}{p_1}.$$
+
+**Beweis (Beweisstil: direkte Integration).**
+Aus Definition 5.3 und dem 1. Hauptsatz:
+$$dS = \frac{\delta Q}{T} = \frac{dU+p\,dV}{T} = \frac{nC_V\,dT}{T} + \frac{nRT\,dV/V}{T} = nC_V\frac{dT}{T}+nR\frac{dV}{V}.$$
+Integration von Zustand 1 nach 2 liefert direkt die erste Formel. Die zweite folgt analog über $dH=T\,dS+V\,dp$. $\blacksquare$
+
+<a id="satz-54-2-hauptsatz-entropiezunahme-in-abgeschlossenen-systemen"></a>
+### Satz 5.4 (2. Hauptsatz — Entropiezunahme in abgeschlossenen Systemen)
+
+**Aussage:** Für ein abgeschlossenes System gilt $\Delta S \geq 0$; Gleichheit genau dann, wenn der Prozess reversibel ist.
+
+**Beweisidee:** Wird anhand des Beispiels von zwei Körpern unterschiedlicher Temperatur $T_1>T_2$, die in thermischen Kontakt gebracht werden, illustriert (kein allgemeiner Beweis, sondern paradigmatisches Beispiel — dies ist in der Vorlesung so behandelt worden). Man berechnet $\Delta S_1<0$ (kälterer Körper) und $\Delta S_2>0$ (wärmerer Körper verliert Wärme, aber bei tieferer effektiver Temperatur als der Empfänger sie erhält) und zeigt $\Delta S_{ges}=\Delta S_1+\Delta S_2 = mc\ln\dfrac{T_m^2}{T_1T_2} > 0$ für $T_1\neq T_2$ (mit Mischtemperatur $T_m=(T_1+T_2)/2$), unter Ausnutzung der Ungleichung vom arithmetisch-geometrischen Mittel.
+
+**Bedeutung:** Formuliert die "Zeitrichtung" der Physik — Prozesse laufen spontan nur in Richtung wachsender Gesamtentropie.
+
+<a id="satz-55-boltzmann-entropie-und-statistische-interpretation"></a>
+### Satz 5.5 (Boltzmann-Entropie und statistische Interpretation)
+
+**Aussage:** Die statistische Definition $S=k_B\ln W$ (Def. 5.4) ist konsistent mit der thermodynamischen Definition $dS=\delta Q_{rev}/T$.
+
+**Beweisidee:** Wird am Beispiel der freien Expansion eines idealen Gases (Volumen $V_0\to V$) gezeigt: Die Anzahl der Realisierungsmöglichkeiten für $N_A$ Teilchen, alle im Volumen $V$ statt $V_0$ zu finden, skaliert wie $W\propto (V/V_0)^{N_A}$, also
+$$S = k_B\ln W = k_B N_A\ln(V/V_0) = R\ln(V/V_0),$$
+was exakt mit der thermodynamischen Formel $\Delta S=nR\ln(V_2/V_1)$ (aus Satz 5.3, isotherme Expansion) für $n=1\,\text{mol}$ übereinstimmt. **Konsequenz:** Entropie ist ein Maß für die Anzahl mikroskopischer Möglichkeiten — Systeme entwickeln sich spontan zum makroskopisch wahrscheinlichsten (= entropiereichsten) Zustand.
+
+**Nernst'sches Theorem (3. Hauptsatz, ohne Beweis):** $\lim_{T\to0} S(T) = 0$ — bei $T=0$ existiert (idealisiert) nur ein einziger Mikrozustand ($W=1$), maximale Ordnung.
+
+<a id="algorithmen-13"></a>
+## Algorithmen
+
+**Lösungsstrategie für Kreisprozess-Aufgaben**
+- **Motivation:** Kreisprozessaufgaben kombinieren mehrere Zustandsänderungen aus Kapitel 4 — ohne systematisches Vorgehen verliert man leicht den Überblick.
+- **Pseudocode:**
+```
+EINGABE: Kreisprozess (Folge von Teilschritten), Anfangszustand
+1. Zeichne den Prozess im p-V-Diagramm (Orientierung! Uhrzeigersinn =
+   Wärmekraftmaschine, Gegenuhrzeigersinn = Kältemaschine)
+2. Berechne für JEDEN Teilschritt einzeln Q_i, W_i, ΔU_i
+   (nutze die Formeln aus Kapitel 4, je nach Teilschritt-Typ)
+3. Prüfe: Summe aller ΔU_i muss 0 sein (Kreisprozess!) — Kontrollrechnung
+4. Bestimme Q_zu (Summe aller Q_i > 0) und Q_ab (Summe aller Q_i < 0)
+5. η = |W_ges| / Q_zu = (Q_zu - |Q_ab|) / Q_zu
+6. Falls Carnot: η direkt über 1 - T2/T1 (schneller als Einzelschritte!)
+AUSGABE: η bzw. Leistungszahl ε
+```
+- **Korrektheitsidee:** Schritt 3 folgt direkt aus $U$ als Zustandsgröße (Def. 5.1); Schritt 5 aus Definition 5.2 kombiniert mit dem 1. Hauptsatz über den gesamten Zyklus.
+- **Typische Fehler:** Vorzeichen von $Q_{ab}$ vergessen (es ist negativ definiert, im Wirkungsgrad wird der Betrag gebraucht); Carnot-Formel auf nicht-Carnot-Prozesse angewendet (nur Carnot erreicht $\eta_{Carnot}$, andere Prozesse haben i. A. geringeren Wirkungsgrad bei gleichen $T_1,T_2$).
+
+<a id="beispiele-23"></a>
+## Beispiele
+
+**Beispiel 1 (leicht):** Eine Carnot-Maschine arbeitet zwischen $T_1=500\,\text{K}$ und $T_2=300\,\text{K}$. Berechne $\eta$.
+*Lösung:* $\eta = 1-300/500 = 0{,}4 = 40\%$.
+
+**Beispiel 2 (mittel):** Dieselbe Maschine nimmt pro Zyklus $Q_1=1000\,\text{J}$ auf. Wie viel Arbeit wird gewonnen, wie viel Wärme abgegeben?
+*Lösung:* $|W|=\eta Q_1=400\,\text{J}$, $|Q_2|=Q_1-|W|=600\,\text{J}$.
+
+**Beispiel 3 (mittel):** Eine Wärmepumpe (als Carnot-Kältemaschine betrieben) soll ein Haus bei $T_1=293\,\text{K}$ heizen, Außentemperatur $T_2=273\,\text{K}$. Berechne die Leistungszahl $\varepsilon=Q_1/W$.
+*Lösung:* Für die Carnot-Wärmepumpe gilt $\varepsilon_{WP} = \dfrac{T_1}{T_1-T_2} = \dfrac{293}{20} \approx 14{,}65$ — pro Joule Arbeit werden $14{,}65\,\text{J}$ Wärme ins Haus gepumpt (deutlich effizienter als direkte elektrische Heizung, $\varepsilon=1$).
+
+**Beispiel 4 (schwer):** $2\,\text{kg}$ Wasser bei $80\,°\text{C}$ werden mit $2\,\text{kg}$ Wasser bei $20\,°\text{C}$ gemischt ($c=4187\,\text{J/(kgK)}$). Berechne $\Delta S_{ges}$.
+*Lösung:* Mischtemperatur $T_m = (353+293)/2 = 323\,\text{K}$. $\Delta S_1 = mc\ln(T_m/T_1) = 2\cdot4187\cdot\ln(323/353) \approx -757\,\text{J/K}$. $\Delta S_2 = 2\cdot4187\cdot\ln(323/293)\approx 829\,\text{J/K}$. $\Delta S_{ges}\approx 72\,\text{J/K} > 0$ ✓ (konsistent mit Satz 5.4).
+
+**Beispiel 5 (schwer):** Vergleiche den Otto-Wirkungsgrad $\eta_{Otto}=1-(V_2/V_1)^{\kappa-1}$ mit dem Carnot-Wirkungsgrad zwischen den auftretenden Extremtemperaturen. Was fällt auf?
+*Lösung:* Man zeigt (Rechenaufgabe mit Adiabatengleichungen), dass $\eta_{Otto} < \eta_{Carnot}(T_{max},T_{min})$ — konsistent mit Satz 5.2, da der Otto-Prozess nicht reversibel zwischen nur zwei konstanten Temperaturreservoiren abläuft (isochore Schritte durchlaufen ein Temperaturkontinuum).
+
+<a id="gegenbeispiele-23"></a>
+## Gegenbeispiele
+
+- Ein Kreisprozess mit $\eta > \eta_{Carnot}(T_1,T_2)$ ist **unmöglich** (Satz 5.2) — falls eine Rechnung das ergibt, liegt ein Fehler vor.
+- $\Delta S_{system} < 0$ ist möglich (z. B. Gas wird komprimiert) — der 2. Hauptsatz verlangt nur $\Delta S_{gesamt}$ (System + Umgebung) $\geq 0$, **nicht** dass die Entropie jedes Teilsystems für sich wächst.
+- Ein "Perpetuum mobile 2. Art" (Maschine, die Wärme aus einem einzigen Reservoir vollständig in Arbeit umwandelt, ohne Abwärme) widerspricht dem 2. Hauptsatz und ist nie beobachtet worden — im Gegensatz zum 1. Hauptsatz, der ein solches Gerät nicht verbieten würde.
+
+<a id="typische-klausuraufgaben-24"></a>
+## Typische Klausuraufgaben
+
+- Wirkungsgrad-/Leistungszahl-Berechnung für Carnot-Prozesse zwischen gegebenen Temperaturen — Erkennungsmerkmal: "reversibel", "idealer Kreisprozess", zwei Temperaturangaben.
+- Vollständige Analyse eines 4-Schritt-Kreisprozesses (oft Otto oder Stirling) mit $p$-$V$-Diagramm — Strategie: Teilschritte einzeln mit Kapitel-4-Formeln durchrechnen.
+- Entropieänderungsberechnung bei Mischungs- oder Wärmeleitungsprozessen — Erkennungsmerkmal: zwei Körper/Reservoire unterschiedlicher Temperatur.
+- Qualitative Fragen: "Warum ist ein Perpetuum mobile 2. Art unmöglich?" — Strategie: Clausius- oder Kelvin-Planck-Formulierung zitieren und mit Entropieargument verknüpfen.
+
+<a id="typische-fehler-24"></a>
+## Typische Fehler
+
+1. Carnot-Wirkungsgrad wird mit Temperaturen in $°\text{C}$ statt Kelvin berechnet — führt zu falschen (oft negativen oder >1) Ergebnissen. **Immer Kelvin verwenden!**
+2. $\eta$ und $\varepsilon$ (Leistungszahl) verwechselt — unterschiedliche Definitionen für Wärmekraftmaschine vs. Kältemaschine/Wärmepumpe.
+3. Vorzeichen von $Q_{ab}$ bei der Wirkungsgradberechnung ignoriert.
+4. Entropieänderung eines Teilsystems ($\Delta S<0$ möglich!) wird fälschlich als Verletzung des 2. Hauptsatzes interpretiert — nur die **Gesamtentropie** muss zunehmen.
+5. Bei Nicht-Carnot-Kreisprozessen wird trotzdem die Carnot-Formel $\eta=1-T_2/T_1$ verwendet (nur für Carnot exakt gültig).
+
+<a id="verbindungen-25"></a>
+## Verbindungen
+
+- Baut vollständig auf Kapitel 4 auf (jeder Kreisprozess = Abfolge der vier Standardprozesse).
+- Die **statistische Entropie** (Satz 5.5) verbindet dieses Kapitel zurück zu Kapitel 2 (kinetische Gastheorie, mikroskopische Beschreibung) — beide zeigen, wie makroskopische Größen aus dem Zählen/Mitteln über viele Mikrozustände entstehen.
+- Das Konzept "Zustandsgröße vs. Prozessgröße" wird in der Elektrodynamik wiederkehren: das **elektrische Potential** (Kapitel 6) ist eine Zustandsgröße (wegunabhängig), die Arbeit im Allgemeinen nicht.
+- Schließt Teil I des Skripts ab; Teil II (Elektromagnetismus) beginnt mit einem strukturell komplett neuen, aber mathematisch ähnlichen Werkzeugkasten (Felder, Flussintegrale, Erhaltungssätze).
+
+<a id="zusammenfassung-13"></a>
+## Zusammenfassung
+
+- Kreisprozess: $\oint dU=0$; Wirkungsgrad $\eta=|W|/Q_{zu}$.
+- **Carnot-Wirkungsgrad** $\eta_{Carnot}=1-T_2/T_1$ ist die obere Schranke für *jede* Wärmekraftmaschine (Carnot'scher Satz).
+- **Entropie**: thermodynamisch $dS=\delta Q_{rev}/T$, statistisch $S=k_B\ln W$ — beide Definitionen sind konsistent.
+- **2. Hauptsatz**: $\Delta S_{gesamt}\geq 0$ für abgeschlossene Systeme; Gleichheit nur bei reversiblen Prozessen.
+- Perpetuum mobile 1. Art (verletzt 1. HS) und 2. Art (verletzt 2. HS) sind beide unmöglich, aus unterschiedlichen Gründen.
+- 3. Hauptsatz (Nernst): $S\to0$ für $T\to0$.
+
+---
+
+*Ende Teil I. Teil II (Elektromagnetismus: Elektrostatik, elektrischer Strom, Magnetismus, Elektrodynamik, Wechselstrom, elektromagnetische Wellen) folgt in gleicher Tiefe im nächsten Schritt.*
+
+
+
+---
+
+<a id="physik-ii-vollständiges-skript-1"></a>
+# Physik II — Vollständiges Skript
+<a id="teil-ii-elektromagnetismus"></a>
+## Teil II: Elektromagnetismus
+
+> Fortsetzung von Teil I (Mechanik der Fluide und Wärmelehre). Gleiche didaktische Tiefe, gleiche Notationskonventionen.
+
+---
+
+<a id="inhaltsverzeichnis-teil-ii"></a>
+# Inhaltsverzeichnis Teil II
+
+6. Elektrostatik I: Ladung, Coulombgesetz, elektrisches Feld, Potential
+7. Elektrostatik II: Gauß'sches Gesetz, Leiter, Kondensatoren
+8. Elektrostatik III: Dielektrika — Materie im elektrischen Feld
+9. Elektrischer Strom und Gleichstromkreise
+10. Ladungstransport in Materialien
+11. Magnetismus I: Kraftwirkungen (Lorentzkraft)
+12. Magnetismus II: Feldquellen und magnetische Materialien
+13. Elektrodynamik: Induktion
+14. Wechselstromkreise
+15. Elektromagnetische Wellen
+
+---
+
+<a id="kapitel-6-elektrostatik-i-ladung-coulombgesetz-elektrisches-feld-potential"></a>
+# Kapitel 6: Elektrostatik I — Ladung, Coulombgesetz, elektrisches Feld, Potential
+
+<a id="motivation-26"></a>
+## Motivation
+
+Die Gravitation kennt nur eine "Sorte" Masse und immer Anziehung. Elektrische Ladung ist reichhaltiger: Es gibt zwei Vorzeichen, Ladungen stoßen sich ab oder ziehen sich an, und die Kraft ist um viele Größenordnungen stärker als die Gravitation (das Verhältnis Coulombkraft/Gravitationskraft zwischen zwei Elektronen ist $\sim 10^{42}$!). Warum brauchen wir trotzdem ein eigenes Kapitel, obwohl die Formel dem Gravitationsgesetz zum Verwechseln ähnlich sieht? Weil das *Konzept des Feldes*, das wir hier einführen, weit über die Elektrostatik hinausgeht — es ist die Sprache, in der die gesamte moderne Physik (inkl. Quantenfeldtheorie) geschrieben ist. Historisch entstand das Feldkonzept bei Faraday (empirisch, über Feldlinien) und wurde von Maxwell mathematisch präzisiert.
+
+<a id="intuition-26"></a>
+## Intuition
+
+Stell dir eine Ladung nicht als isolierten Punkt vor, sondern als etwas, das den *gesamten umgebenden Raum* verändert — so wie eine Masse die Raumzeit krümmt (nur hier einfacher: sie erzeugt ein Vektorfeld). Eine zweite Ladung "spürt" nicht die erste Ladung direkt (das wäre Fernwirkung), sondern reagiert nur auf das *lokale* Feld an ihrem eigenen Ort. Das Feld ist wie eine unsichtbare "Strömung", die von positiven Ladungen ausgeht und in negativen endet — genau wie die Stromfäden aus Kapitel 1, nur ohne dass tatsächlich etwas fließt.
+
+Das **Potential** ist die elektrische Analogie zur Höhe in einem Gravitationsfeld: Genauso wie ein Ball von selbst bergab rollt (zu niedrigerer potentieller Energie), bewegt sich eine positive Ladung von selbst zu niedrigerem Potential. Der Vorteil des Potentials: Es ist ein **Skalar** (eine Zahl pro Ort), viel einfacher zu handhaben als das vektorielle Feld — und aus ihm lässt sich das Feld durch Gradientenbildung vollständig zurückgewinnen.
+
+<a id="formale-definitionen-26"></a>
+## Formale Definitionen
+
+**Definition 6.1 (Elektrische Ladung).**
+Ladung $q$ ist eine additive, erhaltene, quantisierte skalare Eigenschaft der Materie. Die kleinste (frei existierende) Ladungseinheit ist die Elementarladung
+$$e = 1{,}602\cdot10^{-19}\,\text{C}, \qquad q = z\cdot e,\ z\in\mathbb Z.$$
+(Quarks tragen $\pm\tfrac13e,\pm\tfrac23e$, sind aber nicht frei/isoliert beobachtbar.)
+
+**Definition 6.2 (Coulombgesetz).**
+Die Kraft, die eine Punktladung $q_1$ auf eine Punktladung $q_2$ im Abstand $r$ ausübt:
+$$\vec F_C = \frac{1}{4\pi\varepsilon_0}\frac{q_1q_2}{r^2}\,\hat e_r,$$
+mit der **elektrischen Feldkonstante** (Permittivität des Vakuums) $\varepsilon_0 = 8{,}854\cdot10^{-12}\,\text{C}^2/(\text{N}\,\text{m}^2)$, wobei $\hat e_r$ vom Ort der Quellladung zur betrachteten Ladung zeigt.
+
+**Definition 6.3 (Elektrisches Feld).**
+$$\vec E(\vec r) := \lim_{q\to 0}\frac{\vec F_C(\vec r)}{q} = \frac{1}{4\pi\varepsilon_0}\frac{Q}{r^2}\hat e_r \quad\text{(Feld einer Punktladung $Q$)},\qquad [\vec E]=\frac{\text{N}}{\text{C}}=\frac{\text{V}}{\text{m}}.$$
+Der Grenzwert $q\to0$ ("Probeladung") stellt sicher, dass das Feld eine Eigenschaft der *Quelle* ist, nicht der Testladung (die das Quellfeld sonst selbst stören würde).
+
+**Definition 6.4 (Superpositionsprinzip).**
+Für $n$ Punktladungen $q_i$ an Orten $\vec r_i$:
+$$\vec E(\vec r) = \frac{1}{4\pi\varepsilon_0}\sum_{i=1}^n q_i\,\frac{\vec r-\vec r_i}{|\vec r-\vec r_i|^3}.$$
+Für eine kontinuierliche Ladungsverteilung $\rho(\vec r')$:
+$$\vec E(\vec r) = \frac{1}{4\pi\varepsilon_0}\int_V \rho(\vec r')\,\frac{\vec r-\vec r'}{|\vec r-\vec r'|^3}\,dV'.$$
+
+**Definition 6.5 (Potentielle Energie und elektrisches Potential).**
+Die Arbeit, eine Ladung $q$ von $A$ nach $B$ gegen das Feld zu bewegen:
+$$W_{A\to B} = -\int_A^B \vec F_C\cdot d\vec r = q\big(\phi(\vec r_A)-\phi(\vec r_B)\big),$$
+mit dem **elektrischen Potential**
+$$\phi(\vec r) := \frac{E_{pot}(\vec r)}{q}, \qquad \phi(\vec r) = \frac{1}{4\pi\varepsilon_0}\frac{Q}{r}\ \text{(Punktladung, Konvention } \phi(\infty)=0\text{)}.$$
+Die **Spannung** ist die Potentialdifferenz: $U := \phi(\vec r_A)-\phi(\vec r_B)$, $[U]=\text{V}$.
+
+**Definition 6.6 (Zusammenhang Feld — Potential).**
+$$\vec E = -\nabla\phi = -\operatorname{grad}\phi.$$
+
+**Definition 6.7 (Elektrischer Dipol).**
+Zwei Ladungen $+Q$, $-Q$ im Abstand $\vec d$ (von $-$ nach $+$ zeigend). Das **Dipolmoment**:
+$$\vec p := Q\,\vec d, \qquad [\vec p] = \text{C}\,\text{m}.$$
+Im Fernfeld ($R\gg d$):
+$$\phi(\vec R) \approx \frac{1}{4\pi\varepsilon_0}\frac{\vec p\cdot\hat R}{R^2}, \qquad \vec E(\vec R)\approx\frac{1}{4\pi\varepsilon_0 R^3}\big(3(\vec p\cdot\hat R)\hat R-\vec p\big).$$
+
+<a id="eigenschaften-22"></a>
+## Eigenschaften
+
+| Eigenschaft | Aussage | Begründung |
+|---|---|---|
+| Ladungserhaltung | $Q_{ges}=\text{const}$ in einem abgeschlossenen System | Fundamentales Naturgesetz, nie verletzt beobachtet |
+| $\vec F_C$ ist konservativ | $\oint \vec F_C\cdot d\vec r = 0$ | Zentralkraft, $\propto 1/r^2$ — wie Gravitation |
+| $\vec E$ additiv (Superposition) | siehe Def. 6.4 | Coulombkraft ist linear in den Quellladungen |
+| $\phi$ additiv, aber skalar | einfacher zu addieren als $\vec E$ | Skalare Summe statt Vektorsumme — Rechenvorteil! |
+| Feldlinien | beginnen an $+$, enden an $-$ (oder im Unendlichen); Dichte $\propto |\vec E|$ | Veranschaulichung von Def. 6.3/6.4 |
+| Kraft auf Dipol im homogenen Feld | $\vec F=0$, aber Drehmoment $\vec M=\vec p\times\vec E\neq0$ | Kräfte auf $+Q$ und $-Q$ heben sich auf, Angriffspunkte unterschiedlich |
+| Kraft auf Dipol im inhomogenen Feld | $\vec F = (\vec p\cdot\nabla)\vec E \neq 0$ | Feldstärke an den beiden Polen unterschiedlich |
+| Potentielle Energie des Dipols | $E_{pot}=-\vec p\cdot\vec E$ | minimal, wenn $\vec p\parallel\vec E$ (Dipol richtet sich aus) |
+
+<a id="sätze-22"></a>
+## Sätze
+
+<a id="satz-61-wegunabhängigkeit-der-arbeit-im-elektrostatischen-feld"></a>
+### Satz 6.1 (Wegunabhängigkeit der Arbeit im elektrostatischen Feld)
+
+**Aussage:** $W_{A\to B}$ hängt nur von den Endpunkten $A,B$ ab, nicht vom gewählten Weg.
+
+**Voraussetzungen:** elektrostatisches (zeitunabhängiges) Feld einer ruhenden Ladungsverteilung.
+
+**Bedeutung:** Rechtfertigt die Existenz eines Potentials $\phi$ — ohne Wegunabhängigkeit wäre $\phi(\vec r)$ als eindeutige Funktion des Ortes gar nicht definierbar.
+
+**Beweisidee (Beweisstil: Rückführung auf Zentralkraft, analog zur Mechanik).** Die Coulombkraft ist eine Zentralkraft ($\vec F\parallel \hat e_r$, Betrag nur von $r$ abhängig). Für jede Zentralkraft $\vec F(r) = f(r)\hat e_r$ ist $\vec F = -\nabla V(r)$ mit $V(r)=-\int f(r)\,dr$ erfüllt (elementare Vektoranalysis: der Gradient einer nur radial abhängigen Funktion zeigt radial). Damit ist $\vec F$ ein Gradientenfeld, und Gradientenfelder sind per Definition wegunabhängig integrierbar (Hauptsatz für Kurvenintegrale). $\blacksquare$
+
+<a id="satz-62-feld-einer-unendlich-ausgedehnten-geladenen-platte"></a>
+### Satz 6.2 (Feld einer unendlich ausgedehnten geladenen Platte)
+
+**Aussage:** Für eine unendlich ausgedehnte Ebene mit Flächenladungsdichte $\sigma=Q/A$ ist das Feld senkrecht zur Platte, homogen und ortsunabhängig:
+$$\vec E = \frac{\sigma}{2\varepsilon_0}\,\hat e_n.$$
+
+**Voraussetzungen:** unendlich ausgedehnte Fläche (Randeffekte vernachlässigt), homogene Flächenladungsdichte.
+
+**Beweis (Beweisstil: direkte Integration über Def. 6.4, Ausnutzung der Symmetrie).**
+
+Wir zerlegen die Platte in konzentrische Ringe um den Fußpunkt des Lots vom Aufpunkt $P$ (Abstand $z$ von der Platte). Ein Ring bei Radius $r$, Breite $dr$, trägt die Ladung $dQ = \sigma\cdot 2\pi r\,dr$. Sein Beitrag zum Feld in $P$ hat wegen der Kreissymmetrie nur eine Komponente entlang der Flächennormalen $\hat e_n$ (die Radialkomponenten aller Punkte auf dem Ring heben sich paarweise auf):
+$$dE_z = \frac{1}{4\pi\varepsilon_0}\frac{dQ}{R^2}\cos\alpha, \qquad R^2=z^2+r^2,\quad \cos\alpha=\frac{z}{R}.$$
+Also
+$$dE_z = \frac{\sigma}{4\pi\varepsilon_0}\frac{2\pi r\,dr\cdot z}{(z^2+r^2)^{3/2}} = \frac{\sigma z}{2\varepsilon_0}\frac{r\,dr}{(z^2+r^2)^{3/2}}.$$
+Integration über alle Ringe ($r:0\to\infty$), mit Substitution $u=z^2+r^2$, $du=2r\,dr$:
+$$E_z = \frac{\sigma z}{2\varepsilon_0}\int_{z^2}^{\infty} \frac{du/2}{u^{3/2}} = \frac{\sigma z}{2\varepsilon_0}\Big[-u^{-1/2}\Big]_{z^2}^{\infty} = \frac{\sigma z}{2\varepsilon_0}\cdot\frac1z = \frac{\sigma}{2\varepsilon_0}.$$
+Das Ergebnis ist unabhängig von $z$ — das Feld ist homogen. $\blacksquare$
+
+**Konsequenz:** Für einen Plattenkondensator (zwei Platten mit $+\sigma$, $-\sigma$) addieren sich die Felder zwischen den Platten ($\vec E_1,\vec E_2$ gleichgerichtet) und heben sich außerhalb auf:
+$$E_{innen} = \frac{\sigma}{2\varepsilon_0}+\frac{\sigma}{2\varepsilon_0}=\frac{\sigma}{\varepsilon_0}, \qquad E_{außen}=0.$$
+
+<a id="algorithmen-14"></a>
+## Algorithmen
+
+**Lösungsstrategie für Feld-/Potentialberechnungen mit Superposition**
+- **Motivation:** Bei komplexen Ladungsverteilungen ist die direkte Integration oft die einzige Methode (bevor in Kapitel 7 das Gauß'sche Gesetz als Abkürzung für symmetrische Fälle eingeführt wird).
+- **Pseudocode:**
+```
+EINGABE: Ladungsverteilung (diskret oder kontinuierlich ρ(r'))
+1. Wähle Koordinatensystem passend zur Symmetrie der Verteilung
+2. WENN diskrete Ladungen:
+     E(r) = (1/4πε0) * Σ q_i (r-r_i)/|r-r_i|³   (vektoriell aufsummieren!)
+3. WENN kontinuierliche Verteilung:
+     a. Zerlege in Ladungselemente dQ = ρ dV (bzw. σ dA, λ dl)
+     b. Nutze Symmetrie: welche Feldkomponenten heben sich weg?
+     c. Integriere nur die verbleibende(n) Komponente(n)
+4. Für Potential: gleiches Vorgehen, aber skalar (einfacher!) —
+     φ(r) = (1/4πε0) ∫ dQ / |r-r'|
+5. Falls E gesucht, aber φ bereits bekannt: E = -grad(φ)
+AUSGABE: E(r) oder φ(r)
+```
+- **Korrektheitsidee:** Direkte Anwendung von Def. 6.4 (Superposition), abgesichert durch die Linearität der Coulombkraft.
+- **Typische Fehler:** Vektorielle Integration wird versehentlich skalar durchgeführt (Feldkomponenten, die sich eigentlich aufheben sollten, werden addiert); Symmetrie wird nicht ausgenutzt, was zu unnötig komplizierten Integralen führt.
+
+<a id="beispiele-24"></a>
+## Beispiele
+
+**Beispiel 1 (leicht):** Zwei Punktladungen $q_1=2\,\mu\text{C}$, $q_2=-3\,\mu\text{C}$ im Abstand $10\,\text{cm}$. Berechne die Kraft.
+*Lösung:* $F=\dfrac{1}{4\pi\varepsilon_0}\dfrac{|q_1q_2|}{r^2} = 9\cdot10^9\cdot\dfrac{6\cdot10^{-12}}{0{,}01}\approx5{,}4\,\text{N}$ (anziehend, da unterschiedliches Vorzeichen).
+
+**Beispiel 2 (leicht):** Berechne $\vec E$ im Abstand $r=1\,\text{m}$ von $Q=1\,\mu\text{C}$.
+*Lösung:* $E = \dfrac{1}{4\pi\varepsilon_0}\dfrac{Q}{r^2} = 9\cdot10^9\cdot10^{-6} = 9000\,\text{V/m}$.
+
+**Beispiel 3 (mittel):** Berechne das Potential im Mittelpunkt zwischen zwei Ladungen $+Q$ und $-Q$ im Abstand $2a$.
+*Lösung:* Wegen Symmetrie (gleicher Abstand $a$, aber entgegengesetztes Vorzeichen): $\phi = \dfrac{1}{4\pi\varepsilon_0}\left(\dfrac{Q}{a}+\dfrac{-Q}{a}\right)=0$ — Achtung: $\vec E$ ist dort **nicht** null (die Feldbeiträge addieren sich, da $\vec E$ Vektor ist)! Wichtiges Gegenbeispiel für "$\phi=0\Rightarrow\vec E=0$".
+
+**Beispiel 4 (mittel):** Ein Dipol ($p=3{,}3\cdot10^{-30}\,\text{C m}$, typisch für ein Wassermolekül) steht im homogenen Feld $E=10^5\,\text{V/m}$ senkrecht zu $\vec p$. Berechne das Drehmoment.
+*Lösung:* $M = pE\sin(90°) = 3{,}3\cdot10^{-30}\cdot10^5 = 3{,}3\cdot10^{-25}\,\text{N m}$.
+
+**Beispiel 5 (schwer):** Berechne das Feld auf der Achse eines geladenen Rings (Radius $R$, Ladung $Q$) im Abstand $z$ vom Mittelpunkt.
+*Lösung:* Analog zu Satz 6.2, aber jetzt ist der "Ring" selbst die Quelle (nicht eine Scheibe von Ringen). Jedes Ladungselement $dQ=Q\,d\theta/(2\pi)$ trägt $dE_z = \dfrac{1}{4\pi\varepsilon_0}\dfrac{dQ\,z}{(z^2+R^2)^{3/2}}$ bei (Radialkomponenten heben sich durch Symmetrie auf). Integration über den vollen Ring ($\int dQ=Q$):
+$$E_z = \frac{1}{4\pi\varepsilon_0}\frac{Qz}{(z^2+R^2)^{3/2}}.$$
+Für $z\gg R$ geht dies gegen $\dfrac{1}{4\pi\varepsilon_0}\dfrac{Q}{z^2}$ (Punktladungslimes) — eine wichtige Plausibilitätsprüfung für jede Feldberechnung ausgedehnter Ladungsverteilungen.
+
+<a id="gegenbeispiele-24"></a>
+## Gegenbeispiele
+
+- $\phi=0$ an einem Punkt bedeutet **nicht** $\vec E=0$ dort (siehe Beispiel 3) — Potential ist ein Skalar, Nullstellen sagen nichts über den Gradienten aus.
+- Die Coulombkraft ist **nicht** additiv im Sinne "Kraft auf $q_3$ hängt nur von $q_1$ und $q_3$ ab" — sie ist additiv im Sinne von Def. 6.4 (Vektorsumme *aller* Einzelkräfte); ein Missverständnis führt oft zu falscher Vernachlässigung einer dritten Ladung.
+- Die Formel für das Plattenfeld ($E=\sigma/\varepsilon_0$ zwischen den Platten) gilt **nicht** an den Rändern eines endlichen Kondensators (dort treten Streufelder auf — die Näherung "unendlich ausgedehnt" versagt).
+
+<a id="typische-klausuraufgaben-25"></a>
+## Typische Klausuraufgaben
+
+- Kraft-/Feldberechnung zwischen mehreren Punktladungen — Erkennungsmerkmal: konkrete Ladungswerte und Abstände, oft mit Vektoraddition in 2D.
+- Feld-/Potentialberechnung für symmetrische Ladungsverteilungen (Ring, Platte, Linie) durch direkte Integration — Strategie: Symmetrie zuerst ausnutzen, dann integrieren.
+- Kraft/Drehmoment auf einen Dipol im homogenen/inhomogenen Feld — Erkennungsmerkmal: "Dipol", "polares Molekül".
+- Kombination Kraft + Bewegung (z. B. Ladung im homogenen Feld beschleunigt, ballistische Bahn) — nutzt Mechanik-Grundlagen aus Teil I.
+
+<a id="typische-fehler-25"></a>
+## Typische Fehler
+
+1. $\vec E$ und $\phi$ werden verwechselt (Vektor vs. Skalar) — Nullstellen des einen implizieren nicht das andere.
+2. Vorzeichenfehler bei $\hat e_r$ (Richtung von Quelle zu Aufpunkt, nicht umgekehrt).
+3. Bei Superposition wird vektoriell statt komponentenweise summiert (v. a. bei nicht-kollinearen Ladungsanordnungen).
+4. Grenzfall-Check wird vergessen (z. B. $z\gg R$ sollte immer auf die Punktladungsformel zurückführen — guter Fehlerindikator).
+
+<a id="verbindungen-26"></a>
+## Verbindungen
+
+- Das Superpositionsprinzip (Def. 6.4) und die direkte Integration werden in Kapitel 7 durch das viel effizientere **Gauß'sche Gesetz** ergänzt (für symmetrische Fälle).
+- Der Zusammenhang $\vec E=-\nabla\phi$ ist strukturell identisch zum Zusammenhang zwischen konservativer Kraft und potentieller Energie in der Mechanik (Teil I, vgl. Satz 6.1-Beweis).
+- Das **Dipolmoment** taucht in Kapitel 8 (Dielektrika, induzierte Dipole) und in Kapitel 12 (magnetisches Dipolmoment) in enger struktureller Analogie wieder auf.
+
+<a id="zusammenfassung-14"></a>
+## Zusammenfassung
+
+- Coulombgesetz: $\vec F_C=\dfrac{1}{4\pi\varepsilon_0}\dfrac{q_1q_2}{r^2}\hat e_r$; elektrisches Feld $\vec E=\vec F_C/q$.
+- Superposition gilt für $\vec E$ (vektoriell) und $\phi$ (skalar, einfacher).
+- $\vec E=-\nabla\phi$; $U=\phi_A-\phi_B$.
+- Elektrischer Dipol: $\vec p=Q\vec d$; $\vec M=\vec p\times\vec E$, $E_{pot}=-\vec p\cdot\vec E$.
+- Feld einer unendlichen Platte: $E=\sigma/(2\varepsilon_0)$; im Plattenkondensator $E=\sigma/\varepsilon_0$.
+
+---
+
+<a id="kapitel-7-elektrostatik-ii-gaußsches-gesetz-leiter-kondensatoren"></a>
+# Kapitel 7: Elektrostatik II — Gauß'sches Gesetz, Leiter, Kondensatoren
+
+<a id="motivation-27"></a>
+## Motivation
+
+Die direkte Integration aus Kapitel 6 ist für symmetrische Ladungsverteilungen (Kugel, Zylinder, Ebene) unnötig aufwendig. Gauß erkannte: Es gibt einen tieferen Zusammenhang zwischen dem elektrischen Fluss durch eine *geschlossene* Fläche und der eingeschlossenen Ladung — unabhängig von der genauen Form der Fläche. Das ist keine neue Physik (es folgt direkt aus dem Coulombgesetz), sondern ein mächtiges *mathematisches Werkzeug*, das symmetrische Probleme drastisch vereinfacht — dieselbe Idee wie die Kontinuitätsgleichung in Kapitel 1, nur für das elektrische Feld statt für Massenstromdichte.
+
+<a id="intuition-27"></a>
+## Intuition
+
+Stell dir das elektrische Feld als Strömung vor (wie in Kapitel 6 angedeutet). Der "Fluss" durch eine Fläche misst, wie viele Feldlinien hindurchtreten. Eine geladene Kugel im Zentrum einer beliebigen umschließenden Fläche "strahlt" eine feste Anzahl Feldlinien aus — egal ob die umschließende Fläche eine Kugel, ein Würfel oder eine verbeulte Kartoffel ist, es treten immer gleich viele Feldlinien hindurch, weil keine Feldlinien im ladungsfreien Raum entstehen oder enden können. Das ist der Kern des Gauß'schen Gesetzes.
+
+Bei **Leitern** ist die Kernidee: Ladungen sind frei beweglich. Im Gleichgewicht müssen sie sich so anordnen, dass im Inneren $\vec E=0$ ist — sonst würden die freien Ladungen weiter beschleunigt (es gäbe kein Gleichgewicht). Das ist wie Wasser in einem Gefäß: Es fließt so lange, bis die Oberfläche eben ist (Kräftegleichgewicht) — bei Leitern ist die "ebene Oberfläche" der Zustand $\vec E_{innen}=0$.
+
+<a id="formale-definitionen-27"></a>
+## Formale Definitionen
+
+**Definition 7.1 (Elektrischer Fluss).**
+$$\Phi_{el} := \int_A \vec E\cdot d\vec A,$$
+mit Flächennormalenvektor $d\vec A$ (bei geschlossenen Flächen konventionell nach außen orientiert).
+
+**Definition 7.2 (Leiter, elektrostatisches Gleichgewicht).**
+Ein Leiter enthält frei bewegliche Ladungsträger. Im elektrostatischen Gleichgewicht gilt im Inneren des Leiters $\vec E_{innen}=0$ und das gesamte Leitermaterial ist eine Äquipotentialfläche ($\phi=\text{const}$).
+
+**Definition 7.3 (Kapazität).**
+$$C := \frac{Q}{U}, \qquad [C]=\text{F (Farad)} = \text{C/V}.$$
+
+**Definition 7.4 (Energiedichte des elektrischen Feldes).**
+$$w_{el} := \frac{1}{V}\int_{Aufladung} \delta W = \frac12\varepsilon_0 E^2, \qquad [w_{el}]=\text{J/m}^3.$$
+
+<a id="eigenschaften-23"></a>
+## Eigenschaften
+
+| Eigenschaft | Aussage | Kurzbegründung |
+|---|---|---|
+| Feld im Leiterinneren | $\vec E=0$ | sonst würden freie Ladungen weiterfließen (kein GGW) |
+| Ladung sitzt auf der Oberfläche | $\rho_{innen}=0$ | folgt aus Gauß'schem Gesetz angewendet auf $\vec E=0$-Region |
+| $\vec E$ senkrecht zur Leiteroberfläche | $\vec E \perp$ Oberfläche | sonst würde eine Tangentialkomponente Ladung entlang der Oberfläche verschieben |
+| Hohlleiter, keine Ladung im Hohlraum | $\vec E=0$ im Hohlraum, unabhängig vom Außenfeld | Faraday-Käfig-Prinzip |
+| Kondensatoren, Reihenschaltung | $\dfrac1{C_{ges}}=\sum\dfrac1{C_i}$ | $U$ addiert sich, $Q$ gleich auf allen |
+| Kondensatoren, Parallelschaltung | $C_{ges}=\sum C_i$ | $U$ gleich auf allen, $Q$ addiert sich |
+
+<a id="sätze-23"></a>
+## Sätze
+
+<a id="satz-71-gaußsches-gesetz-integral"></a>
+### Satz 7.1 (Gauß'sches Gesetz, integral)
+
+**Aussage:**
+$$\oint_S \vec E\cdot d\vec A = \frac{Q_{innen}}{\varepsilon_0}.$$
+
+**Voraussetzungen:** $S$ geschlossene Fläche; $Q_{innen}$ = gesamte von $S$ eingeschlossene Ladung.
+
+**Bedeutung:** Eine der vier Maxwell-Gleichungen (integral). Äquivalent zum Coulombgesetz, aber viel einfacher anwendbar bei Symmetrie.
+
+**Beweis (Beweisstil: Nachweis für Punktladung + Superposition, dann Verallgemeinerung).**
+
+*Schritt 1 — Punktladung, Kugel als Gauß-Fläche:* Für eine Punktladung $Q$ im Zentrum einer Kugel vom Radius $R$: $\vec E$ ist überall auf der Kugeloberfläche radial und vom gleichen Betrag $E=\dfrac{1}{4\pi\varepsilon_0}\dfrac{Q}{R^2}$ (Def. 6.3), also
+$$\oint_S\vec E\cdot d\vec A = E\cdot 4\pi R^2 = \frac{1}{4\pi\varepsilon_0}\frac{Q}{R^2}\cdot4\pi R^2 = \frac{Q}{\varepsilon_0}.$$
+
+*Schritt 2 — beliebige Fläche um dieselbe Punktladung:* Der Raumwinkel, den ein Flächenelement $dA$ vom Ladungsort aus einnimmt, ist $d\Omega = \dfrac{dA\cos\alpha}{R^2}$ ($\alpha$ Winkel zwischen $\vec E$ und Flächennormale). Damit ist $\vec E\cdot d\vec A = E\,dA\cos\alpha = \dfrac{Q}{4\pi\varepsilon_0}\,d\Omega$, und die Integration über eine *beliebige* geschlossene Fläche, die die Ladung umschließt, liefert $\oint d\Omega=4\pi$ (voller Raumwinkel), also wieder $Q/\varepsilon_0$ — unabhängig von der Form.
+
+*Schritt 3 — Ladung außerhalb der Fläche:* Jede Feldlinie, die eintritt, tritt auch wieder aus (Raumwinkelbeiträge heben sich auf) → Netto-Fluss $=0$.
+
+*Schritt 4 — viele Ladungen (Superposition, Def. 6.4):* Da $\vec E$ additiv ist, ist auch $\Phi_{el}$ additiv. Für mehrere Punktladungen (bzw. eine kontinuierliche Verteilung) tragen nach Schritt 2/3 nur die *innerhalb* liegenden Ladungen bei, jede mit $q_i/\varepsilon_0$. Summation liefert $Q_{innen}/\varepsilon_0$. $\blacksquare$
+
+<a id="satz-72-gaußsches-gesetz-differentiell-1-maxwell-gleichung"></a>
+### Satz 7.2 (Gauß'sches Gesetz, differentiell — 1. Maxwell-Gleichung)
+
+**Aussage:** $$\operatorname{div}\vec E(\vec r) = \frac{1}{\varepsilon_0}\rho(\vec r).$$
+
+**Beweis (Beweisstil: direkte Anwendung des Satzes von Gauß auf Satz 7.1).**
+$$\oint_S\vec E\cdot d\vec A \overset{\text{Gauß-Integralsatz}}{=} \int_V \operatorname{div}\vec E\, dV \overset{\text{Satz 7.1}}{=} \frac{Q_{innen}}{\varepsilon_0} = \frac1{\varepsilon_0}\int_V\rho\,dV.$$
+Da $V$ beliebig ist, folgt punktweise Gleichheit der Integranden. $\blacksquare$
+
+**Konsequenz:** Mit $\vec E=-\nabla\phi$ (Def. 6.6) folgt die **Poisson-Gleichung**
+$$\Delta\phi(\vec r) = -\frac{1}{\varepsilon_0}\rho(\vec r),$$
+bzw. im ladungsfreien Raum die **Laplace-Gleichung** $\Delta\phi=0$.
+
+<a id="satz-73-feld-einer-geladenen-kugel-innen-und-außen"></a>
+### Satz 7.3 (Feld einer geladenen Kugel — innen und außen)
+
+**Aussage:** Für eine gleichmäßig geladene Kugelschale/Kugel (Gesamtladung $Q$, Radius $R$):
+$$E(r) = 0 \ (r<R), \qquad E(r) = \frac{1}{4\pi\varepsilon_0}\frac{Q}{r^2}\ (r>R).$$
+
+**Beweis (Beweisstil: Anwendung Gauß'sches Gesetz mit kugelsymmetrischer Gauß-Fläche).**
+Wegen Kugelsymmetrie ist $\vec E=E(r)\hat e_r$. Wähle als Gauß-Fläche eine konzentrische Kugel vom Radius $r$:
+$$\oint\vec E\cdot d\vec A = E(r)\cdot4\pi r^2 = \frac{Q_{innen}}{\varepsilon_0}.$$
+Für $r<R$ (Hohlkugel, Ladung nur auf der Oberfläche bei $R$): $Q_{innen}=0\Rightarrow E=0$.
+Für $r>R$: $Q_{innen}=Q\Rightarrow E(r)=\dfrac{Q}{4\pi\varepsilon_0r^2}$ — von außen sieht die Kugel exakt wie eine Punktladung aus. $\blacksquare$
+
+<a id="satz-74-kondensatorformeln"></a>
+### Satz 7.4 (Kondensatorformeln)
+
+| Kondensatortyp | Kapazität | Herleitungsidee |
+|---|---|---|
+| Plattenkondensator | $C=\varepsilon_0\dfrac{A}{d}$ | $E=\sigma/\varepsilon_0$ (Satz 6.2-Konsequenz), $U=Ed$, $Q=\sigma A$ |
+| Kugelkondensator (Radien $a<b$) | $C=\dfrac{4\pi\varepsilon_0}{1/a-1/b}$ | $U=\phi(a)-\phi(b)$ mit $\phi(r)=Q/(4\pi\varepsilon_0r)$ (Satz 7.3) |
+| Einzelkugel ($b\to\infty$) | $C=4\pi\varepsilon_0a$ | Grenzfall des Kugelkondensators |
+
+**Beweis (Plattenkondensator, Beweisstil: direkte Kombination bereits bewiesener Sätze).**
+Aus Satz 6.2 (Konsequenz): $E=\sigma/\varepsilon_0$ zwischen den Platten. Da $\vec E$ homogen ist, gilt $U=\int\vec E\cdot d\vec r = E\cdot d = \dfrac{\sigma d}{\varepsilon_0} = \dfrac{Qd}{\varepsilon_0A}$. Also $C=Q/U = \varepsilon_0A/d$. $\blacksquare$
+
+<a id="satz-75-energie-des-elektrischen-feldes-im-kondensator"></a>
+### Satz 7.5 (Energie des elektrischen Feldes im Kondensator)
+
+**Aussage:** $$W = \frac12CU^2 = \frac{Q^2}{2C} = \frac12 QU.$$
+
+**Beweis (Beweisstil: Integration der Aufladearbeit).**
+Beim Aufladen wird in jedem Moment die Ladung $dQ$ gegen die bereits vorhandene Spannung $U(Q)=Q/C$ transportiert: $\delta W = U\,dQ = \dfrac{Q}{C}dQ$. Integration von $0$ bis $Q_{end}$:
+$$W = \int_0^{Q}\frac{Q'}{C}dQ' = \frac{Q^2}{2C} = \frac12 CU^2. \qquad\blacksquare$$
+Mit $C=\varepsilon_0A/d$ und $U=Ed$: $W=\tfrac12\varepsilon_0E^2\cdot(Ad)=\tfrac12\varepsilon_0E^2\cdot V$, was die Energiedichte $w_{el}=\tfrac12\varepsilon_0E^2$ (Def. 7.4) bestätigt — die Feldenergie ist also **im Feld selbst** gespeichert, nicht "an den Ladungen".
+
+<a id="algorithmen-15"></a>
+## Algorithmen
+
+**Lösungsstrategie: Gauß'sches Gesetz anwenden**
+- **Motivation:** Das Gauß'sche Gesetz ist nur nützlich, wenn man die passende Gauß-Fläche wählt — sonst bleibt $\oint\vec E\cdot d\vec A$ unlösbar kompliziert.
+- **Pseudocode:**
+```
+EINGABE: Ladungsverteilung mit Symmetrie
+1. Erkenne Symmetrietyp:
+   Kugelsymmetrisch  → Gauß-Fläche = konzentrische Kugel
+   Zylindersymmetrisch → Gauß-Fläche = koaxialer Zylinder
+   Ebene Symmetrie   → Gauß-Fläche = "Gauß-Dose" (Quader/Zylinder
+                         mit Deckflächen parallel zur geladenen Ebene)
+2. Prüfe: Ist |E| auf der gewählten Fläche konstant und E parallel
+   (oder senkrecht) zu dA? WENN NEIN: falsche Fläche gewählt, erneut prüfen
+3. Berechne Q_innen als Funktion des Flächenparameters (r, ...)
+4. Löse E * A_Fläche = Q_innen/ε0 nach E auf
+AUSGABE: E(r) im gesamten Raum (typischerweise stückweise, innen/außen)
+```
+- **Korrektheitsidee:** Direkte Anwendung von Satz 7.1; die Symmetrieprüfung in Schritt 2 stellt sicher, dass $\vec E$ aus dem Integral herausgezogen werden darf.
+- **Typische Anwendungen:** Feld von Kugel, unendlichem Zylinder/Draht, unendlicher Ebene/Platte.
+- **Typische Fehler:** Gauß'sches Gesetz wird auf *nicht*-symmetrische Verteilungen angewendet (dann ist es zwar weiterhin *wahr*, aber nicht *nützlich*, da $E$ nicht aus dem Integral gezogen werden kann); falsche Gauß-Fläche (z. B. Kugel bei zylindrischer Symmetrie).
+
+<a id="beispiele-25"></a>
+## Beispiele
+
+**Beispiel 1 (leicht):** Eine Kugel mit $Q=5\,\text{nC}$, $R=2\,\text{cm}$. Berechne $E$ bei $r=1\,\text{cm}$ und $r=5\,\text{cm}$.
+*Lösung:* $r<R$: $E=0$. $r>R$: $E=\dfrac{1}{4\pi\varepsilon_0}\dfrac{Q}{r^2}=9\cdot10^9\cdot\dfrac{5\cdot10^{-9}}{0{,}0025}\approx1{,}8\cdot10^4\,\text{V/m}$.
+
+**Beispiel 2 (mittel):** Ein unendlich langer, gerader Draht mit Linienladungsdichte $\lambda$ — bestimme $E(r)$ mittels Gauß'schem Gesetz.
+*Lösung:* Zylindrische Gauß-Fläche, Radius $r$, Länge $\ell$: $E\cdot2\pi r\ell = \lambda\ell/\varepsilon_0 \Rightarrow E(r)=\dfrac{\lambda}{2\pi\varepsilon_0r}$ (Feld fällt mit $1/r$, nicht $1/r^2$ — charakteristisch für Zylindersymmetrie!).
+
+**Beispiel 3 (mittel):** Ein Plattenkondensator ($A=100\,\text{cm}^2$, $d=1\,\text{mm}$) wird auf $U=100\,\text{V}$ aufgeladen. Berechne $C$, $Q$, $W$.
+*Lösung:* $C=\varepsilon_0A/d = 8{,}854\cdot10^{-12}\cdot0{,}01/10^{-3}\approx8{,}85\cdot10^{-11}\,\text{F}$. $Q=CU\approx8{,}85\cdot10^{-9}\,\text{C}$. $W=\tfrac12CU^2\approx4{,}4\cdot10^{-7}\,\text{J}$.
+
+**Beispiel 4 (schwer):** Drei Kondensatoren $C_1=2\,\mu\text{F}$, $C_2=3\,\mu\text{F}$ (parallel), diese Kombination in Reihe mit $C_3=6\,\mu\text{F}$. Berechne $C_{ges}$.
+*Lösung:* Parallel: $C_{12}=C_1+C_2=5\,\mu\text{F}$. Reihe mit $C_3$: $\dfrac1{C_{ges}}=\dfrac15+\dfrac16=\dfrac{11}{30}\Rightarrow C_{ges}=\dfrac{30}{11}\approx2{,}73\,\mu\text{F}$.
+
+**Beispiel 5 (schwer):** Zeige mit dem Gauß'schen Gesetz, dass im Hohlraum eines geladenen Leiters (ohne Ladung im Hohlraum) $\vec E=0$ gilt, selbst wenn außen ein beliebig kompliziertes Feld herrscht.
+*Lösung:* Wähle die Gauß-Fläche direkt innerhalb der Leiteroberfläche, den Hohlraum umschließend, aber vollständig im Leitermaterial verlaufend. Dort ist $\vec E=0$ (Eigenschaft von Leitern, Def. 7.2), also $\oint\vec E\cdot d\vec A=0 \Rightarrow Q_{innen}=0$. Da im Hohlraum keine Ladung sitzt, könnte höchstens auf der *inneren* Oberfläche des Leiters (die den Hohlraum begrenzt) eine Ladung induziert sein — aber ohne Ladung im Hohlraum selbst zeigt eine genauere Analyse (Eindeutigkeitssatz der Poisson-Gleichung, hier nicht im Detail bewiesen), dass diese induzierte Ladung ebenfalls null ist und somit $\vec E=0$ im gesamten Hohlraum gilt. Dies ist das Funktionsprinzip des **Faraday-Käfigs**.
+
+<a id="gegenbeispiele-25"></a>
+## Gegenbeispiele
+
+- Gauß'sches Gesetz liefert bei **fehlender Symmetrie** zwar eine korrekte, aber praktisch nutzlose Gleichung — z. B. für zwei beliebig positionierte Punktladungen lässt sich $E$ nicht aus $\oint\vec E\cdot d\vec A=Q_{innen}/\varepsilon_0$ isolieren, da $\vec E$ nicht konstant auf einer einfachen Fläche ist. Hier bleibt nur Superposition (Kapitel 6).
+- Im Inneren eines Leiters ist $\vec E=0$ **nur im elektrostatischen Gleichgewicht** — fließt Strom (Kapitel 9), ist $\vec E\neq0$ im Leiter erforderlich, um den Strom aufrechtzuerhalten.
+
+<a id="typische-klausuraufgaben-26"></a>
+## Typische Klausuraufgaben
+
+- Feldberechnung mit Gauß'schem Gesetz für Kugel/Zylinder/Ebene — Erkennungsmerkmal: hochsymmetrische Ladungsverteilung. Strategie: siehe Algorithmus.
+- Kondensator-Netzwerke (Reihen-/Parallelschaltung, gemischt) — Strategie: schrittweise von "innen nach außen" zusammenfassen.
+- Energieberechnung beim Auf-/Entladen oder beim Verbinden zweier geladener Kondensatoren.
+- Faraday-Käfig-/Influenz-Verständnisfragen.
+
+<a id="typische-fehler-26"></a>
+## Typische Fehler
+
+1. Gauß'sches Gesetz wird auf unsymmetrische Probleme angewendet und dann trotzdem $E$ vor das Integral gezogen (unzulässig!).
+2. Bei der Kugel wird vergessen, dass $E=0$ im Inneren einer *Hohlkugel* gilt, aber bei einer *massiven, gleichmäßig raumgeladenen* Kugel $E(r)\propto r$ im Inneren (unterschiedliche Ladungsverteilung → unterschiedliches $Q_{innen}(r)$!).
+3. Reihen-/Parallelformeln für Kondensatoren mit denen für Widerstände (Kapitel 9) verwechselt (dort ist es genau umgekehrt!).
+4. Energie wird mit $W=CU^2$ statt $W=\tfrac12CU^2$ berechnet (Faktor-2-Fehler durch Vergessen der Integration).
+
+<a id="verbindungen-27"></a>
+## Verbindungen
+
+- Satz 7.2 ist die **1. Maxwell-Gleichung** — wird in Kapitel 15 zusammen mit den übrigen drei Maxwell-Gleichungen zur vollständigen Theorie des Elektromagnetismus zusammengeführt.
+- Die Poisson-/Laplace-Gleichung ist eine der wichtigsten partiellen Differentialgleichungen der Physik überhaupt (elektrostatisches Potential, aber auch Gravitationspotential, stationäre Wärmeleitung).
+- Kondensator-Reihen-/Parallelformeln sind das **Spiegelbild** der Widerstandsformeln aus Kapitel 9 — guter Vergleichspunkt.
+- $\vec E$-Feld an Leiteroberflächen ist die Grundlage für Kapitel 8 (Grenzflächenbedingungen bei Dielektrika).
+
+<a id="zusammenfassung-15"></a>
+## Zusammenfassung
+
+- Gauß'sches Gesetz (integral): $\oint\vec E\cdot d\vec A = Q_{innen}/\varepsilon_0$; (differentiell): $\operatorname{div}\vec E=\rho/\varepsilon_0$.
+- Nützlich bei Kugel-, Zylinder-, Ebenensymmetrie — liefert $E(r)$ ohne direkte Integration.
+- Leiter im elektrostatischen Gleichgewicht: $\vec E_{innen}=0$, Ladung nur auf der Oberfläche, Oberfläche ist Äquipotentialfläche.
+- Kondensator: $C=Q/U$; Platten-, Kugelkondensator-Formeln; Reihen-/Parallelschaltung (Kehrwert- bzw. direkte Addition).
+- Feldenergie: $W=\tfrac12CU^2$, Energiedichte $w_{el}=\tfrac12\varepsilon_0E^2$ — Energie steckt im Feld, nicht in den Ladungen.
+
+---
+
+<a id="kapitel-8-elektrostatik-iii-dielektrika-materie-im-elektrischen-feld"></a>
+# Kapitel 8: Elektrostatik III — Dielektrika, Materie im elektrischen Feld
+
+<a id="motivation-28"></a>
+## Motivation
+
+Bisher haben wir Felder im Vakuum betrachtet. Reale Kondensatoren enthalten aber fast immer ein Isoliermaterial (Dielektrikum) zwischen den Platten — nicht zufällig, sondern weil es die Kapazität *erhöht*. Um zu verstehen, warum, müssen wir untersuchen, was mikroskopisch passiert, wenn ein elektrisches Feld auf Materie trifft, die selbst keine frei beweglichen Ladungsträger hat (im Gegensatz zu Leitern, Kapitel 7).
+
+<a id="intuition-28"></a>
+## Intuition
+
+In einem Isolator sind die Elektronen fest an ihre Atome gebunden — sie können nicht frei wandern wie in einem Leiter. Ein äußeres Feld kann sie aber ein kleines Stück verschieben: Der positive Kern und die negative Elektronenhülle "verrutschen" leicht gegeneinander, das Atom wird zu einem winzigen Dipol (induzierte Polarisation) — man kann sich das wie ein Gummiband vorstellen, das sich unter Zug leicht dehnt, aber nicht reißt oder wegfließt.
+
+Diese vielen mikroskopischen Dipole richten sich (teilweise) entlang des äußeren Feldes aus und erzeugen selbst ein Gegenfeld, das dem äußeren Feld im Material entgegenwirkt und es dadurch abschwächt. Weniger Feld bei gleicher Ladung auf den Kondensatorplatten bedeutet weniger Spannung bei gleicher Ladung — und damit (da $C=Q/U$) eine **größere** Kapazität.
+
+<a id="formale-definitionen-28"></a>
+## Formale Definitionen
+
+**Definition 8.1 (Polarisation).**
+$$\vec P := \frac1V\sum_i \vec p_i,$$
+die mittlere Dipolmomentdichte im Material, $[\vec P]=\text{C/m}^2$.
+
+**Definition 8.2 (Dielektrizitätszahl).**
+Experimentell: Bei konstanter Ladung sinkt die Spannung am Kondensator um den Faktor $\varepsilon$ beim Einbringen eines Dielektrikums:
+$$C_{diel} = \varepsilon\, C_{Vakuum}, \qquad \varepsilon\geq1\ \text{(dimensionslos)}.$$
+
+**Definition 8.3 (Dielektrische Suszeptibilität).**
+$$\vec P = \varepsilon_0\chi\vec E_{diel}, \qquad \chi:=\varepsilon-1.$$
+
+**Definition 8.4 (Dielektrisches Verschiebungsfeld).**
+$$\vec D := \varepsilon_0\vec E_{diel}+\vec P = \varepsilon_0\varepsilon\,\vec E_{diel} = \varepsilon_0\vec E_{vak}.$$
+
+<a id="eigenschaften-24"></a>
+## Eigenschaften
+
+| Größe | Quelle | Verschwindet im Vakuum? |
+|---|---|---|
+| $\vec E_{diel}$ | freie **und** gebundene (Polarisations-)Ladungen | nein, ist das "wahre" Feld im Material |
+| $\vec P$ | gebundene Ladungen allein | ja ($\chi=0$ im Vakuum) |
+| $\vec D$ | **nur** freie Ladungen | nein, aber $\vec D=\varepsilon_0\vec E$ im Vakuum |
+
+| Materialtyp | $\chi$ | Beispiel |
+|---|---|---|
+| Vakuum | $0$ | — |
+| unpolares Dielektrikum | $\chi>0$, klein | $N_2$, unpolare Gase |
+| polares Dielektrikum | $\chi>0$, größer | Wasser ($\varepsilon\approx80$) |
+
+<a id="sätze-24"></a>
+## Sätze
+
+<a id="satz-81-div-vec-d-freie-ladungsdichte-maxwell-gleichung-in-materie"></a>
+### Satz 8.1 (Div $\vec D$ = freie Ladungsdichte — Maxwell-Gleichung in Materie)
+
+**Aussage:** $$\operatorname{div}\vec D = \rho_{frei}.$$
+
+**Voraussetzungen:** lineares, isotropes Dielektrikum.
+
+**Beweis (Beweisstil: Bilanz freier vs. gebundener Ladung, aufbauend auf Satz 7.2).**
+
+Das Gauß'sche Gesetz (Satz 7.2) gilt *immer* für das tatsächliche Feld, mit der *gesamten* Ladungsdichte (frei + Polarisation/gebunden):
+$$\operatorname{div}\vec E_{diel} = \frac{1}{\varepsilon_0}(\rho_{frei}+\rho_{pol}).$$
+Die gebundene (Polarisations-)Ladungsdichte hängt mit der Polarisation zusammen über $\rho_{pol}=-\operatorname{div}\vec P$ (ohne Beweis hier übernommen — folgt aus einer Bilanzbetrachtung analog zu Satz 1.1, angewendet auf die "verschobene" gebundene Ladung). Einsetzen:
+$$\operatorname{div}\vec E_{diel} = \frac1{\varepsilon_0}\rho_{frei} - \frac1{\varepsilon_0}\operatorname{div}\vec P \;\Longrightarrow\; \operatorname{div}(\varepsilon_0\vec E_{diel}+\vec P) = \rho_{frei}.$$
+Mit Definition 8.4 ($\vec D=\varepsilon_0\vec E_{diel}+\vec P$) folgt direkt $\operatorname{div}\vec D=\rho_{frei}$. $\blacksquare$
+
+**Bedeutung:** $\vec D$ ist ein "Hilfsfeld", das nur auf die (kontrollierbaren) freien Ladungen reagiert — praktisch für Rechnungen, da man die komplizierte Polarisationsladungsverteilung nicht kennen muss.
+
+<a id="satz-82-brechungsgesetz-für-das-e-feld-an-einer-dielektrischen-grenzfläche"></a>
+### Satz 8.2 (Brechungsgesetz für das E-Feld an einer dielektrischen Grenzfläche)
+
+**Aussage:** An einer ladungsfreien Grenzfläche zwischen zwei Dielektrika ($\varepsilon_1,\varepsilon_2$) gilt für die Winkel zur Flächennormalen:
+$$\varepsilon_1\tan\alpha_2 = \varepsilon_2\tan\alpha_1 \quad\text{bzw. äquivalent}\quad \tan\alpha_1 = \varepsilon_1\tan\alpha_2/\varepsilon_2.$$
+
+**Beweisidee (Beweisstil: getrennte Analyse von Tangential- und Normalkomponente).**
+Zwei Teilaussagen werden kombiniert: (1) Die **Tangentialkomponente** von $\vec E$ ist an der Grenzfläche stetig ($E_{t,1}=E_{t,2}$) — folgt aus $\oint\vec E\cdot d\vec s=0$ (Konservativität, Satz 6.1) angewendet auf eine schmale Schleife, die die Grenzfläche kreuzt. (2) Die **Normalkomponente** von $\vec D$ ist stetig ($D_{n,1}=D_{n,2}$), falls keine freie Flächenladung vorhanden ist — folgt aus Satz 8.1 (Gauß'sches Gesetz für $\vec D$), angewendet auf eine flache "Gauß-Dose" über die Grenzfläche. Aus $D_n=\varepsilon_0\varepsilon E_n$ und Division der beiden Stetigkeitsbedingungen ($E_t/E_n=\tan\alpha$) folgt die Behauptung. $\blacksquare$
+
+<a id="satz-83-kapazität-und-feldenergie-mit-dielektrikum"></a>
+### Satz 8.3 (Kapazität und Feldenergie mit Dielektrikum)
+
+**Aussage:** $$C_{diel}=\varepsilon C_{vak}, \qquad w_{el}=\tfrac12\varepsilon_0\varepsilon E^2 = \tfrac12 \vec E\cdot\vec D.$$
+
+**Beweisidee:** Direkte Konsequenz aus $\vec D=\varepsilon_0\varepsilon\vec E$ eingesetzt in die Kondensator- und Energieformeln aus Kapitel 7 (Sätze 7.4, 7.5), unter Beachtung, dass bei *konstanter Ladung* $Q$ das Feld $E$ um den Faktor $\varepsilon$ sinkt.
+
+<a id="algorithmen-16"></a>
+## Algorithmen
+
+**Lösungsstrategie: Kondensator mit Dielektrikum**
+```
+EINGABE: Kondensatorgeometrie, Dielektrikum(a) mit ε_r
+1. Bestimme, ob Q oder U konstant gehalten wird (z. B. Batterie
+   angeschlossen = U konstant; isoliert = Q konstant)
+2. Berechne C_vak für die gegebene Geometrie (Kapitel 7)
+3. C_diel = ε * C_vak  (bei vollständig gefülltem Kondensator)
+   Bei teilweiser Füllung: Reihen-/Parallelschaltung von Teilkondensatoren
+   mit und ohne Dielektrikum modellieren!
+4. WENN Q konstant: neues U = Q/C_diel (sinkt), E sinkt um Faktor ε
+   WENN U konstant: neues Q = C_diel * U (steigt)
+5. Energie über W = Q²/(2C) bzw. W = ½CU² je nachdem, was konstant ist
+AUSGABE: C, Q, U, E, W im Endzustand
+```
+- **Typischer Fehler:** Bei teilweiser Füllung (z. B. Dielektrikum füllt nur die halbe Plattenfläche oder nur die halbe Plattendistanz) wird fälschlich einfach $C=\varepsilon C_{vak}$ für den *gesamten* Kondensator verwendet, statt die Geometrie korrekt als Parallel- oder Reihenschaltung zweier Teilkondensatoren zu modellieren.
+
+<a id="beispiele-26"></a>
+## Beispiele
+
+**Beispiel 1 (leicht):** Ein Plattenkondensator mit $C_{vak}=10\,\text{pF}$ wird mit Glas ($\varepsilon=6$) gefüllt. Neue Kapazität?
+*Lösung:* $C_{diel}=6\cdot10=60\,\text{pF}$.
+
+**Beispiel 2 (mittel):** Derselbe Kondensator wird zuerst mit $U_0=100\,\text{V}$ (Batterie) aufgeladen, dann von der Batterie getrennt, dann wird das Dielektrikum eingeführt. Wie ändert sich $U$?
+*Lösung:* $Q$ bleibt konstant (isoliert!). $U_{neu}=Q/C_{diel}=Q/(6C_{vak}) = U_0/6\approx16{,}7\,\text{V}$.
+
+**Beispiel 3 (mittel):** Ein Kondensator ist zur Hälfte (Fläche) mit einem Dielektrikum ($\varepsilon=4$) gefüllt, zur Hälfte Vakuum, gleiche Plattenspannung $U$. Wie verhalten sich die beiden Hälften zueinander?
+*Lösung:* Beide Hälften liegen an derselben Spannung $U$ (Platten sind durchgehend leitend) → **Parallelschaltung** zweier Kondensatoren mit halber Fläche: $C_{ges}=\tfrac12C_{vak}+\tfrac12\cdot4C_{vak} = 2{,}5\,C_{vak}$.
+
+**Beispiel 4 (schwer):** Ein Lichtstrahl (Analogie zur Feldlinienbrechung) trifft mit $\alpha_1=30°$ von einem Medium mit $\varepsilon_1=1$ auf ein Medium mit $\varepsilon_2=4$. Berechne $\alpha_2$ für die E-Feldlinie (Satz 8.2).
+*Lösung:* $\tan\alpha_2 = \dfrac{\varepsilon_2}{\varepsilon_1}\tan\alpha_1 = 4\cdot\tan30° \approx 2{,}31 \Rightarrow \alpha_2\approx66{,}6°$ — die Feldlinie wird beim Übergang in das Medium mit höherem $\varepsilon$ stärker von der Normalen weggebrochen.
+
+<a id="gegenbeispiele-26"></a>
+## Gegenbeispiele
+
+- $C_{diel}=\varepsilon C_{vak}$ gilt **nur**, wenn das Dielektrikum den *gesamten* felderfüllten Raum ausfüllt — bei teilweiser Füllung muss immer über Ersatzschaltbilder (Reihen-/Parallelschaltung von Teilkondensatoren) gerechnet werden.
+- Anisotrope Kristalle haben **keine** skalare Dielektrizitätszahl $\varepsilon$ — dort ist $\vec D=\varepsilon_0\hat\varepsilon\vec E$ mit einem Tensor $\hat\varepsilon$ (hier nicht behandelt, aber wichtige Einschränkung der Gültigkeit von Def. 8.2/8.4).
+
+<a id="typische-klausuraufgaben-27"></a>
+## Typische Klausuraufgaben
+
+- "Wie ändert sich $C$/$U$/$Q$/$W$, wenn ein Dielektrikum eingeführt wird?" — Strategie: zuerst klären, ob $Q$ oder $U$ konstant bleibt (Batterie angeschlossen oder nicht).
+- Teilweise gefüllte Kondensatoren — Strategie: Ersatzschaltbild aus Teilkondensatoren (parallel bei gemeinsamer Spannung/unterschiedlicher Fläche, Reihe bei gemeinsamer Ladung/unterschiedlichem Plattenabstand).
+- Grenzflächenbedingungen (Satz 8.2) — eher Verständnisaufgabe.
+
+<a id="typische-fehler-27"></a>
+## Typische Fehler
+
+1. Verwechslung, ob $Q$ oder $U$ beim Einbringen des Dielektrikums konstant bleibt (führt zu entgegengesetzten Antworten für $E$ und $U$!).
+2. Teilweise gefüllte Kondensatoren werden als vollständig gefüllt behandelt.
+3. $\vec D$ und $\vec E$ werden verwechselt — $\vec D$ hängt nur von freien Ladungen ab, $\vec E$ vom Gesamtfeld.
+
+<a id="verbindungen-28"></a>
+## Verbindungen
+
+- Direkte Erweiterung von Kapitel 7 (Kondensatoren) auf reale Materialien.
+- $\vec D=\rho_{frei}$-Formulierung ist eine der vier Maxwell-Gleichungen "in Materie" — wird in Kapitel 15 im Vakuum-Grenzfall wieder auf die einfache Form aus Kapitel 7 reduziert.
+- Konzeptuelle Parallele zu **magnetisierbaren Materialien** (Kapitel 12): dort spielt $\vec H$ die analoge Rolle zu $\vec D$, $\vec M$ (Magnetisierung) die analoge Rolle zu $\vec P$.
+
+<a id="zusammenfassung-16"></a>
+## Zusammenfassung
+
+- Dielektrika werden durch ein äußeres Feld polarisiert ($\vec P=\varepsilon_0\chi\vec E$), was das Feld im Material abschwächt.
+- $\vec D:=\varepsilon_0\vec E+\vec P=\varepsilon_0\varepsilon\vec E$ hängt nur von freien Ladungen ab: $\operatorname{div}\vec D=\rho_{frei}$.
+- Kondensator mit vollständig füllendem Dielektrikum: $C_{diel}=\varepsilon C_{vak}$.
+- Grenzflächen: $E_t$ stetig, $D_n$ stetig (ohne freie Flächenladung) → Brechungsgesetz für Feldlinien.
+
+---
+
+<a id="kapitel-9-elektrischer-strom-und-gleichstromkreise"></a>
+# Kapitel 9: Elektrischer Strom und Gleichstromkreise
+
+<a id="motivation-29"></a>
+## Motivation
+
+Elektrostatik behandelt ruhende Ladungen. Doch die meisten praktischen Anwendungen (Beleuchtung, Elektronik, Motoren) beruhen auf *bewegten* Ladungen — elektrischem Strom. Die zentrale Frage: Wie hängt der Strom, der durch ein Material fließt, mit der angelegten Spannung zusammen? Die Antwort (Ohm'sches Gesetz) ist empirisch, aber lässt sich mikroskopisch aus der Bewegung der Ladungsträger im Material verstehen — ein weiteres Beispiel für den Brückenschlag zwischen mikroskopischer Mechanik und makroskopischem Verhalten, wie schon in Kapitel 2.
+
+<a id="intuition-29"></a>
+## Intuition
+
+Stell dir Elektronen in einem Metall wie Menschen in einer dichten, aber fließenden Menschenmenge vor. Ein elektrisches Feld ist wie eine leichte Neigung des Bodens: Die Menge bewegt sich im Mittel bergab, aber jede einzelne Person stößt ständig mit anderen zusammen (Streuung an Gitteratomen) und wird abgebremst — daher stellt sich eine **konstante mittlere Driftgeschwindigkeit** ein (nicht eine ständig wachsende), genau wie ein Fallschirmspringer eine Grenzgeschwindigkeit erreicht, wenn Luftwiderstand die Gewichtskraft ausgleicht. Das Ohm'sche Gesetz ist die makroskopische Konsequenz dieses mikroskopischen Gleichgewichts.
+
+<a id="formale-definitionen-29"></a>
+## Formale Definitionen
+
+**Definition 9.1 (Stromstärke).**
+$$I := \frac{dQ}{dt}, \qquad [I]=\text{A (Ampere)}.$$
+
+**Definition 9.2 (Stromdichte).**
+$$\vec j(\vec r) := n\,q\,\vec v_{Drift}, \qquad I = \int_A \vec j\cdot d\vec A,$$
+mit Ladungsträgerdichte $n$, Ladung $q$ pro Träger, mittlerer Driftgeschwindigkeit $\vec v_{Drift}$.
+
+**Definition 9.3 (Elektrischer Widerstand, spezifischer Widerstand).**
+$$R := \frac{U}{I}, \qquad [R]=\Omega\text{ (Ohm)}; \qquad R = \varrho\,\frac{\ell}{A},$$
+mit spezifischem Widerstand $\varrho$ (Materialkonstante), Leitfähigkeit $\sigma:=1/\varrho$.
+
+**Definition 9.4 (Elektrische Leistung).**
+$$P := \frac{dW}{dt} = U\cdot I.$$
+
+<a id="eigenschaften-25"></a>
+## Eigenschaften
+
+| Größe | Formel | Bemerkung |
+|---|---|---|
+| Mikroskopisches Ohm'sches Gesetz | $\vec j=\sigma\vec E$ | lineare Antwort, gilt für "Ohm'sche" Leiter |
+| Kontinuitätsgleichung für Ladung | $\operatorname{div}\vec j=-\dot\rho$ | identisch zu Satz 1.1, angewendet auf Ladung |
+| Stationärer Strom | $\operatorname{div}\vec j=0$ | keine Ladungsanhäufung irgendwo |
+| Temperaturabhängigkeit (Metalle) | $\varrho(T)=\varrho_0(1+\alpha T+\beta T^2)$, $\alpha\gg\beta T$ | mehr Gitterschwingungen bei höherem $T$ → mehr Streuung |
+| Temperaturabhängigkeit (Halbleiter) | $n(T)\propto e^{-E_g/(k_BT)}$ | mehr Ladungsträger bei höherem $T$ (dominiert über erhöhte Streuung) |
+| Supraleiter | $R=0$ für $T<T_c$ | Quantenphänomen, hier nicht hergeleitet |
+
+<a id="sätze-25"></a>
+## Sätze
+
+<a id="satz-91-kontinuitätsgleichung-für-elektrische-ladung"></a>
+### Satz 9.1 (Kontinuitätsgleichung für elektrische Ladung)
+
+**Aussage:** $$\operatorname{div}\vec j = -\frac{\partial\rho}{\partial t}.$$
+
+**Beweis:** Identisch zum Beweis von Satz 1.1, mit Massenstromdichte $\to$ elektrische Stromdichte, Massendichte $\to$ Ladungsdichte ersetzt (dieselbe Bilanzargumentation über ein beliebiges Kontrollvolumen + Satz von Gauß). $\blacksquare$
+
+<a id="satz-92-mikroskopische-herleitung-des-ohmschen-gesetzes"></a>
+### Satz 9.2 (Mikroskopische Herleitung des Ohm'schen Gesetzes)
+
+**Aussage:** $$\vec j = \sigma\vec E, \qquad U = R\,I.$$
+
+**Voraussetzungen:** Driftgeschwindigkeit klein gegen thermische Geschwindigkeit, lineares Reibungsmodell (Stoßzeit-Näherung), homogener, isotroper Leiter.
+
+**Beweis (Beweisstil: Kräftebilanz, analog zur Sedimentationsgeschwindigkeit in Kapitel 1).**
+
+Ein Ladungsträger der Masse $m$, Ladung $q$, erfährt im Feld $\vec E$ die Kraft $\vec F=q\vec E$. Gleichzeitig wird er durch Stöße mit dem Gitter gebremst; wir modellieren dies durch eine effektive Reibungskraft $\vec F_{Reib}=-\vec v/\mu$ mit einer Materialkonstante $\mu$ (Beweglichkeit). Im stationären Zustand (Kräftegleichgewicht, analog zur Stokes-Sedimentation, Kapitel 1):
+$$q\vec E = \frac{\vec v_{Drift}}{\mu} \;\Longrightarrow\; \vec v_{Drift}=\mu\vec E.$$
+Einsetzen in Definition 9.2:
+$$\vec j = nq\vec v_{Drift} = nq\mu\vec E =: \sigma\vec E, \qquad \sigma:=nq\mu.$$
+Für einen homogenen Leiter der Länge $\ell$, Querschnitt $A$, mit $I=jA$ und $U=E\ell$ (homogenes Feld):
+$$I = \sigma E A = \sigma\frac{U}{\ell}A \;\Longrightarrow\; U = \frac{\ell}{\sigma A}\,I =: R\,I,\quad R=\frac{\ell}{\sigma A}=\varrho\frac{\ell}{A}. \qquad\blacksquare$$
+
+<a id="satz-93-kirchhoffsche-regeln"></a>
+### Satz 9.3 (Kirchhoff'sche Regeln)
+
+**Aussage:**
+- **Knotenregel (1. Kirchhoff'sche Regel):** $\sum_k I_k = 0$ (Vorzeichen: zufließend positiv, abfließend negativ) an jedem Knotenpunkt.
+- **Maschenregel (2. Kirchhoff'sche Regel):** $\sum_n U_n = 0$ entlang jeder geschlossenen Masche.
+
+**Voraussetzungen:** stationärer (oder quasistationärer) Strom.
+
+**Beweis Knotenregel (Beweisstil: direkte Konsequenz von Satz 9.1).**
+Für stationären Strom gilt $\operatorname{div}\vec j=0$ (Satz 9.1 mit $\dot\rho=0$). Integration über ein kleines Volumen um einen Knotenpunkt und Anwendung des Satzes von Gauß:
+$$0 = \int_V\operatorname{div}\vec j\, dV = \oint_S\vec j\cdot d\vec A = \sum_k I_k. \qquad\blacksquare$$
+
+**Beweis Maschenregel (Beweisstil: direkte Konsequenz der Konservativität des elektrostatischen Feldes, Satz 6.1).**
+Für ein (quasi-)elektrostatisches Feld gilt $\oint\vec E\cdot d\vec s=0$ (Satz 6.1, da $\vec E=-\nabla\phi$). Entlang einer Masche ist dieses Integral gerade die Summe aller Spannungsabfälle und -quellen: $\oint\vec E\cdot d\vec s = \sum_n U_n = 0$. $\blacksquare$
+
+**Bedeutung:** Diese beiden Regeln erlauben die vollständige Analyse *beliebiger* linearer Netzwerke (nicht nur reine Reihen-/Parallelschaltungen).
+
+<a id="satz-94-ersatzwiderstände-reihen-und-parallelschaltung"></a>
+### Satz 9.4 (Ersatzwiderstände: Reihen- und Parallelschaltung)
+
+**Aussage:** $$R_{Reihe}=\sum_i R_i, \qquad \frac1{R_{Parallel}}=\sum_i\frac1{R_i}.$$
+
+**Beweis Reihenschaltung (Beweisstil: Kombination Knoten-/Maschenregel).**
+Bei Reihenschaltung fließt durch alle Widerstände derselbe Strom $I$ (Knotenregel, da keine Verzweigung). Maschenregel: $U_{ges}=\sum_iU_i=\sum_iR_iI = I\sum_iR_i =: I\,R_{Reihe}$. $\blacksquare$
+
+**Beweis Parallelschaltung (analog, Beweisstil: Kombination Knoten-/Maschenregel).**
+Bei Parallelschaltung liegt an allen Widerständen dieselbe Spannung $U$ an. Knotenregel: $I_{ges}=\sum_iI_i=\sum_iU/R_i = U\sum_i1/R_i =: U/R_{Parallel}$. $\blacksquare$
+
+**Bemerkung:** Beachte die **Umkehrung** gegenüber Kondensatoren (Kapitel 7, Satz 7.4/Eigenschaftentabelle) — dort war es genau andersherum (Kehrwertaddition bei Reihe für Kondensatoren, direkte Addition bei Reihe für Widerstände). Vergleichstabelle:
+
+| | Widerstände | Kondensatoren |
+|---|---|---|
+| Reihenschaltung | $R_{ges}=\sum R_i$ | $1/C_{ges}=\sum1/C_i$ |
+| Parallelschaltung | $1/R_{ges}=\sum1/R_i$ | $C_{ges}=\sum C_i$ |
+| Grund des Unterschieds | bei Widerständen ist $I$ (nicht $U$) bei Reihe gleich; bei Kondensatoren ist $Q$ (nicht $U$) bei Reihe gleich | — |
+
+<a id="algorithmen-17"></a>
+## Algorithmen
+
+**Netzwerkanalyse-Algorithmus (Kirchhoff'sche Regeln)**
+
+- **Motivation:** Bei komplexen Schaltungen (nicht reine Reihen-/Parallelschaltung) versagt die einfache Ersatzwiderstandsmethode; man braucht ein systematisches Gleichungssystem.
+- **Idee:** Jeder unabhängige Knoten liefert eine Knotengleichung, jede unabhängige Masche eine Maschengleichung — zusammen genug Gleichungen, um alle unbekannten Ströme zu bestimmen.
+- **Voraussetzungen:** lineares Netzwerk (Ohm'sche Widerstände, ideale Spannungsquellen).
+- **Pseudocode:**
+```
+EINGABE: Schaltung mit b Zweigen, k Knoten, definierten Stromrichtungen
+1. Wähle (k-1) unabhängige Knoten, stelle Knotengleichungen auf (Satz 9.3)
+2. Bestimme unabhängige Maschen (b - k + 1 Stück), stelle
+   Maschengleichungen auf (Satz 9.3), Vorzeichen konsistent mit
+   gewähltem Umlaufsinn
+3. Löse das entstehende lineare Gleichungssystem (b Gleichungen,
+   b Unbekannte Ströme) z. B. mit Gauß-Elimination
+4. Prüfe Ergebnis: negative Ströme bedeuten nur, dass die tatsächliche
+   Richtung der angenommenen entgegengesetzt ist (kein Fehler!)
+AUSGABE: alle Zweigströme I_i
+```
+- **Mathematische Beschreibung:** lineares Gleichungssystem $A\vec I = \vec b$ mit Inzidenzmatrix $A$ (Knotengleichungen) und Maschenimpedanzen.
+- **Laufzeit:** Gauß-Elimination auf $b\times b$-System: $O(b^3)$.
+- **Speicherbedarf:** $O(b^2)$ für die Koeffizientenmatrix.
+- **Korrektheitsidee:** Folgt direkt aus Satz 9.3; die Anzahl der unabhängigen Gleichungen ($k-1$ Knoten + $b-k+1$ Maschen $=b$) entspricht genau der Anzahl der Unbekannten.
+- **Typische Anwendungen:** Brückenschaltungen, Netzwerke mit mehreren Spannungsquellen, Spannungsteiler unter Last.
+- **Typische Fehler:** Vorzeichenkonvention beim Maschenumlauf inkonsistent gewählt; eine abhängige (redundante) Masche/Knoten wird mitgezählt, was zu einem singulären Gleichungssystem führt.
+
+<a id="beispiele-27"></a>
+## Beispiele
+
+**Beispiel 1 (leicht):** Ein Draht ($\ell=2\,\text{m}$, $A=1\,\text{mm}^2$, $\varrho=1{,}7\cdot10^{-8}\,\Omega\text{m}$, Kupfer). Berechne $R$.
+*Lösung:* $R=\varrho\ell/A = 1{,}7\cdot10^{-8}\cdot2/10^{-6}=0{,}034\,\Omega$.
+
+**Beispiel 2 (leicht):** Ein Widerstand $R=100\,\Omega$ liegt an $U=10\,\text{V}$. Berechne $I$ und $P$.
+*Lösung:* $I=U/R=0{,}1\,\text{A}$. $P=UI=1\,\text{W}$.
+
+**Beispiel 3 (mittel):** Drei Widerstände $R_1=10\,\Omega$, $R_2=20\,\Omega$ (parallel), in Reihe mit $R_3=5\,\Omega$. Berechne $R_{ges}$.
+*Lösung:* $R_{12}=(1/10+1/20)^{-1}=6{,}67\,\Omega$. $R_{ges}=6{,}67+5=11{,}67\,\Omega$.
+
+**Beispiel 4 (mittel):** Unbelasteter Spannungsteiler mit $R_1=R_2=1\,\text{k}\Omega$ an $U_0=10\,\text{V}$. Berechne $U_2$. Nun wird ein Lastwiderstand $R_L=1\,\text{k}\Omega$ parallel zu $R_2$ geschaltet — wie ändert sich $U_2$?
+*Lösung:* Unbelastet: $U_2=U_0R_2/(R_1+R_2)=5\,\text{V}$. Belastet: $R_2\|R_L=500\,\Omega$, $U_2'=U_0\cdot500/(1000+500)\approx3{,}33\,\text{V}$ — die Spannung bricht unter Last ein (wichtiger Effekt bei realen Spannungsteilern!).
+
+**Beispiel 5 (schwer):** Eine Brückenschaltung (Wheatstone-Brücke) mit vier Widerständen $R_1,R_2,R_3,R_4$ und einem Galvanometer in der Brückendiagonale. Zeige, dass im "abgeglichenen" Zustand (kein Strom durchs Galvanometer) $R_1/R_2=R_3/R_4$ gilt.
+*Lösung:* Im abgeglichenen Zustand fließt kein Strom durch die Diagonale, also verhalten sich die beiden Zweige wie zwei unabhängige Spannungsteiler an derselben Gesamtspannung. Gleichsetzen der Teilspannungen an den beiden Mittelknoten (die dann gleiches Potential haben müssen, da kein Strom durch die Verbindung fließt) liefert nach Umformen $R_1/R_2=R_3/R_4$ — Grundprinzip der präzisen Widerstandsmessung.
+
+<a id="gegenbeispiele-27"></a>
+## Gegenbeispiele
+
+- Nicht alle Materialien sind "Ohm'sch" — z. B. Dioden, Glühlampen (Widerstand ändert sich stark mit $I$ bzw. $T$) haben eine nichtlineare Kennlinie $I(U)$; das Ohm'sche Gesetz $U=RI$ gilt dort nur lokal (differentiell) mit $R(I)$, nicht global mit konstantem $R$.
+- Reale Spannungsquellen haben einen **Innenwiderstand** — die Klemmenspannung sinkt unter Last; ideale Spannungsquellen (konstantes $U$ unabhängig von $I$) sind eine Idealisierung.
+
+<a id="typische-klausuraufgaben-28"></a>
+## Typische Klausuraufgaben
+
+- Ersatzwiderstandsberechnung für Reihen-/Parallel-/gemischte Schaltungen — Strategie: schrittweise "von außen nach innen" oder "innen nach außen" zusammenfassen.
+- Kirchhoff'sche Regeln bei Mehrfachmaschen (Brückenschaltung, Netzwerke mit mehreren Quellen) — Strategie: siehe Algorithmus.
+- Belasteter vs. unbelasteter Spannungsteiler — Erkennungsmerkmal: "Lastwiderstand", "Verbraucher angeschlossen".
+- Leistungsberechnung, Joule'sche Wärme in Schaltungen.
+
+<a id="typische-fehler-28"></a>
+## Typische Fehler
+
+1. Reihen-/Parallelformeln für Widerstände und Kondensatoren verwechselt (siehe Vergleichstabelle oben!).
+2. Beim Spannungsteiler wird die Belastung durch $R_L$ vergessen — führt zu systematisch zu hohen $U_2$-Werten.
+3. Vorzeichenfehler bei Kirchhoff'scher Maschenregel (Umlaufsinn nicht konsistent mit Strom-/Quellenrichtung).
+4. Ohm'sches Gesetz wird auf nichtlineare Bauelemente (Diode, Glühlampe) mit konstantem $R$ angewendet.
+
+<a id="verbindungen-29"></a>
+## Verbindungen
+
+- Die Kontinuitätsgleichung (Satz 9.1) und die Kirchhoff'sche Knotenregel sind direkte Anwendungen desselben Prinzips wie in Kapitel 1 (Massenerhaltung) — ein wiederkehrendes Muster der gesamten Physik.
+- $\vec j=\sigma\vec E$ hat exakt dieselbe mathematische Struktur wie die Transportgesetze aus Kapitel 3 (Fick, Fourier) — "Fluss $\propto$ Gradient".
+- Widerstand und Temperaturabhängigkeit werden in Kapitel 10 (Ladungstransport in Materialien) mikroskopisch vertieft.
+- RC-Aufladevorgänge (hier kurz als Anwendung erwähnt) werden strukturell in Kapitel 14 (Wechselstrom, komplexe Widerstände) wieder aufgegriffen.
+
+<a id="zusammenfassung-17"></a>
+## Zusammenfassung
+
+- $I=dQ/dt$; $\vec j=nq\vec v_{Drift}$.
+- Ohm'sches Gesetz (mikroskopisch: $\vec j=\sigma\vec E$; makroskopisch: $U=RI$), $R=\varrho\ell/A$.
+- Kirchhoff'sche Regeln: Knotenregel ($\sum I=0$) aus Ladungserhaltung, Maschenregel ($\sum U=0$) aus Konservativität von $\vec E$.
+- Widerstände: Reihe addiert sich direkt, Parallel als Kehrwertsumme (umgekehrt wie bei Kondensatoren!).
+- $P=UI=RI^2=U^2/R$ (Joule'sche Wärme).
+
+---
+
+<a id="kapitel-10-ladungstransport-in-materialien"></a>
+# Kapitel 10: Ladungstransport in Materialien
+
+<a id="motivation-30"></a>
+## Motivation
+
+Warum leiten Metalle Strom gut, Isolatoren fast gar nicht, und Halbleiter irgendwo dazwischen — und warum ändert sich das bei Halbleitern so stark mit der Temperatur (im Gegensatz zu Metallen)? Die Antwort erfordert einen Blick auf die *quantenmechanische* Struktur der Materie (Bändermodell) — ein erster Ausblick über die klassische Physik dieser Vorlesung hinaus, der aber für das Verständnis moderner Elektronik (Transistoren, Solarzellen) unverzichtbar ist.
+
+<a id="intuition-30"></a>
+## Intuition
+
+Stell dir die erlaubten Energieniveaus der Elektronen in einem Festkörper nicht als einzelne Linien (wie im isolierten Atom), sondern als breite "Bänder" erlaubter Energien vor, getrennt durch "verbotene" Energielücken (Bandlücken) — wie Stockwerke eines Gebäudes mit einigen "gesperrten" Zwischengeschossen. Elektronen können nur dann zum elektrischen Strom beitragen, wenn sie sich in einem *teilweise* gefüllten Band frei bewegen können (so wie Menschen sich nur dann durch ein Stockwerk bewegen können, wenn nicht *jeder* Platz bereits besetzt ist — bei einem voll besetzten Band kann niemand "einen Platz weiterrücken", ohne dass ein anderer bereits dort ist, es sei denn es gibt einen Sprung ins nächste, unbesetzte Band).
+
+Bei **Metallen** überlappt das oberste besetzte Band mit dem nächsten (oder ist nur teilweise gefüllt) — Elektronen bewegen sich fast frei. Bei **Isolatoren** ist eine riesige Bandlücke zum nächsten Band vorhanden — bei Raumtemperatur schafft es praktisch kein Elektron, sie zu überspringen. Bei **Halbleitern** ist die Lücke klein genug, dass thermische Anregung ($k_BT$) einige wenige Elektronen "hinüberspringen" lässt — und mit steigender Temperatur werden es exponentiell mehr.
+
+<a id="formale-definitionen-30"></a>
+## Formale Definitionen
+
+**Definition 10.1 (Bändermodell — qualitativ).**
+Elektronen in einem Festkörper besetzen erlaubte Energiebänder, getrennt durch Bandlücken $E_g$. Das höchste bei $T=0$ vollständig besetzte Band heißt **Valenzband**, das nächsthöhere (bei $T=0$ leere) **Leitungsband**.
+
+**Definition 10.2 (Klassifikation nach Bandstruktur).**
+
+| Typ | Bandstruktur | Bandlücke $E_g$ |
+|---|---|---|
+| Metall (Leiter) | Leitungsband teilweise gefüllt oder Bänder überlappen | $E_g=0$ (kein Gap) |
+| Halbleiter | Valenzband voll, Leitungsband leer bei $T=0$, aber $E_g$ klein | $E_g\sim1{-}2\,\text{eV}$ (z. B. Si: $1{,}1\,\text{eV}$) |
+| Isolator | wie Halbleiter, aber $E_g$ groß | $E_g\gg k_BT$ (mehrere eV) |
+
+**Definition 10.3 (Ladungsträgerdichte im Halbleiter, intrinsisch).**
+$$n(T) \propto e^{-E_g/(2k_BT)}$$
+(exponentielles "Ausfrieren" bei tiefer $T$; Herleitung erfordert Fermi-Dirac-Statistik, hier nicht im Detail behandelt).
+
+<a id="eigenschaften-26"></a>
+## Eigenschaften
+
+| Eigenschaft | Metall | Halbleiter |
+|---|---|---|
+| $\varrho(T)$-Verhalten | steigt mit $T$ (mehr Streuung) | **sinkt** mit $T$ (exponentiell mehr Ladungsträger) |
+| Ladungsträger bei $T=0$ | vorhanden (Fermi-See) | keine (im intrinsischen Fall) |
+| Dotierung möglich | nein (sinnlos) | ja — gezielte Erhöhung der Ladungsträgerdichte |
+
+**Wichtige Vergleichstabelle — Temperaturabhängigkeit des Widerstands (Zusammenfassung aus Kapitel 9 + hier vertieft):**
+
+| Material | Formel | Grund |
+|---|---|---|
+| Metall | $\varrho(T)=\varrho_0(1+\alpha T)$, $\alpha>0$ | mehr Gitterschwingungen → mehr Streuung, Ladungsträgerdichte $n$ konstant |
+| Halbleiter | $\varrho(T)\propto e^{+E_g/(2k_BT)}$ (sinkt mit steigendem $T$) | $n(T)$ steigt exponentiell, dominiert über (schwächer wachsende) Streuung |
+| Supraleiter | $\varrho=0$ für $T<T_c$ | Cooper-Paare, quantenmechanischer Effekt |
+
+<a id="sätze-26"></a>
+## Sätze
+
+Dieses Kapitel enthält (im Rahmen dieser Vorlesung) keine vollständig herleitbaren Sätze im strengen Sinn, da die zugrundeliegende Bandtheorie Quantenmechanik voraussetzt, die hier nicht Gegenstand ist. Die zentralen Aussagen werden daher als **empirisch begründete Modellvorstellungen** behandelt:
+
+<a id="satz-101-wiedemann-franz-gesetz-wiederholungvertiefung-aus-kapitel-3"></a>
+### "Satz" 10.1 (Wiedemann-Franz-Gesetz, Wiederholung/Vertiefung aus Kapitel 3)
+
+**Aussage:** $\lambda/\sigma = aT$ (Definition 3.4).
+
+**Begründung (qualitativ, kein vollständiger Beweis):** In Metallen werden sowohl Wärme als auch elektrischer Strom von *denselben* freien Leitungselektronen getragen. Da beide Transportprozesse auf demselben mikroskopischen Mechanismus (Elektronenbewegung + Streuung an Gitterdefekten) beruhen, sind $\lambda$ und $\sigma$ nicht unabhängig, sondern über die universelle Lorenz-Zahl verknüpft.
+
+<a id="algorithmen-18"></a>
+## Algorithmen
+
+Kein klassischer Algorithmus; stattdessen eine **Entscheidungsstrategie zur Materialklassifikation**:
+```
+EINGABE: Widerstand R(T)-Messkurve oder Bandlücke E_g
+1. WENN dR/dT > 0 (Widerstand steigt mit T): → Metall
+2. WENN dR/dT < 0 (Widerstand sinkt mit T):  → Halbleiter (oder Isolator,
+   falls Leitfähigkeit bei Raumtemperatur verschwindend gering)
+3. WENN R = 0 unterhalb einer kritischen Temperatur T_c: → Supraleiter
+AUSGABE: Materialklasse
+```
+
+<a id="beispiele-28"></a>
+## Beispiele
+
+**Beispiel 1 (leicht):** Silizium hat $E_g=1{,}1\,\text{eV}$. Bei welcher Temperaturskala wird $k_BT\sim E_g$?
+*Lösung:* $T\sim E_g/k_B = 1{,}1\cdot1{,}6\cdot10^{-19}/1{,}38\cdot10^{-23}\approx12750\,\text{K}$ — bei Raumtemperatur ($300\,\text{K}$) ist $k_BT\approx0{,}026\,\text{eV}\ll E_g$, daher sind bei Raumtemperatur nur sehr wenige Elektronen thermisch angeregt (exponentiell unterdrückt), was erklärt, warum reines (intrinsisches) Silizium bei Raumtemperatur ein sehr viel schlechterer Leiter ist als ein Metall.
+
+**Beispiel 2 (mittel):** Ein Kupferdraht hat bei $20\,°\text{C}$ den Widerstand $R_0=10\,\Omega$, $\alpha=0{,}004\,\text{K}^{-1}$. Berechne $R$ bei $80\,°\text{C}$.
+*Lösung:* $R=R_0(1+\alpha\Delta T)=10(1+0{,}004\cdot60)=12{,}4\,\Omega$.
+
+<a id="gegenbeispiele-28"></a>
+## Gegenbeispiele
+
+- Das lineare Modell $\varrho(T)=\varrho_0(1+\alpha T)$ für Metalle gilt **nicht** bei sehr tiefen Temperaturen (dort dominieren andere Streumechanismen, z. B. an Verunreinigungen, das Verhalten wird komplizierter) und **nicht** in der Nähe des Schmelzpunkts.
+- Bei Supraleitern versagt jedes klassische Widerstandsmodell komplett — $R=0$ ist ein rein quantenmechanischer Effekt (Cooper-Paare), nicht durch klassische Streutheorie erklärbar.
+
+<a id="typische-klausuraufgaben-29"></a>
+## Typische Klausuraufgaben
+
+- Temperaturabhängige Widerstandsberechnung für Metalle (linear) — meist einfache Einsetzaufgabe.
+- Qualitative Erklärung, warum Halbleiterwiderstand mit $T$ sinkt, Metallwiderstand steigt — Verständnisfrage, Bändermodell-Argumentation gefragt.
+- Einordnung eines Materials anhand einer gegebenen $R(T)$-Kurve.
+
+<a id="typische-fehler-29"></a>
+## Typische Fehler
+
+1. Halbleiter- und Metallverhalten bei Temperaturabhängigkeit verwechselt (Vorzeichen von $d\varrho/dT$).
+2. Bandlücke $E_g$ wird mit der thermischen Energie $k_BT$ verwechselt (unterschiedliche Größenordnungen, siehe Beispiel 1).
+
+<a id="verbindungen-30"></a>
+## Verbindungen
+
+- Direkte Fortsetzung von Kapitel 9 (Temperaturabhängigkeit des Widerstands, dort nur empirisch eingeführt, hier mikroskopisch motiviert).
+- Wiedemann-Franz-Gesetz verbindet zurück zu Kapitel 3 (Wärmeleitung).
+- Erster Kontaktpunkt mit Konzepten, die in der Festkörperphysik/Quantenmechanik vertieft werden (außerhalb dieser Vorlesung).
+
+<a id="zusammenfassung-18"></a>
+## Zusammenfassung
+
+- Bändermodell erklärt Leiter/Halbleiter/Isolator über die Größe der Bandlücke $E_g$ relativ zu $k_BT$.
+- Metalle: $\varrho$ steigt mit $T$ (mehr Streuung, $n$ konstant).
+- Halbleiter: $\varrho$ sinkt mit $T$ (exponentiell mehr Ladungsträger, $n(T)\propto e^{-E_g/2k_BT}$).
+- Supraleiter: $R=0$ unterhalb $T_c$ (quantenmechanisch, hier nicht hergeleitet).
+
+---
+
+<a id="kapitel-11-magnetismus-i-kraftwirkungen-lorentzkraft"></a>
+# Kapitel 11: Magnetismus I — Kraftwirkungen (Lorentzkraft)
+
+<a id="motivation-31"></a>
+## Motivation
+
+Elektrische und magnetische Phänomene wurden lange als getrennt betrachtet — bis Ørsted 1820 entdeckte, dass ein stromdurchflossener Draht eine Kompassnadel ablenkt: **bewegte** Ladungen erzeugen magnetische Effekte. Das ist der erste Hinweis auf die tiefe Einheit von Elektrizität und Magnetismus, die Maxwell später vollständig formalisierte (Kapitel 15). In diesem Kapitel betrachten wir zunächst nur die *Kraftwirkung* eines gegebenen Magnetfelds auf bewegte Ladungen — die *Erzeugung* von Magnetfeldern folgt in Kapitel 12.
+
+<a id="intuition-31"></a>
+## Intuition
+
+Die Lorentzkraft ist ungewöhnlich, weil sie **senkrecht** sowohl zur Geschwindigkeit als auch zum Feld steht — sie ändert also nie den Betrag der Geschwindigkeit (verrichtet keine Arbeit!), sondern nur ihre Richtung. Stell dir das wie eine unsichtbare Hand vor, die ein Teilchen immer seitlich "anschubst", nie nach vorne oder hinten — das Ergebnis ist eine Kreis- oder Spiralbewegung, niemals eine Geschwindigkeitsänderung im Betrag. Das ist fundamental anders als die elektrische Kraft (Kapitel 6), die sehr wohl Arbeit verrichten kann.
+
+<a id="formale-definitionen-31"></a>
+## Formale Definitionen
+
+**Definition 11.1 (Lorentzkraft).**
+$$\vec F_L = q\,\vec v\times\vec B, \qquad [\vec B] = \text{T (Tesla)} = \frac{\text{Vs}}{\text{m}^2}.$$
+Allgemein (elektrisches + magnetisches Feld):
+$$\vec F = q(\vec E+\vec v\times\vec B).$$
+
+**Definition 11.2 (Magnetisches Dipolmoment einer Stromschleife).**
+$$\vec\mu := I\,A\,\hat n,$$
+mit Flächenvektor $\hat n$ nach der Rechte-Hand-Regel zur Umlaufrichtung des Stroms.
+
+<a id="eigenschaften-27"></a>
+## Eigenschaften
+
+| Eigenschaft | Aussage | Begründung |
+|---|---|---|
+| Lorentzkraft verrichtet keine Arbeit | $\vec F_L\perp\vec v$ stets | $\vec F_L\cdot\vec v = q(\vec v\times\vec B)\cdot\vec v=0$ (Spatprodukt mit wiederholtem Vektor) |
+| Bahn bei homogenem $\vec B$, $\vec v\perp\vec B$ | Kreisbahn | konstante Zentripetalkraft senkrecht zu $\vec v$ |
+| Bahn bei $\vec v$ mit Komponente $\parallel\vec B$ | Schraubenbahn (Helix) | Parallelkomponente unbeeinflusst, Senkrechtkomponente kreist |
+| Drehmoment auf Stromschleife | $\vec M=\vec\mu\times\vec B$ | strukturidentisch zu elektrischem Dipol (Kapitel 6) |
+
+<a id="sätze-27"></a>
+## Sätze
+
+<a id="satz-111-kreisbahn-im-homogenen-magnetfeld"></a>
+### Satz 11.1 (Kreisbahn im homogenen Magnetfeld)
+
+**Aussage:** Ein geladenes Teilchen mit $\vec v\perp\vec B$ bewegt sich auf einer Kreisbahn mit Radius
+$$r = \frac{mv}{|q|B},$$
+und Umlauffrequenz (Zyklotronfrequenz) $\omega = \dfrac{|q|B}{m}$ (unabhängig von $v$!).
+
+**Beweis (Beweisstil: Gleichsetzen von Lorentzkraft und Zentripetalkraft).**
+Für Kreisbewegung ist die notwendige Zentripetalkraft $F_{Zp}=mv^2/r$, radial nach innen gerichtet. Die Lorentzkraft $F_L=qvB$ (für $\vec v\perp\vec B$) steht ebenfalls stets senkrecht zu $\vec v$, radial. Gleichsetzen:
+$$qvB = \frac{mv^2}{r} \;\Longrightarrow\; r = \frac{mv}{qB}.$$
+Mit $\omega=v/r$ folgt $\omega = v\cdot\dfrac{qB}{mv} = \dfrac{qB}{m}$ — unabhängig von $v$, eine bemerkenswerte Eigenschaft, die dem Zyklotron (Teilchenbeschleuniger) zugrunde liegt: Teilchen unterschiedlicher Geschwindigkeit brauchen dieselbe Zeit pro Umlauf. $\blacksquare$
+
+<a id="satz-112-hall-effekt"></a>
+### Satz 11.2 (Hall-Effekt)
+
+**Aussage:** Fließt Strom $I$ durch einen Leiter (Dicke $d$, senkrecht dazu Magnetfeld $B$), stellt sich eine Querspannung (Hall-Spannung) ein:
+$$U_H = \frac{I\,B}{n\,q\,d}.$$
+
+**Voraussetzungen:** stationärer Strom, homogenes $B$-Feld senkrecht zur Stromrichtung.
+
+**Beweisidee (Beweisstil: Kräftegleichgewicht quer zum Strom).**
+Die driftenden Ladungsträger erfahren die Lorentzkraft $qv_{Drift}B$ senkrecht zur Stromrichtung — sie werden zur einen Seite des Leiters abgelenkt und häufen sich dort an, bis das entstehende elektrische Querfeld $E_H$ die Lorentzkraft gerade kompensiert: $qE_H=qv_{Drift}B \Rightarrow E_H=v_{Drift}B$. Mit $U_H=E_H\cdot d$ und $v_{Drift}=I/(nqA)=I/(nqd\cdot b)$ ($b$: Leiterbreite, $A=d\cdot b$) folgt nach Einsetzen $U_H=IB/(nqd)$ (die Breite $b$ kürzt sich heraus). $\blacksquare$
+
+**Bedeutung:** Der Hall-Effekt erlaubt (a) die Messung von Magnetfeldern (Hall-Sonde) und (b) die Bestimmung von Vorzeichen und Dichte $n$ der Ladungsträger — historisch wichtig für den Nachweis, dass in Metallen negative Ladungsträger (Elektronen) den Strom tragen.
+
+<a id="algorithmen-19"></a>
+## Algorithmen
+
+**Lösungsstrategie für Bewegung im Magnetfeld**
+```
+EINGABE: geladenes Teilchen mit Anfangsgeschwindigkeit v, Feld B
+1. Zerlege v in Komponenten parallel und senkrecht zu B
+2. Parallelkomponente: unverändert (keine Kraft in dieser Richtung)
+3. Senkrechtkomponente: Kreisbewegung mit r = mv_perp/(|q|B),
+   ω = |q|B/m
+4. WENN v_parallel = 0: reine Kreisbahn
+   WENN v_parallel ≠ 0: Überlagerung = Schraubenbahn (Helix)
+5. Für Kräfte-/Energiefragen: beachte, dass B nie Arbeit verrichtet
+   (nur E-Feld-Anteile ändern die kinetische Energie!)
+AUSGABE: Bahnkurve, Radius, Frequenz
+```
+- **Typischer Fehler:** Es wird versucht, mit der Lorentzkraft eine Energieänderung zu berechnen — das ist grundsätzlich unmöglich, da $\vec F_L\perp\vec v$ immer gilt.
+
+<a id="beispiele-29"></a>
+## Beispiele
+
+**Beispiel 1 (leicht):** Ein Elektron ($q=-e$, $v=10^6\,\text{m/s}$) bewegt sich senkrecht zu $B=0{,}1\,\text{T}$. Berechne $F_L$.
+*Lösung:* $F_L=|q|vB=1{,}6\cdot10^{-19}\cdot10^6\cdot0{,}1=1{,}6\cdot10^{-14}\,\text{N}$.
+
+**Beispiel 2 (mittel):** Dasselbe Elektron — berechne den Bahnradius.
+*Lösung:* $r=mv/(|q|B) = 9{,}1\cdot10^{-31}\cdot10^6/(1{,}6\cdot10^{-19}\cdot0{,}1)\approx5{,}7\cdot10^{-5}\,\text{m}$.
+
+**Beispiel 3 (mittel):** Ein Massenspektrometer nutzt Kreisbahnen im Magnetfeld, um Ionen nach Masse zu trennen. Zwei Ionen gleicher Ladung, gleicher Geschwindigkeit, aber $m_1\neq m_2$ — welches hat den größeren Bahnradius?
+*Lösung:* $r\propto m$ (bei festem $q,v,B$) — das schwerere Ion hat den größeren Radius.
+
+**Beispiel 4 (schwer):** Ein Proton fliegt mit $v=(v_x,0,v_z)$ in ein Feld $\vec B=(0,0,B)$. Beschreibe die Bahn.
+*Lösung:* $v_z$ (parallel zu $B$) bleibt unverändert. $v_x$ (senkrecht zu $B$) erzeugt eine Kreisbewegung in der $xy$-Ebene mit $r=mv_x/(qB)$. Überlagerung: eine Schraubenbahn (Helix) mit Ganghöhe $h=v_z\cdot T=v_z\cdot2\pi m/(qB)$ pro Umlauf.
+
+<a id="gegenbeispiele-29"></a>
+## Gegenbeispiele
+
+- Für $\vec v\parallel\vec B$ ist $\vec F_L=q\vec v\times\vec B=0$ — **keine** Kraftwirkung, das Teilchen fliegt geradeaus weiter (Grenzfall, oft in Klausuraufgaben als "Fallstrick" verwendet).
+- Die Formel $\omega=qB/m$ (Zyklotronfrequenz) gilt **nicht** mehr exakt bei relativistischen Geschwindigkeiten (dort wird $m\to\gamma m$ geschwindigkeitsabhängig) — für diese Vorlesung nicht relevant, aber wichtige Erinnerung an den Gültigkeitsbereich.
+
+<a id="typische-klausuraufgaben-30"></a>
+## Typische Klausuraufgaben
+
+- Kreisradius/Zyklotronfrequenz-Berechnung für geladene Teilchen im $B$-Feld — Erkennungsmerkmal: "Massenspektrometer", "Zyklotron", "Kreisbahn".
+- Hall-Effekt-Berechnung, oft kombiniert mit Bestimmung der Ladungsträgerdichte $n$ — Erkennungsmerkmal: "Hall-Spannung", "Hall-Sonde".
+- Kombination $\vec E$- und $\vec B$-Feld (Geschwindigkeitsfilter, "Wien-Filter": $qE=qvB \Rightarrow v=E/B$ für ungestörten Durchgang).
+- Schraubenbahn-Aufgaben (3D-Bewegung).
+
+<a id="typische-fehler-30"></a>
+## Typische Fehler
+
+1. Vorzeichen der Ladung bei der Kreuzproduktrichtung vergessen (Elektronen kreisen entgegengesetzt zu positiven Ladungen bei gleichem $\vec v,\vec B$).
+2. Es wird versucht, eine Geschwindigkeits-/Energieänderung durch $\vec B$ allein zu berechnen (unmöglich, siehe Eigenschaftentabelle).
+3. Bei $\vec v$ nicht senkrecht zu $\vec B$ wird trotzdem die einfache Kreisbahnformel (ohne Zerlegung in Parallel-/Senkrechtkomponente) verwendet.
+
+<a id="verbindungen-31"></a>
+## Verbindungen
+
+- Das magnetische Dipolmoment (Def. 11.2) und sein Drehmoment $\vec M=\vec\mu\times\vec B$ sind strukturell identisch zum elektrischen Dipol (Kapitel 6) — direkte Vergleichstabelle:
+
+| | Elektrischer Dipol | Magnetischer Dipol |
+|---|---|---|
+| Moment | $\vec p=Q\vec d$ | $\vec\mu=IA\hat n$ |
+| Drehmoment | $\vec M=\vec p\times\vec E$ | $\vec M=\vec\mu\times\vec B$ |
+| Energie | $E_{pot}=-\vec p\cdot\vec E$ | $E_{pot}=-\vec\mu\cdot\vec B$ |
+
+- Die Erzeugung des $\vec B$-Feldes selbst (durch Ströme) folgt in Kapitel 12.
+- Der Hall-Effekt verbindet dieses Kapitel zurück zu Kapitel 9/10 (Ladungsträgerdichte, Vorzeichen der Ladungsträger).
+
+<a id="zusammenfassung-19"></a>
+## Zusammenfassung
+
+- Lorentzkraft $\vec F_L=q\vec v\times\vec B$ steht immer senkrecht zu $\vec v$ — verrichtet keine Arbeit.
+- Kreisbahn bei $\vec v\perp\vec B$: $r=mv/(|q|B)$, $\omega=|q|B/m$ (geschwindigkeitsunabhängig).
+- Schraubenbahn bei beliebigem $\vec v$: Zerlegung in Parallel-/Senkrechtkomponente.
+- Hall-Effekt: $U_H=IB/(nqd)$ — Messung von $B$ und Bestimmung von Ladungsträgereigenschaften.
+- Magnetisches Dipolmoment $\vec\mu=IA\hat n$, Drehmoment $\vec M=\vec\mu\times\vec B$ — Analogie zum elektrischen Dipol.
+
+---
+
+<a id="kapitel-12-magnetismus-ii-feldquellen-und-magnetische-materialien"></a>
+# Kapitel 12: Magnetismus II — Feldquellen und magnetische Materialien
+
+<a id="motivation-32"></a>
+## Motivation
+
+Kapitel 11 behandelte die Wirkung eines *gegebenen* Magnetfelds. Jetzt fragen wir: Wie entsteht ein Magnetfeld überhaupt? Ørsteds Entdeckung (bewegte Ladungen/Ströme erzeugen $\vec B$) wird hier quantifiziert (Biot-Savart-Gesetz, Ampère'sches Gesetz) — das magnetische Analogon zum Coulombgesetz/Gauß'schen Gesetz der Elektrostatik, mit einem entscheidenden strukturellen Unterschied: Es gibt **keine magnetischen Monopole**.
+
+<a id="intuition-32"></a>
+## Intuition
+
+Ströme erzeugen Magnetfelder, die sich *um* den Strom herum wickeln — nicht radial wie beim elektrischen Feld einer Punktladung, sondern zirkulär, wie die Wirbel, die ein Löffel beim Umrühren im Tee erzeugt. Das Fehlen magnetischer Monopole bedeutet: Jede Feldlinie eines $\vec B$-Feldes ist geschlossen (hat keinen Anfang und kein Ende) — im Gegensatz zu elektrischen Feldlinien, die an Ladungen beginnen/enden.
+
+<a id="formale-definitionen-32"></a>
+## Formale Definitionen
+
+**Definition 12.1 (Biot-Savart-Gesetz).**
+Das Magnetfeld eines stromdurchflossenen Leiterelements $d\vec\ell$ am Aufpunkt $\vec r$ (relativ zum Leiterelement):
+$$d\vec B = \frac{\mu_0}{4\pi}\frac{I\,d\vec\ell\times\hat r}{r^2},$$
+mit der **magnetischen Feldkonstante** $\mu_0 = 4\pi\cdot10^{-7}\,\text{Tm/A}$ (bzw. $\text{Vs/(Am)}$).
+
+**Definition 12.2 (Magnetischer Fluss).**
+$$\Phi_B := \int_A\vec B\cdot d\vec A.$$
+
+**Definition 12.3 (Magnetisierung, magnetische Feldstärke).**
+Analog zu Def. 8.1/8.4:
+$$\vec M := \frac1V\sum_i\vec\mu_i, \qquad \vec H := \frac{\vec B}{\mu_0}-\vec M.$$
+
+<a id="eigenschaften-28"></a>
+## Eigenschaften
+
+| Eigenschaft | Aussage | Begründung |
+|---|---|---|
+| Keine magnetischen Monopole | $\operatorname{div}\vec B=0$ überall (2. Maxwell-Gleichung) | nie beobachtet; $\vec B$-Feldlinien sind stets geschlossen |
+| $\vec B$-Feldlinien um Draht | konzentrische Kreise | Rechte-Hand-Regel (Daumen = Stromrichtung, Finger = $\vec B$) |
+
+**Vergleichstabelle magnetische Materialien:**
+
+| Typ | $\chi_m$ (magn. Suszeptibilität) | Mikroskopischer Ursprung | Beispiel |
+|---|---|---|---|
+| Diamagnetisch | $\chi_m<0$, sehr klein | induzierte Gegenmomente (Lenz'sche Regel auf atomarer Ebene) | Wasser, Kupfer, Bismut |
+| Paramagnetisch | $\chi_m>0$, klein | permanente atomare Momente richten sich aus | Aluminium, Sauerstoff |
+| Ferromagnetisch | $\chi_m\gg1$, stark nichtlinear | kollektive Ausrichtung in Domänen (Weiss-Bezirke) | Eisen, Kobalt, Nickel |
+
+<a id="sätze-28"></a>
+## Sätze
+
+<a id="satz-121-div-b-0-2-maxwell-gleichung"></a>
+### Satz 12.1 (Div B = 0 — 2. Maxwell-Gleichung)
+
+**Aussage:** $$\operatorname{div}\vec B(\vec r) = 0 \quad\text{überall}, \qquad \oint_S\vec B\cdot d\vec A = 0\ \text{(für jede geschlossene Fläche)}.$$
+
+**Bedeutung:** Formalisiert die Abwesenheit magnetischer Monopole — das strukturelle Gegenstück zu $\operatorname{div}\vec E=\rho/\varepsilon_0$ (Satz 7.2), nur mit Quellstärke null.
+
+**Beweisidee:** Wird in dieser Vorlesung als empirischer Befund (keine magnetischen Monopole je beobachtet) postuliert, nicht aus tieferliegenden Prinzipien hergeleitet — konsistent mit der Struktur des Biot-Savart-Gesetzes, bei dem $d\vec B\perp d\vec\ell$ und $d\vec B\perp\hat r$ stets zirkuläre, geschlossene Feldlinien erzwingt.
+
+<a id="satz-122-magnetfeld-eines-geraden-unendlich-langen-leiters"></a>
+### Satz 12.2 (Magnetfeld eines geraden, unendlich langen Leiters)
+
+**Aussage:** $$B(r) = \frac{\mu_0 I}{2\pi r}.$$
+
+**Beweis (Beweisstil: direkte Integration von Biot-Savart über den unendlichen Draht).**
+
+Für ein Leiterelement $d\vec\ell=dz\,\hat e_z$ bei $z$ auf dem Draht (Aufpunkt im Abstand $r$ senkrecht zum Draht) ist $|d\vec\ell\times\hat r| = dz\sin\theta$, mit $\sin\theta=r/\sqrt{r^2+z^2}$ (Winkel zwischen Draht und Verbindungslinie zum Aufpunkt). Alle Beiträge $d\vec B$ zeigen (wegen der Zylindersymmetrie um den Draht) in dieselbe tangentiale Richtung, sodass wir die Beträge direkt aufaddieren dürfen:
+$$B = \frac{\mu_0I}{4\pi}\int_{-\infty}^{\infty} \frac{dz\cdot r}{(r^2+z^2)^{3/2}}.$$
+Mit der Substitution $z=r\tan\phi$ ($dz=r\sec^2\phi\,d\phi$, $r^2+z^2=r^2\sec^2\phi$) wird das Integral zu
+$$B = \frac{\mu_0I}{4\pi r}\int_{-\pi/2}^{\pi/2}\cos\phi\,d\phi = \frac{\mu_0I}{4\pi r}\cdot2 = \frac{\mu_0I}{2\pi r}. \qquad\blacksquare$$
+
+<a id="satz-123-ampèresches-gesetz"></a>
+### Satz 12.3 (Ampère'sches Gesetz)
+
+**Aussage:** $$\oint_C\vec B\cdot d\vec s = \mu_0 I_{umschlossen}.$$
+
+**Voraussetzungen:** stationärer Strom, $C$ geschlossene Kurve, $I_{umschlossen}$ = Nettostrom durch eine von $C$ berandete Fläche.
+
+**Beweisidee (Beweisstil: Nachweis für den geraden Leiter mit Kreis als Integrationsweg, dann Verallgemeinerung analog zu Satz 7.1).**
+
+Für einen geraden Leiter mit Kreis vom Radius $r$ um den Draht als Integrationsweg $C$: $\vec B$ ist überall auf $C$ tangential mit konstantem Betrag $B(r)=\mu_0I/(2\pi r)$ (Satz 12.2), also
+$$\oint_C\vec B\cdot d\vec s = B(r)\cdot2\pi r = \mu_0I.$$
+Für eine *beliebige* geschlossene Kurve um denselben Draht liefert eine dem Raumwinkelargument von Satz 7.1 analoge Überlegung (hier: "Umschlingungswinkel" statt Raumwinkel) dasselbe Ergebnis $\mu_0I$, solange die Kurve den Draht genau einmal umschließt; Kurven, die den Draht nicht umschließen, liefern null. Für beliebige Stromverteilungen folgt die allgemeine Aussage durch Superposition (wie bei Satz 7.1, Schritt 4). $\blacksquare$
+
+**Bedeutung:** Analog zum Gauß'schen Gesetz (elektrisch) ist Ampère's Gesetz das effiziente Werkzeug zur Feldberechnung bei Stromverteilungen mit hoher Symmetrie (langer Draht, Spule, Toroid).
+
+<a id="satz-124-magnetfeld-einer-langen-spule"></a>
+### Satz 12.4 (Magnetfeld einer langen Spule)
+
+**Aussage:** Im Inneren einer langen Spule (Länge $\ell$, $N$ Windungen, Strom $I$), fern von den Enden:
+$$B = \mu_0\frac{N}{\ell}I =: \mu_0 nI \quad(n:=N/\ell\text{, Windungsdichte}), \qquad B_{außen}\approx0.$$
+
+**Beweis (Beweisstil: Anwendung des Ampère'schen Gesetzes mit rechteckigem Integrationsweg).**
+Wähle als Integrationsweg $C$ ein Rechteck: eine Seite der Länge $L$ im Spuleninneren (parallel zur Achse), die gegenüberliegende Seite weit außerhalb (wo $B\approx0$ angenommen wird), verbunden durch zwei kurze Seiten senkrecht zur Achse (deren Beitrag zum Wegintegral verschwindet, da dort $\vec B\perp d\vec s$ bzw. $B\approx0$ außen). Der umschlossene Strom ist $I_{umschlossen}=N'\cdot I$, mit $N'=nL$ Windungen innerhalb der Weglänge $L$. Ampère'sches Gesetz:
+$$B\cdot L = \mu_0\, nL\, I \;\Longrightarrow\; B=\mu_0 nI. \qquad\blacksquare$$
+
+<a id="algorithmen-20"></a>
+## Algorithmen
+
+**Lösungsstrategie: Ampère'sches Gesetz anwenden**
+```
+EINGABE: Stromverteilung mit Symmetrie
+1. Erkenne Symmetrietyp (analog zu Gauß'schem Gesetz, Kapitel 7):
+   Gerader Draht (Zylindersymmetrie) → kreisförmiger Integrationsweg
+   Lange Spule / Toroid → rechteckiger bzw. kreisförmiger Weg im Inneren
+2. Prüfe: Ist |B| auf dem gewählten Weg konstant und B parallel zu ds?
+   WENN NEIN: falscher Integrationsweg gewählt
+3. Bestimme I_umschlossen (Vorzeichen nach Rechte-Hand-Regel!)
+4. Löse B * (Weglänge) = μ0 * I_umschlossen nach B auf
+AUSGABE: B(r) bzw. B im Spuleninneren
+```
+- **Typischer Fehler:** Vorzeichen von $I_{umschlossen}$ falsch (Rechte-Hand-Regel zwischen Umlaufsinn von $C$ und Stromrichtung nicht konsistent angewendet).
+
+<a id="beispiele-30"></a>
+## Beispiele
+
+**Beispiel 1 (leicht):** Ein gerader Draht führt $I=5\,\text{A}$. Berechne $B$ im Abstand $r=2\,\text{cm}$.
+*Lösung:* $B=\mu_0I/(2\pi r) = 4\pi\cdot10^{-7}\cdot5/(2\pi\cdot0{,}02) = 5\cdot10^{-5}\,\text{T}$.
+
+**Beispiel 2 (mittel):** Eine Spule ($N=500$, $\ell=20\,\text{cm}$, $I=2\,\text{A}$). Berechne $B$ im Inneren.
+*Lösung:* $B=\mu_0(N/\ell)I = 4\pi\cdot10^{-7}\cdot(500/0{,}2)\cdot2\approx6{,}28\cdot10^{-3}\,\text{T}$.
+
+**Beispiel 3 (mittel):** Zwei parallele, stromdurchflossene Drähte ($I_1=I_2=10\,\text{A}$, Abstand $d=5\,\text{cm}$, gleiche Richtung). Berechne die Kraft pro Länge zwischen ihnen (nutze $\vec F=I\vec\ell\times\vec B$ aus Kap. 11 kombiniert mit Satz 12.2).
+*Lösung:* $B_1$ am Ort von Draht 2: $B_1=\mu_0I_1/(2\pi d)$. Kraft pro Länge: $F/\ell = I_2B_1 = \mu_0I_1I_2/(2\pi d) = 4\pi10^{-7}\cdot100/(2\pi\cdot0{,}05) = 4\cdot10^{-4}\,\text{N/m}$ (anziehend, da gleiche Stromrichtung — diese Kraft definiert historisch die Einheit Ampere!).
+
+<a id="gegenbeispiele-30"></a>
+## Gegenbeispiele
+
+- Ampère'sches Gesetz liefert für **nicht-symmetrische** Stromverteilungen zwar eine korrekte, aber nicht direkt nach $B$ auflösbare Gleichung (analog zu Gauß'schem Gesetz, Kapitel 7).
+- Am **Rand/Ende** einer endlichen Spule gilt $B=\mu_0nI$ **nicht** mehr exakt (dort treten Streufelder auf, ähnlich den Randeffekten beim Plattenkondensator, Kapitel 6).
+
+<a id="typische-klausuraufgaben-31"></a>
+## Typische Klausuraufgaben
+
+- Feldberechnung mit Ampère'schem Gesetz für Draht/Spule/Toroid — Strategie: siehe Algorithmus.
+- Kraft zwischen parallelen Strömen — Kombination aus Kapitel 11 und 12.
+- Qualitative Fragen zu Dia-/Para-/Ferromagnetismus (Domänenstruktur, Hysterese bei Ferromagneten — hier nur qualitativ erwähnt).
+
+<a id="typische-fehler-31"></a>
+## Typische Fehler
+
+1. Rechte-Hand-Regel falsch angewendet (Vorzeichen/Richtung von $\vec B$).
+2. Ampère'sches Gesetz auf unsymmetrische Probleme angewendet und $B$ trotzdem vor das Integral gezogen.
+3. Streufelder an Spulenenden vernachlässigt, wo die Näherung eigentlich nicht mehr gilt (nur bei expliziter Fragestellung relevant).
+
+<a id="verbindungen-32"></a>
+## Verbindungen
+
+- Satz 12.1 ist die **2. Maxwell-Gleichung**, Satz 12.3 die Vorstufe der **4. Maxwell-Gleichung** (die in Kapitel 15 durch den Maxwell'schen Verschiebungsstrom noch ergänzt wird!).
+- Strukturelle Analogie zu Kapitel 7 (Gauß'sches Gesetz ↔ Ampère'sches Gesetz) — beide sind "Integralformen", die bei Symmetrie eine schnelle Feldberechnung erlauben.
+- Die Kraft zwischen parallelen Strömen (Beispiel 3) ist die historische Grundlage der SI-Definition des Ampere.
+- Grundlage für Kapitel 13 (Induktion) — die zeitliche Änderung des hier definierten magnetischen Flusses $\Phi_B$ erzeugt eine induzierte Spannung.
+
+<a id="zusammenfassung-20"></a>
+## Zusammenfassung
+
+- Biot-Savart-Gesetz: $d\vec B = \dfrac{\mu_0}{4\pi}\dfrac{Id\vec\ell\times\hat r}{r^2}$ — Grundgesetz zur Feldberechnung.
+- $\operatorname{div}\vec B=0$: keine magnetischen Monopole, Feldlinien stets geschlossen.
+- Ampère'sches Gesetz: $\oint\vec B\cdot d\vec s=\mu_0I_{umschlossen}$ — effizient bei Symmetrie.
+- Gerader Draht: $B=\mu_0I/(2\pi r)$; lange Spule: $B=\mu_0nI$.
+- Magnetische Materialien: dia- (schwach abstoßend), para- (schwach anziehend), ferromagnetisch (stark, nichtlinear, Domänenstruktur).
+
+---
+
+<a id="kapitel-13-elektrodynamik-induktion"></a>
+# Kapitel 13: Elektrodynamik — Induktion
+
+<a id="motivation-33"></a>
+## Motivation
+
+Wir haben gesehen: Ströme erzeugen Magnetfelder (Kapitel 12). Faraday stellte 1831 die umgekehrte Frage: Kann ein Magnetfeld einen Strom erzeugen? Die Antwort ist ja — aber nur, wenn sich das Feld (bzw. der von einer Leiterschleife eingeschlossene Fluss) *ändert*. Diese Entdeckung ist die Grundlage praktisch der gesamten elektrischen Energieerzeugung (Generatoren) und schließt den Kreis zur vollständigen Vereinigung von Elektrizität und Magnetismus.
+
+<a id="intuition-33"></a>
+## Intuition
+
+Stell dir den magnetischen Fluss durch eine Leiterschleife als "Menge an Feldlinien" vor, die durch die Schleife hindurchtreten. Ändert sich diese Menge (weil sich das Feld ändert, die Schleife bewegt oder gedreht wird), "spürt" die Schleife das als induzierte Spannung — als würde die Natur versuchen, die Änderung zu "kompensieren". Diese Kompensationstendenz (Lenz'sche Regel) ist ein Spezialfall des allgemeineren Prinzips "System reagiert der Störung entgegen" (vergleichbar mit Trägheit in der Mechanik: ein Körper "widersetzt" sich einer Geschwindigkeitsänderung).
+
+<a id="formale-definitionen-33"></a>
+## Formale Definitionen
+
+**Definition 13.1 (Induktionsspannung).**
+$$U_{ind} := -\frac{d\Phi_B}{dt}.$$
+
+**Definition 13.2 (Selbstinduktivität).**
+$$L := \frac{\Phi_B}{I}, \qquad [L]=\text{H (Henry)} = \text{Vs/A}.$$
+
+<a id="eigenschaften-29"></a>
+## Eigenschaften
+
+| Eigenschaft | Aussage |
+|---|---|
+| Induktion tritt auf bei | Änderung von $B$, Fläche $A$, oder Winkel zwischen $\vec B$ und $\hat n$ |
+| Lenz'sche Regel | Der induzierte Strom fließt so, dass er seiner Ursache entgegenwirkt (Vorzeichen in Def. 13.1!) |
+| Selbstinduktivität einer langen Spule | $L=\mu_0n^2A\ell = \mu_0\dfrac{N^2}{\ell}A$ |
+
+<a id="sätze-29"></a>
+## Sätze
+
+<a id="satz-131-faradaysches-induktionsgesetz-3-maxwell-gleichung"></a>
+### Satz 13.1 (Faraday'sches Induktionsgesetz — 3. Maxwell-Gleichung)
+
+**Aussage:** $$U_{ind} = \oint_C\vec E\cdot d\vec s = -\frac{d}{dt}\int_A\vec B\cdot d\vec A.$$
+
+**Bedeutung:** Ein sich zeitlich änderndes Magnetfeld erzeugt ein elektrisches Wirbelfeld (nicht mehr konservativ, im Gegensatz zu Satz 6.1!) — dies ist eine fundamentale Erweiterung der Elektrostatik.
+
+**Beweisidee (Beweisstil: Spezialfall — bewegter Leiter im konstanten Feld, dann Verallgemeinerung als Postulat).**
+
+Für den Spezialfall einer Leiterschleife, die sich mit Geschwindigkeit $\vec v$ durch ein *zeitlich konstantes* $\vec B$-Feld bewegt: Auf die Ladungsträger im bewegten Leiter wirkt die Lorentzkraft $\vec F=q\vec v\times\vec B$ (Kapitel 11), die entlang des Leiters eine effektive "bewegungsinduzierte" elektrische Feldstärke $\vec E'=\vec v\times\vec B$ erzeugt. Integriert man diese entlang der Schleife und wandelt in eine Flussänderung um (Rechenschritt: geometrische Betrachtung der pro Zeit überstrichenen Fläche), erhält man exakt $U_{ind}=-d\Phi_B/dt$.
+
+Für den allgemeineren Fall eines *ruhenden* Leiters in einem *zeitlich veränderlichen* Feld lässt sich dies nicht mehr auf die Lorentzkraft zurückführen — hier postulierte Faraday (bzw. später Maxwell in voller Allgemeinheit) das Gesetz als eigenständiges Naturgesetz, bestätigt durch alle bekannten Experimente. **Markierung:** Vollständiger allgemeiner Beweis erfordert die relativistische Vereinheitlichung von $\vec E$ und $\vec B$ (Spezielle Relativitätstheorie) und geht über diese Vorlesung hinaus — hier wird das Gesetz für den allgemeinen Fall als postuliert/experimentell bestätigt behandelt.
+
+<a id="satz-132-selbstinduktion-und-aufbauverhalten-in-einer-rl-schaltung"></a>
+### Satz 13.2 (Selbstinduktion und Aufbauverhalten in einer RL-Schaltung)
+
+**Aussage:** Beim Einschalten einer Spannung $U_0$ an einen Kreis mit Widerstand $R$ und Induktivität $L$ steigt der Strom gemäß
+$$I(t) = \frac{U_0}{R}\left(1-e^{-t/\tau}\right), \qquad \tau = \frac{L}{R}.$$
+
+**Beweis (Beweisstil: Aufstellen und Lösen der Differentialgleichung — direkte Analogie zur RC-Aufladung).**
+
+Maschenregel (Satz 9.3) für den RL-Kreis: $U_0 = IR + L\dfrac{dI}{dt}$ (die Spule erzeugt eine Gegenspannung $U_L=L\,dI/dt$, Konsequenz aus Satz 13.1 mit $\Phi_B=LI$, Def. 13.2). Dies ist eine lineare, inhomogene Differentialgleichung 1. Ordnung:
+$$\frac{dI}{dt} + \frac{R}{L}I = \frac{U_0}{L}.$$
+Die allgemeine Lösung ist die Summe aus partikulärer Lösung ($I_p=U_0/R$, stationärer Endwert) und homogener Lösung ($I_h=Ce^{-Rt/L}$). Mit der Anfangsbedingung $I(0)=0$ (Spule verhindert sprunghafte Stromänderung):
+$$0 = \frac{U_0}{R}+C \;\Longrightarrow\; C=-\frac{U_0}{R}.$$
+Also
+$$I(t) = \frac{U_0}{R}\left(1-e^{-Rt/L}\right) = \frac{U_0}{R}\left(1-e^{-t/\tau}\right),\quad \tau=\frac{L}{R}. \qquad\blacksquare$$
+
+**Vergleichstabelle RC- vs. RL-Aufladung** (Verbindung zu Kapitel 9):
+
+| | RC-Kreis (Kondensator) | RL-Kreis (Spule) |
+|---|---|---|
+| Zeitkonstante | $\tau=RC$ | $\tau=L/R$ |
+| Verhindert Sprünge in | Spannung $U_C$ | Strom $I$ |
+| Anfangswert | $U_C(0)=0$ | $I(0)=0$ |
+| Endwert | $U_C(\infty)=U_0$ | $I(\infty)=U_0/R$ |
+
+<a id="algorithmen-21"></a>
+## Algorithmen
+
+**Lösungsstrategie für Induktionsaufgaben**
+```
+EINGABE: Anordnung mit zeitlich veränderlichem Fluss
+1. Bestimme Φ_B(t) = ∫∫ B·dA — beachte ALLE zeitabhängigen Faktoren:
+   B(t), A(t), Winkel(t) zwischen B und Flächennormale
+2. U_ind = -dΦ_B/dt
+3. Bestimme Vorzeichen/Richtung des induzierten Stroms über
+   Lenz'sche Regel (nicht nur aus der Formel — Plausibilitätscheck!)
+4. WENN Selbstinduktion relevant (Spule im Stromkreis):
+   Maschenregel mit U_L = L dI/dt aufstellen, DGL lösen
+AUSGABE: U_ind(t), I(t)
+```
+- **Typischer Fehler:** Nur EINEN der drei möglichen zeitabhängigen Faktoren ($B$, $A$, Winkel) berücksichtigen, obwohl mehrere gleichzeitig variieren (z. B. bei einer rotierenden Spule im konstanten Feld ändert sich der *Winkel*, nicht $B$ selbst — leicht übersehen).
+
+<a id="beispiele-31"></a>
+## Beispiele
+
+**Beispiel 1 (leicht):** Eine Leiterschleife ($A=0{,}01\,\text{m}^2$) liegt in einem Feld, das sich mit $dB/dt=0{,}5\,\text{T/s}$ ändert. Berechne $U_{ind}$.
+*Lösung:* $U_{ind}=-A\dfrac{dB}{dt} = -0{,}01\cdot0{,}5=-5\cdot10^{-3}\,\text{V}$.
+
+**Beispiel 2 (mittel):** Eine Spule mit $N=200$ Windungen, $A=5\,\text{cm}^2$, wird in $t=0{,}1\,\text{s}$ von $B_1=0$ auf $B_2=0{,}8\,\text{T}$ hochgefahren. Berechne die mittlere Induktionsspannung.
+*Lösung:* $U_{ind}=-N\dfrac{\Delta\Phi_B}{\Delta t} = -N\dfrac{A\Delta B}{\Delta t} = -200\cdot\dfrac{5\cdot10^{-4}\cdot0{,}8}{0{,}1}=-0{,}8\,\text{V}$.
+
+**Beispiel 3 (mittel):** Eine Spule mit $L=0{,}5\,\text{H}$, $R=10\,\Omega$, an $U_0=20\,\text{V}$. Berechne $\tau$ und $I$ nach $t=\tau$.
+*Lösung:* $\tau=L/R=0{,}05\,\text{s}$. $I(\tau)=\dfrac{U_0}{R}(1-e^{-1})\approx2\cdot0{,}632=1{,}26\,\text{A}$.
+
+**Beispiel 4 (schwer):** Eine rechteckige Leiterschleife ($a\times b$) rotiert mit Winkelgeschwindigkeit $\omega$ in einem homogenen Feld $B$ um eine Achse in der Schleifenebene, senkrecht zu $\vec B$ bei $t=0$. Bestimme $U_{ind}(t)$.
+*Lösung:* $\Phi_B(t)=BA\cos(\omega t)$ (Winkel zwischen $\vec B$ und Flächennormale ändert sich!). $U_{ind}=-\dfrac{d\Phi_B}{dt}=BA\omega\sin(\omega t)$ — dies ist das **Grundprinzip des Wechselstromgenerators** und motiviert direkt Kapitel 14 (sinusförmige Wechselspannung entsteht auf natürliche Weise aus Rotation).
+
+<a id="gegenbeispiele-31"></a>
+## Gegenbeispiele
+
+- Eine Leiterschleife in einem **konstanten**, **unbewegten** Feld hat $U_{ind}=0$, unabhängig von der Feldstärke — nur *Änderungen* induzieren eine Spannung (häufiger Irrtum: "starkes Feld = starke Induktion", falsch, es zählt nur die *Änderungsrate*).
+- Eine Schleife, deren Fläche sich ändert, aber deren *Flächenvektor* stets senkrecht zu $\vec B$ steht (z. B. Rotation um eine Achse parallel zu $\vec B$), hat trotz Bewegung $U_{ind}=0$, da sich $\Phi_B$ dabei nicht ändert.
+
+<a id="typische-klausuraufgaben-32"></a>
+## Typische Klausuraufgaben
+
+- Berechnung von $U_{ind}$ bei zeitlich veränderlichem $B$, $A$ oder Winkel — Strategie: Alle drei Faktoren in $\Phi_B(t)$ explizit hinschreiben, dann ableiten.
+- RL-Auf-/Entladevorgänge — direkte Analogie zu RC-Kreisen (Kapitel 9/hier), Strategie: Differentialgleichung aufstellen und mit bekannter Lösungsform vergleichen.
+- Generatorprinzip (rotierende Schleife) — oft Übergang zu Wechselstromaufgaben (Kapitel 14).
+- Lenz'sche Regel als Verständnisfrage ("in welche Richtung fließt der induzierte Strom?").
+
+<a id="typische-fehler-32"></a>
+## Typische Fehler
+
+1. Nur $dB/dt$ berücksichtigt, obwohl sich auch $A$ oder der Winkel ändern (siehe Algorithmus-Warnung).
+2. Vorzeichen/Minuszeichen in $U_{ind}=-d\Phi_B/dt$ vergessen — führt zu falscher Richtung des induzierten Stroms (Verletzung der Lenz'schen Regel/Energieerhaltung!).
+3. RL- und RC-Zeitkonstanten verwechselt ($\tau=L/R$ vs. $\tau=RC$ — unterschiedliche Struktur!).
+4. Bei Selbstinduktion wird vergessen, dass $L\,dI/dt$ eine *Gegenspannung* ist (Vorzeichen in der Maschengleichung).
+
+<a id="verbindungen-33"></a>
+## Verbindungen
+
+- Satz 13.1 ist die **3. Maxwell-Gleichung** und schließt (zusammen mit dem noch fehlenden Maxwell'schen Verschiebungsstrom, Kapitel 15) die vollständige Vereinigung von Elektrizität und Magnetismus ab.
+- Die RL-Aufladung (Satz 13.2) ist mathematisch identisch zur RC-Aufladung (Kapitel 9) — dieselbe Differentialgleichungsstruktur, andere physikalische Größen.
+- Das Generatorprinzip (Beispiel 4) ist die physikalische Motivation für Kapitel 14 (Wechselstrom) — sinusförmige Spannungen entstehen natürlich aus Rotation im Magnetfeld.
+- Lenz'sche Regel ist ein Spezialfall des allgemeineren Prinzips "Le Chatelier" bzw. Energieerhaltung (ein induzierter Strom, der seine Ursache *verstärken* würde, würde Energie aus dem Nichts erzeugen — Widerspruch zum 1. Hauptsatz).
+
+<a id="zusammenfassung-21"></a>
+## Zusammenfassung
+
+- Faraday'sches Induktionsgesetz: $U_{ind}=-d\Phi_B/dt$ — jede Änderung des umschlossenen Flusses induziert eine Spannung.
+- Lenz'sche Regel: induzierter Strom wirkt seiner Ursache entgegen (Vorzeichen in der Formel).
+- Selbstinduktivität $L=\Phi_B/I$; RL-Aufladung mathematisch analog zur RC-Aufladung, $\tau=L/R$.
+- Rotierende Leiterschleife im Magnetfeld erzeugt sinusförmige Spannung — Grundprinzip des Generators.
+
+---
+
+<a id="kapitel-14-wechselstromkreise"></a>
+# Kapitel 14: Wechselstromkreise
+
+<a id="motivation-34"></a>
+## Motivation
+
+Die meisten technischen Anwendungen (Stromnetz, Funktechnik) nutzen nicht Gleichstrom, sondern zeitlich sinusförmig veränderlichen Wechselstrom — nicht zuletzt, weil er sich (via Transformatoren, hier nicht vertieft) verlustarm auf hohe Spannungen transformieren lässt, und weil er (wie in Kapitel 13, Beispiel 4 gesehen) auf natürliche Weise aus rotierenden Generatoren entsteht. Kondensatoren und Spulen verhalten sich bei Wechselstrom fundamental anders als bei Gleichstrom — dieses Kapitel entwickelt das Werkzeug (komplexe Widerstände), um das systematisch zu berechnen.
+
+<a id="intuition-34"></a>
+## Intuition
+
+Bei Gleichstrom "blockiert" ein Kondensator im stationären Zustand vollständig (er ist ja aufgeladen, kein weiterer Strom fließt) und eine Spule "blockiert" gar nicht (konstanter Strom erzeugt keine Gegenspannung). Bei Wechselstrom ändert sich das: Ein Kondensator wird ständig um- und aufgeladen — je schneller die Wechselspannung oszilliert, desto leichter "kommt der Strom durch" (der Kondensator wirkt wie ein frequenzabhängiger Widerstand, der bei hoher Frequenz klein wird). Eine Spule reagiert umgekehrt: Sie erzeugt bei schnellen Stromänderungen eine große Gegenspannung (Selbstinduktion, Kapitel 13) und "blockiert" daher hohe Frequenzen stärker.
+
+Die komplexe Schreibweise ist ein **reines Rechenwerkzeug**: Sinus- und Kosinusfunktionen mit Phasenverschiebung lassen sich mühsam mit trigonometrischen Additionstheoremen addieren — oder elegant als Realteil komplexer Exponentialfunktionen, die sich einfach multiplizieren.
+
+<a id="formale-definitionen-34"></a>
+## Formale Definitionen
+
+**Definition 14.1 (Wechselspannung, komplexe Darstellung).**
+$$u(t) = \hat U\cos(\omega t) = \operatorname{Re}\{\hat U e^{i\omega t}\}.$$
+
+**Definition 14.2 (Komplexer Widerstand, Impedanz).**
+$$\underline Z := \frac{\underline U}{\underline I}, \qquad [\underline Z]=\Omega.$$
+
+**Definition 14.3 (Impedanzen der Grundelemente).**
+
+| Element | Impedanz $\underline Z$ | Phasenverschiebung ($u$ gegen $i$) |
+|---|---|---|
+| Widerstand $R$ | $R$ | $0$ |
+| Kondensator $C$ | $\dfrac{1}{i\omega C}$ | $u$ eilt $i$ um $90°$ **nach** |
+| Spule $L$ | $i\omega L$ | $u$ eilt $i$ um $90°$ **voraus** |
+
+<a id="eigenschaften-30"></a>
+## Eigenschaften
+
+| Größe | Formel | Bedeutung |
+|---|---|---|
+| Betrag der Impedanz | $|\underline Z|=\sqrt{R^2+(X_L-X_C)^2}$ (Reihenschaltung RLC) | effektiver Widerstand |
+| Blindwiderstände | $X_L=\omega L$, $X_C=1/(\omega C)$ | frequenzabhängig |
+| Phasenwinkel | $\tan\varphi = (X_L-X_C)/R$ | Verschiebung zwischen $u(t)$ und $i(t)$ |
+| Resonanz (Serienschwingkreis) | $\omega_0=1/\sqrt{LC}$ | $X_L=X_C\Rightarrow |\underline Z|=R$ minimal |
+
+<a id="sätze-30"></a>
+## Sätze
+
+<a id="satz-141-impedanz-des-kondensators"></a>
+### Satz 14.1 (Impedanz des Kondensators)
+
+**Aussage:** $\underline Z_C = \dfrac{1}{i\omega C}$.
+
+**Beweis (Beweisstil: direkte Herleitung aus $I=C\,dU/dt$).**
+Für einen Kondensator gilt $Q=CU \Rightarrow I=dQ/dt=C\,dU/dt$. Mit dem Ansatz $\underline U(t)=\hat U e^{i\omega t}$:
+$$\underline I(t) = C\frac{d}{dt}\left(\hat Ue^{i\omega t}\right) = i\omega C\,\hat Ue^{i\omega t} = i\omega C\,\underline U(t).$$
+Also $\underline Z_C = \underline U/\underline I = \dfrac{1}{i\omega C}$. $\blacksquare$
+
+<a id="satz-142-impedanz-der-spule"></a>
+### Satz 14.2 (Impedanz der Spule)
+
+**Aussage:** $\underline Z_L = i\omega L$.
+
+**Beweis (Beweisstil: direkte Herleitung aus $U=L\,dI/dt$, Satz 13.2 verallgemeinert).**
+Mit Ansatz $\underline I(t)=\hat Ie^{i\omega t}$ und $U_L=L\,dI/dt$ (aus Satz 13.2/Def. 13.2):
+$$\underline U(t) = L\frac{d}{dt}\left(\hat Ie^{i\omega t}\right) = i\omega L\,\hat Ie^{i\omega t} = i\omega L\,\underline I(t) \;\Longrightarrow\; \underline Z_L=i\omega L. \qquad\blacksquare$$
+
+<a id="satz-143-kirchhoffsche-regeln-gelten-unverändert-für-komplexe-größen"></a>
+### Satz 14.3 (Kirchhoff'sche Regeln gelten unverändert für komplexe Größen)
+
+**Aussage:** Knoten- und Maschenregel (Satz 9.3) gelten formal identisch für die komplexen Ströme/Spannungen $\underline I,\underline U$.
+
+**Beweisidee:** Da die Maxwell-Gleichungen linear sind und $\operatorname{Re}\{\cdot\}$ mit Addition vertauscht, gelten alle linearen Beziehungen (insbesondere die Kirchhoff'schen Regeln) für die komplexen Amplituden genauso wie für die reellen Momentanwerte — Realteilbildung kann "am Ende" der Rechnung erfolgen. Ersatzimpedanzen addieren sich daher nach denselben Regeln wie Ersatzwiderstände (Satz 9.4), nur mit komplexen $\underline Z$ statt reellen $R$.
+
+<a id="algorithmen-22"></a>
+## Algorithmen
+
+**Lösungsstrategie für Wechselstromkreise (komplexe Rechnung)**
+- **Motivation:** Direkte Lösung der Differentialgleichungen für RLC-Netzwerke ist mühsam; komplexe Impedanzen reduzieren das Problem auf simple algebraische (Ohm'sche) Gleichungen.
+- **Pseudocode:**
+```
+EINGABE: RLC-Netzwerk, Anregungsfrequenz ω
+1. Ersetze jedes Bauelement durch seine komplexe Impedanz:
+   R → R,  C → 1/(iωC),  L → iωL
+2. Wende Kirchhoff'sche Regeln / Ersatzimpedanz-Formeln
+   (Reihe: Z_ges = ΣZ_i; Parallel: 1/Z_ges = Σ1/Z_i) an,
+   GENAU WIE bei Gleichstromwiderständen (Satz 14.3)
+3. Berechne gesuchte komplexe Größe (I, U, Z)
+4. Extrahiere Betrag (Amplitude) und Phase:
+   Amplitude = |Z|,  Phasenwinkel φ = arg(Z)
+5. Rücktransformation in Zeitbereich falls nötig:
+   u(t) = Re{U_komplex * e^{iωt}} = |U| cos(ωt + φ)
+AUSGABE: Amplitude, Phase, ggf. Zeitverlauf
+```
+- **Korrektheitsidee:** Direkte Konsequenz aus Sätzen 14.1–14.3; die Linearität aller beteiligten Gleichungen erlaubt das Rechnen mit komplexen Größen und Realteilbildung erst am Ende.
+- **Typische Fehler:** Betrag und Realteil einer komplexen Größe verwechselt; Phasenwinkel-Vorzeichen falsch (kapazitiv vs. induktiv).
+
+<a id="beispiele-32"></a>
+## Beispiele
+
+**Beispiel 1 (leicht):** Ein Kondensator $C=1\,\mu\text{F}$ bei $\omega=1000\,\text{rad/s}$. Berechne $|Z_C|$.
+*Lösung:* $|Z_C|=1/(\omega C)=1/(1000\cdot10^{-6})=1000\,\Omega$.
+
+**Beispiel 2 (mittel):** Reihenschaltung $R=100\,\Omega$, $L=0{,}1\,\text{H}$ bei $\omega=1000\,\text{rad/s}$. Berechne $|Z|$ und $\varphi$.
+*Lösung:* $X_L=\omega L=100\,\Omega$. $|Z|=\sqrt{R^2+X_L^2}=\sqrt{100^2+100^2}\approx141{,}4\,\Omega$. $\varphi=\arctan(X_L/R)=45°$ (Strom eilt Spannung um $45°$ nach).
+
+**Beispiel 3 (mittel):** RLC-Serienschwingkreis mit $L=1\,\text{mH}$, $C=1\,\mu\text{F}$. Berechne die Resonanzfrequenz $\omega_0$.
+*Lösung:* $\omega_0=1/\sqrt{LC}=1/\sqrt{10^{-3}\cdot10^{-6}}\approx3{,}16\cdot10^4\,\text{rad/s}$.
+
+**Beispiel 4 (schwer):** Zeige, dass bei Resonanz ($\omega=\omega_0$) im RLC-Serienkreis die Spannungen an $L$ und $C$ jeweils um den Faktor $\omega_0L/R$ (bzw. $1/(\omega_0CR)$, was bei Resonanz gleich ist — "Güte" $Q$) größer sein können als die angelegte Gesamtspannung.
+*Lösung:* Bei Resonanz gilt $|Z|=R$ (da $X_L=X_C$ sich in der Summe $i(X_L-X_C)$ aufheben), also $I=U/R$. Die Spannung an der Spule: $U_L=I\cdot X_L = (U/R)\cdot\omega_0L$. Für $R$ klein (schwache Dämpfung) kann $U_L\gg U$ werden — ein auf den ersten Blick paradoxes, aber korrektes Resultat (Spannungsüberhöhung im Reihenschwingkreis), da sich $U_L$ und $U_C$ zu jedem Zeitpunkt gegenseitig größtenteils aufheben (Phasenverschiebung von $180°$ zueinander) und nur die Differenz mit der äußeren Spannung übereinstimmen muss.
+
+<a id="gegenbeispiele-32"></a>
+## Gegenbeispiele
+
+- Die einfachen Ersatzimpedanz-Regeln (Reihe/Parallel wie bei Gleichstromwiderständen) gelten **nur**, solange man konsequent mit *komplexen* Größen rechnet — eine direkte Addition der *Beträge* $|Z_i|$ ist bei gemischten R-L-C-Netzwerken **falsch** (nur bei reinen Reihen-/Parallelschaltungen *gleichartiger* Elemente ohne Phasenverschiebung zulässig).
+- Bei $\omega=0$ (Gleichstrom) wird $Z_C\to\infty$ (Kondensator sperrt vollständig) und $Z_L\to0$ (Spule ist ein Kurzschluss) — Grenzfälle, die die Ergebnisse aus Kapitel 9 (reiner Gleichstromkreis) korrekt reproduzieren müssen; guter Plausibilitätscheck.
+
+<a id="typische-klausuraufgaben-33"></a>
+## Typische Klausuraufgaben
+
+- Impedanzberechnung für RLC-Netzwerke (Reihe, Parallel, gemischt) — Strategie: siehe Algorithmus, konsequent komplex rechnen.
+- Resonanzfrequenz-Berechnung und Diskussion des Verhaltens bei/unter/über Resonanz.
+- Phasenverschiebung zwischen Strom und Spannung bestimmen und interpretieren (kapazitiv/induktiv/rein ohmsch).
+- Grenzfallanalyse ($\omega\to0$, $\omega\to\infty$) als Plausibilitätscheck.
+
+<a id="typische-fehler-33"></a>
+## Typische Fehler
+
+1. Beträge der Einzelimpedanzen werden direkt addiert statt komplex (führt bei gemischten RLC-Netzwerken zu falschen Ergebnissen).
+2. Vorzeichen von $X_L-X_C$ im Phasenwinkel vertauscht (kapazitiv vs. induktiv verwechselt).
+3. Resonanzformel $\omega_0=1/\sqrt{LC}$ mit der Zeitkonstante $\tau=L/R$ bzw. $\tau=RC$ aus Kapitel 13/9 verwechselt — unterschiedliche physikalische Bedeutung!
+4. Rücktransformation in den Zeitbereich vergessen, wenn nach $u(t)$ statt nach der komplexen Amplitude gefragt ist.
+
+<a id="verbindungen-34"></a>
+## Verbindungen
+
+- Direkte Fortsetzung von Kapitel 9 (Gleichstromkreise) und Kapitel 13 (Selbstinduktion) — komplexe Wechselstromrechnung verallgemeinert beide.
+- Grenzfall $\omega\to0$ reproduziert Kapitel 9; die $L$-Impedanz baut direkt auf Satz 13.2 auf.
+- Resonanzphänomene sind konzeptuell verwandt mit mechanischen Resonanzphänomenen (erzwungene Schwingung, hier vorausgesetzt, aber nicht Teil dieses Skripts).
+- Motiviert Kapitel 15: ein oszillierender Strom (Wechselstrom) in einer Antenne ist die Quelle elektromagnetischer Wellen.
+
+<a id="zusammenfassung-22"></a>
+## Zusammenfassung
+
+- Wechselgrößen werden komplex dargestellt: $u(t)=\operatorname{Re}\{\hat Ue^{i\omega t}\}$.
+- Impedanzen: $Z_R=R$, $Z_C=1/(i\omega C)$, $Z_L=i\omega L$.
+- Kirchhoff'sche Regeln und Ersatzimpedanz-Formeln gelten unverändert (formal identisch zu Gleichstrom, aber komplex).
+- Resonanz im RLC-Serienkreis bei $\omega_0=1/\sqrt{LC}$: minimale Impedanz, möglicherweise starke Spannungsüberhöhung an $L$/$C$.
+
+---
+
+<a id="kapitel-15-elektromagnetische-wellen"></a>
+# Kapitel 15: Elektromagnetische Wellen
+
+<a id="motivation-35"></a>
+## Motivation
+
+Die vier bisher gefundenen Gesetze (Gauß elektrisch, Gauß magnetisch, Faraday, Ampère) beschrieben zunächst stationäre oder quasistationäre Situationen. Maxwell erkannte 1861–1865 eine fehlende Symmetrie: Ein sich änderndes $\vec B$-Feld erzeugt ein $\vec E$-Feld (Faraday, Kapitel 13) — sollte nicht auch ein sich änderndes $\vec E$-Feld ein $\vec B$-Feld erzeugen? Diese von Maxwell hinzugefügte Korrektur (**Verschiebungsstrom**) macht die Gleichungen symmetrisch — und sagt als Konsequenz selbstständig ausbreitende elektromagnetische Wellen voraus, deren Geschwindigkeit exakt mit der (damals unabhängig gemessenen) Lichtgeschwindigkeit übereinstimmt. Dies war einer der größten Triumphe der theoretischen Physik: Licht wurde als elektromagnetisches Phänomen identifiziert, ohne dass dies ursprünglich das Ziel der Theorie war.
+
+<a id="intuition-35"></a>
+## Intuition
+
+Stell dir ein oszillierendes $\vec E$-Feld vor, das (nach der Maxwell'schen Ergänzung) ein oszillierendes $\vec B$-Feld erzeugt, welches wiederum (nach Faraday) ein oszillierendes $\vec E$-Feld erzeugt — ein sich selbst tragender Prozess, der sich wie eine Welle durch den Raum ausbreitet, *ohne* dass ein Medium nötig ist (im Gegensatz zu Schallwellen, die Materie brauchen). Man kann es sich wie zwei Personen vorstellen, die sich gegenseitig anstoßen und dadurch gemeinsam vorwärts "rollen", ganz ohne festen Boden unter den Füßen.
+
+<a id="formale-definitionen-35"></a>
+## Formale Definitionen
+
+**Definition 15.1 (Verschiebungsstrom).**
+$$\vec j_{Vers} := \varepsilon_0\frac{\partial\vec E}{\partial t}.$$
+
+**Definition 15.2 (Vollständige Maxwell-Gleichungen im Vakuum).**
+
+| Nr. | Integralform | Differentialform | Name |
+|---|---|---|---|
+| I | $\oint\vec E\cdot d\vec A=Q_{innen}/\varepsilon_0$ | $\operatorname{div}\vec E=\rho/\varepsilon_0$ | Gauß (elektrisch) |
+| II | $\oint\vec B\cdot d\vec A=0$ | $\operatorname{div}\vec B=0$ | Gauß (magnetisch) |
+| III | $\oint\vec E\cdot d\vec s=-\dfrac{d\Phi_B}{dt}$ | $\operatorname{rot}\vec E=-\dfrac{\partial\vec B}{\partial t}$ | Faraday |
+| IV | $\oint\vec B\cdot d\vec s=\mu_0I+\mu_0\varepsilon_0\dfrac{d\Phi_E}{dt}$ | $\operatorname{rot}\vec B=\mu_0\vec j+\mu_0\varepsilon_0\dfrac{\partial\vec E}{\partial t}$ | Ampère-Maxwell |
+
+<a id="eigenschaften-31"></a>
+## Eigenschaften
+
+| Eigenschaft | Aussage |
+|---|---|
+| $\vec E$, $\vec B$, Ausbreitungsrichtung | stehen paarweise senkrecht aufeinander (transversale Welle) |
+| Ausbreitungsgeschwindigkeit im Vakuum | $c=1/\sqrt{\mu_0\varepsilon_0}\approx3\cdot10^8\,\text{m/s}$ |
+| Energiefluss | Poynting-Vektor $\vec S=\vec E\times\vec H$ |
+| Erzeugung | beschleunigte Ladungen (z. B. oszillierender Dipol, "Hertz'scher Dipol") |
+
+<a id="sätze-31"></a>
+## Sätze
+
+<a id="satz-151-wellengleichung-aus-den-maxwell-gleichungen"></a>
+### Satz 15.1 (Wellengleichung aus den Maxwell-Gleichungen)
+
+**Aussage:** Im ladungs- und stromfreien Vakuum erfüllt jede kartesische Komponente von $\vec E$ und $\vec B$ die Wellengleichung
+$$\Delta\vec E = \mu_0\varepsilon_0\frac{\partial^2\vec E}{\partial t^2}, \qquad \Delta\vec B=\mu_0\varepsilon_0\frac{\partial^2\vec B}{\partial t^2}.$$
+
+**Beweis (Beweisstil: direkte Kombination der Maxwell-Gleichungen III und IV, Vektoridentität).**
+
+Im Vakuum ohne freie Ladungen/Ströme ($\rho=0,\vec j=0$) lauten III und IV:
+$$\operatorname{rot}\vec E = -\frac{\partial\vec B}{\partial t}, \qquad \operatorname{rot}\vec B = \mu_0\varepsilon_0\frac{\partial\vec E}{\partial t}.$$
+Wende $\operatorname{rot}$ auf die erste Gleichung an:
+$$\operatorname{rot}(\operatorname{rot}\vec E) = -\frac{\partial}{\partial t}(\operatorname{rot}\vec B) = -\mu_0\varepsilon_0\frac{\partial^2\vec E}{\partial t^2}$$
+(im letzten Schritt wurde die zweite Gleichung eingesetzt). Mit der Vektoridentität $\operatorname{rot}(\operatorname{rot}\vec E) = \nabla(\operatorname{div}\vec E)-\Delta\vec E$ und $\operatorname{div}\vec E=0$ (Maxwell I, ladungsfrei):
+$$-\Delta\vec E = -\mu_0\varepsilon_0\frac{\partial^2\vec E}{\partial t^2} \;\Longrightarrow\; \Delta\vec E = \mu_0\varepsilon_0\frac{\partial^2\vec E}{\partial t^2}.$$
+Analog für $\vec B$ (Rollen von $\vec E$ und $\vec B$ vertauscht). $\blacksquare$
+
+**Bedeutung:** Vergleich mit der allgemeinen 3D-Wellengleichung $\Delta\psi = \dfrac{1}{v^2}\dfrac{\partial^2\psi}{\partial t^2}$ zeigt sofort
+$$v = c = \frac{1}{\sqrt{\mu_0\varepsilon_0}}.$$
+Einsetzen der bekannten Werte für $\mu_0,\varepsilon_0$ liefert $c\approx2{,}998\cdot10^8\,\text{m/s}$ — exakt die (unabhängig gemessene) Lichtgeschwindigkeit. Diese Übereinstimmung war Maxwells zentrales Argument, dass **Licht eine elektromagnetische Welle ist**.
+
+<a id="satz-152-ebene-harmonische-welle-struktureigenschaften"></a>
+### Satz 15.2 (Ebene, harmonische Welle — Struktureigenschaften)
+
+**Aussage:** Für eine ebene Welle $\vec E(\vec r,t) = \vec E_0\cos(\vec k\cdot\vec r-\omega t)$, die die Wellengleichung löst, gilt notwendig $\omega=ck$ (Dispersionsrelation), sowie $\vec E\perp\vec k$, $\vec B\perp\vec k$, $\vec E\perp\vec B$, mit $|\vec B|=|\vec E|/c$.
+
+**Beweisidee (Beweisstil: Einsetzen des Lösungsansatzes in die Maxwell-Gleichungen).**
+Einsetzen des ebenen-Wellen-Ansatzes in $\operatorname{div}\vec E=0$ liefert $\vec k\cdot\vec E_0=0$, also $\vec E\perp\vec k$ (Transversalität). Einsetzen in die Wellengleichung (Satz 15.1) liefert direkt $k^2=\mu_0\varepsilon_0\omega^2=\omega^2/c^2$, also $\omega=ck$. Einsetzen in $\operatorname{rot}\vec E=-\partial\vec B/\partial t$ liefert die Kopplung zwischen $\vec E_0$ und $\vec B_0$ inklusive der senkrechten Orientierung zueinander und dem Betragsverhältnis $c$.
+
+<a id="algorithmen-23"></a>
+## Algorithmen
+
+Kein klassischer Algorithmus; stattdessen eine **Checkliste zur Analyse elektromagnetischer Wellen**:
+```
+EINGABE: gegebene Welle (E0, k, ω oder Frequenz f, Ausbreitungsmedium)
+1. Prüfe Dispersionsrelation: ω = ck (Vakuum) bzw. ω = v_Phase * k (Medium)
+2. Bestimme B aus E über |B| = |E|/c, Richtung senkrecht zu E und k
+   (Rechte-Hand-Regel: E × B zeigt in Ausbreitungsrichtung)
+3. Für Energiefragen: Poynting-Vektor S = E × H, zeitgemittelt
+   <S> = ½ E0 B0 / μ0  (analog zur mittleren Leistung bei Wechselstrom!)
+AUSGABE: vollständige Wellenbeschreibung
+```
+
+<a id="beispiele-33"></a>
+## Beispiele
+
+**Beispiel 1 (leicht):** Berechne $c$ aus $\mu_0=4\pi\cdot10^{-7}\,\text{Tm/A}$, $\varepsilon_0=8{,}854\cdot10^{-12}\,\text{C}^2/(\text{Nm}^2)$.
+*Lösung:* $c=1/\sqrt{\mu_0\varepsilon_0} = 1/\sqrt{4\pi\cdot10^{-7}\cdot8{,}854\cdot10^{-12}}\approx2{,}998\cdot10^8\,\text{m/s}$.
+
+**Beispiel 2 (leicht):** Eine EM-Welle hat $E_0=100\,\text{V/m}$. Berechne $B_0$.
+*Lösung:* $B_0=E_0/c=100/(3\cdot10^8)\approx3{,}33\cdot10^{-7}\,\text{T}$.
+
+**Beispiel 3 (mittel):** Bestimme die Wellenlänge einer EM-Welle mit $f=100\,\text{MHz}$ (UKW-Rundfunk).
+*Lösung:* $\lambda=c/f = 3\cdot10^8/10^8=3\,\text{m}$.
+
+**Beispiel 4 (schwer):** Zeige, dass die Dispersionsrelation $\omega=ck$ tatsächlich aus dem Einsetzen des ebenen-Wellen-Ansatzes in die Wellengleichung folgt (Satz 15.2, Rechendetail).
+*Lösung:* Mit $\vec E=\vec E_0\cos(\vec k\cdot\vec r-\omega t)$: $\Delta\vec E = -k^2\vec E$ (zweifache Ortsableitung bringt Faktor $-k^2$), $\partial^2\vec E/\partial t^2=-\omega^2\vec E$ (zweifache Zeitableitung bringt Faktor $-\omega^2$). Einsetzen in $\Delta\vec E=\mu_0\varepsilon_0\partial^2\vec E/\partial t^2$: $-k^2\vec E = -\mu_0\varepsilon_0\omega^2\vec E \Rightarrow k^2=\mu_0\varepsilon_0\omega^2=\omega^2/c^2 \Rightarrow \omega=ck$ (positive Wurzel für Ausbreitung in $+\vec k$-Richtung).
+
+<a id="gegenbeispiele-33"></a>
+## Gegenbeispiele
+
+- Eine **longitudinale** elektromagnetische Welle (Feld schwingt parallel zur Ausbreitungsrichtung) existiert im Vakuum **nicht** — die Transversalitätsbedingung ($\vec k\cdot\vec E_0=0$) folgt zwingend aus $\operatorname{div}\vec E=0$ (Maxwell I im ladungsfreien Raum).
+- In einem **Medium** mit Ladungen/Strömen (z. B. einem Leiter) gilt die einfache Wellengleichung (Satz 15.1) **nicht** unverändert — dort muss der Ohm'sche Strom $\vec j=\sigma\vec E$ (Kapitel 9) mitberücksichtigt werden, was zu Dämpfung (Skin-Effekt) statt ungedämpfter Ausbreitung führt.
+
+<a id="typische-klausuraufgaben-34"></a>
+## Typische Klausuraufgaben
+
+- Berechnung von $c$, $\lambda$, $f$, $B_0$ aus gegebenen Wellenparametern — meist direkte Einsetzaufgaben.
+- Herleitung/Nachvollziehen der Wellengleichung aus den Maxwell-Gleichungen (Satz 15.1) — Verständnisaufgabe zur Struktur der Theorie.
+- Qualitative Fragen zur Bedeutung des Verschiebungsstroms (warum musste Maxwell die Ampère-Gleichung ergänzen?).
+- Polarisation und Orientierung von $\vec E$, $\vec B$, $\vec k$ zueinander.
+
+<a id="typische-fehler-34"></a>
+## Typische Fehler
+
+1. $\vec E$, $\vec B$ und Ausbreitungsrichtung werden nicht als senkrecht zueinander erkannt (Transversalität vergessen).
+2. Verwechslung von $\omega$ (Kreisfrequenz) und $f$ (Frequenz): $\omega=2\pi f$.
+3. Der Verschiebungsstrom wird mit einem "echten" Ladungsstrom verwechselt — er beschreibt lediglich die Wirkung eines sich ändernden $E$-Feldes, es fließen dabei keine Ladungen.
+
+<a id="verbindungen-35"></a>
+## Verbindungen
+
+- Schließt den gesamten Elektromagnetismus-Teil ab: Alle vier Maxwell-Gleichungen (Kapitel 7, 12, 13 + hier ergänzter Verschiebungsstrom) werden hier erstmals vollständig zusammengeführt.
+- Der Hertz'sche Dipol (oszillierender elektrischer Dipol, Kapitel 6) als Wellenquelle verbindet dieses Kapitel zurück zur Elektrostatik.
+- Die Energiebetrachtung (Poynting-Vektor) baut auf den Energiedichteformeln aus Kapitel 7 ($w_{el}$) und (analog) Kapitel 12 ($w_{mag}$, hier nicht explizit hergeleitet, aber strukturell analog) auf.
+- Optik, Radiowellentechnik und die gesamte moderne Kommunikationstechnik bauen unmittelbar auf diesem Kapitel auf (außerhalb dieser Vorlesung vertieft).
+
+<a id="zusammenfassung-23"></a>
+## Zusammenfassung
+
+- Maxwell ergänzte den Verschiebungsstrom $\varepsilon_0\partial\vec E/\partial t$, um die Ampère-Gleichung zu symmetrisieren.
+- Die vier vollständigen Maxwell-Gleichungen (Def. 15.2) implizieren im Vakuum die Wellengleichung für $\vec E$ und $\vec B$.
+- Ausbreitungsgeschwindigkeit $c=1/\sqrt{\mu_0\varepsilon_0}$ — identisch mit der Lichtgeschwindigkeit, was Licht als EM-Welle identifiziert.
+- EM-Wellen sind transversal: $\vec E\perp\vec B\perp\vec k$, mit $|\vec B|=|\vec E|/c$.
+- Energietransport über den Poynting-Vektor $\vec S=\vec E\times\vec H$.
+
+---
+
+---
+
+<a id="kapitel-16-exkurs-lorentz-transformation-und-spezielle-relativitätstheorie"></a>
+# Kapitel 16: Exkurs — Lorentz-Transformation und Spezielle Relativitätstheorie
+
+> **Hinweis:** Dieses Kapitel ist bewusst rudimentär gehalten (entsprechend dem tatsächlichen Umfang, der in der Vorlesung behandelt wurde) und folgt nicht der vollen Kapitelstruktur der übrigen Kapitel. Es enthält nur die Kernformeln und die zwei zugehörigen Standardbeispiele.
+
+<a id="motivation-36"></a>
+## Motivation
+
+Kapitel 15 zeigte: Die Maxwell-Gleichungen sagen eine Ausbreitungsgeschwindigkeit $c$ für elektromagnetische Wellen voraus — und zwar **denselben Wert $c$, unabhängig vom Bezugssystem** (die Herleitung von Satz 15.1 benutzt an keiner Stelle die Geschwindigkeit eines Beobachters). Das widerspricht der klassischen (Galilei'schen) Vorstellung, nach der sich Geschwindigkeiten einfach addieren ($u'=u-v$). Einstein löste diesen Widerspruch 1905, indem er die Konstanz von $c$ für alle Beobachter als Postulat akzeptierte und stattdessen Raum und Zeit selbst beobachterabhängig machte.
+
+<a id="grundidee"></a>
+## Grundidee
+
+Zwei Inertialsysteme $S$ (ruhend) und $S'$ (bewegt sich mit Geschwindigkeit $v$ entlang der $x$-Achse relativ zu $S$) sind durch die **Lorentz-Transformation** verknüpft — nicht mehr durch die einfache Galilei-Transformation $x'=x-vt,\ t'=t$.
+
+<a id="formeln"></a>
+## Formeln
+
+**Lorentz-Faktor:**
+$$\gamma := \frac{1}{\sqrt{1-v^2/c^2}} \geq 1.$$
+
+**Lorentz-Transformation** (Boost entlang $x$):
+$$x' = \gamma(x-vt), \qquad t' = \gamma\left(t-\frac{vx}{c^2}\right), \qquad y'=y,\quad z'=z.$$
+
+**Zeitdilatation:** Eine Uhr, die in ihrem eigenen Ruhesystem die **Eigenzeit** $\tau$ anzeigt, wird von einem relativ dazu bewegten Beobachter als "langsamer gehend" gemessen:
+$$\Delta t_{Beobachter} = \gamma\,\Delta\tau \quad(\geq \Delta\tau).$$
+
+**Längenkontraktion** (auch: **Lorentzkontraktion**): Ein Objekt der **Eigenlänge** $L$ (gemessen im eigenen Ruhesystem) erscheint einem relativ dazu bewegten Beobachter verkürzt:
+$$L' = \frac{L}{\gamma} \quad(\leq L).$$
+
+**Invariantes Raumzeit-Intervall** (folgt direkt aus der Konstanz von $c$, siehe Herleitung unten):
+$$s^2 := (ct)^2-x^2 = (ct')^2-x'^2 = \text{const} \quad\text{(gleich in jedem Inertialsystem)}.$$
+
+**Kurze Herleitung der Invarianz von $s^2$:** Einsetzen der Lorentz-Transformation liefert
+$$(ct')^2-x'^2 = c^2\gamma^2\left(t-\frac{vx}{c^2}\right)^2-\gamma^2(x-vt)^2 = \gamma^2\left[c^2t^2-2vxt+\frac{v^2x^2}{c^2}-x^2+2vxt-v^2t^2\right]$$
+$$= \gamma^2\left[c^2t^2\left(1-\frac{v^2}{c^2}\right)-x^2\left(1-\frac{v^2}{c^2}\right)\right] = \gamma^2\left(1-\frac{v^2}{c^2}\right)(c^2t^2-x^2) = c^2t^2-x^2,$$
+da $\gamma^2(1-v^2/c^2)=1$ per Definition von $\gamma$. $\blacksquare$
+
+<a id="beispiel-1-zwillingsparadoxon-qualitativ"></a>
+## Beispiel 1: Zwillingsparadoxon (qualitativ)
+
+Ein Zwilling bleibt auf der Erde, der andere fliegt mit hoher Geschwindigkeit $v$ zu einem fernen Stern und zurück. Aus Sicht des ruhenden Zwillings vergeht für den reisenden Zwilling wegen Zeitdilatation weniger Eigenzeit ($\Delta\tau = \Delta t_{Erde}/\gamma$) — bei der Rückkehr ist der reisende Zwilling jünger. Das "Paradoxon" (jeder der beiden könnte sich als "ruhend" und den anderen als "bewegt" ansehen, symmetrisch) löst sich dadurch auf, dass **nur** der reisende Zwilling beim Umkehren beschleunigt und damit das Inertialsystem wechselt — die Situation ist nicht symmetrisch, es gibt ein eindeutiges Ergebnis.
+
+<a id="beispiel-2-myonenparadoxon-quantitativ"></a>
+## Beispiel 2: Myonenparadoxon (quantitativ)
+
+Kosmische Myonen entstehen hoch in der Atmosphäre und haben im eigenen Ruhesystem eine mittlere Lebensdauer von nur $\tau\approx2{,}2\,\mu\text{s}$. Mit Lichtgeschwindigkeit würden sie ohne Relativitätseffekte im Mittel nur $c\tau\approx660\,\text{m}$ zurücklegen — viel zu wenig, um die Erdoberfläche (Flugstrecke $\sim10\,\text{km}$) zu erreichen. Dennoch werden sie am Boden nachgewiesen. Zwei äquivalente Erklärungen:
+
+- **Aus Sicht des Beobachters auf der Erde:** Die Myonen bewegen sich schnell ($v\approx0{,}998c$, $\gamma\approx16{-}20$ je nach Beispielwerten), ihre Lebensdauer erscheint durch Zeitdilatation verlängert: $\Delta t_{Erde}=\gamma\tau$. Die zurückgelegte Strecke ist dann $\beta c\cdot\gamma\tau = O(10\,\text{km})$ — ausreichend, um die Erdoberfläche zu erreichen.
+- **Aus Sicht des Myons (Eigensystem):** Das Myon "lebt" nur seine Eigenzeit $\tau$, aber die Atmosphäre rast ihm mit $v$ entgegen und ist durch Längenkontraktion auf $L'=L/\gamma \approx 200\,\text{m}$ (statt $10\,\text{km}$) verkürzt — auch aus dieser Perspektive kommt es problemlos am Boden an.
+
+**Beide Sichtweisen sind physikalisch gleichwertig** und liefern dasselbe (beobachtbare) Ergebnis — ein Musterbeispiel dafür, dass Zeitdilatation und Längenkontraktion zwei Seiten derselben Medaille sind, je nachdem, aus welchem Bezugssystem man das Ereignis betrachtet.
+
+<a id="zusammenfassung-24"></a>
+## Zusammenfassung
+
+- Lorentz-Transformation: $x'=\gamma(x-vt)$, $t'=\gamma(t-vx/c^2)$, mit $\gamma=1/\sqrt{1-v^2/c^2}$.
+- Zeitdilatation: bewegte Uhren gehen langsamer, $\Delta t=\gamma\,\Delta\tau$.
+- Längenkontraktion: bewegte Objekte erscheinen verkürzt, $L'=L/\gamma$.
+- Zwillingsparadoxon: Asymmetrie durch Beschleunigung des reisenden Zwillings löst das scheinbare Paradoxon auf.
+- Myonenparadoxon: Zeitdilatation (Beobachtersicht) und Längenkontraktion (Myon-Eigensicht) erklären dasselbe Phänomen äquivalent.
+
+---
+
+*Ende Teil II und damit des vollständigen Skripts (Kapitel 1–16). Zusammen mit Teil I deckt dieses Skript den gesamten rekonstruierten Vorlesungsstoff ab.*
 
 
 
